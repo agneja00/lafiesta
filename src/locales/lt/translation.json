@@ -5,5 +5,11 @@
     "gallery": "Galerija",
     "contacts": "Kontaktai",
     "cta": "Susisiekti"
+  },
+
+  "hero": {
+    "title": "Dovanos, kurios pasako daugiau.",
+    "description": "Gėlės ir staigmenos ypatingoms gyvenimo akimirkoms.",
+    "cta": "Peržiūrėti mūsų darbus"
   }
 }

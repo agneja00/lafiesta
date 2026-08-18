@@ -5,5 +5,11 @@
     "gallery": "Gallery",
     "contacts": "Contacts",
     "cta": "Contact us"
+  },
+
+  "hero": {
+    "title": "Gifts that say more.",
+    "description": "Flowers and surprises for life's special moments.",
+    "cta": "View our work"
   }
 }
