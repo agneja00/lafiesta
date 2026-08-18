@@ -1,11 +1,13 @@
-import styles from "./Header.module.scss"
+import HeaderDesktop from "./HeaderDesktop/HeaderDesktop";
+import HeaderMobile from "./HeaderMobile/HeaderMobile";
 
 const Header = () => {
   return (
     <>
-      <header className={styles.header}></header>
+      <HeaderMobile />
+      <HeaderDesktop />
     </>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

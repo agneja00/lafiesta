@@ -28,6 +28,7 @@ export default [
       ...reactHooks.configs.recommended.rules,
       "react/react-in-jsx-scope": "off",
       "react-refresh/only-export-components": "warn",
+       "react/prop-types": "off",
     },
     settings: { react: { version: "detect" } },
   },

@@ -1,0 +1,155 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+
+  min-height: 3rem;
+  padding: 0.75rem 1.5rem;
+
+  border-radius: $radius-button;
+
+  font-family: $font-body;
+  font-weight: 600;
+  line-height: 1;
+  text-decoration: none;
+  white-space: nowrap;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.15s ease,
+    box-shadow 0.2s ease;
+
+  &:active {
+    transform: scale(0.97);
+  }
+
+  &:focus-visible {
+    outline: 0.125rem solid $color-accent-coral;
+    outline-offset: 0.125rem;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+.primary {
+  background-color: $color-accent-coral;
+  color: $color-white;
+
+  box-shadow: 0 0.375rem 1rem rgba(241, 112, 122, 0.16);
+
+  &:hover {
+    background-color: $color-accent-coral-dark;
+  }
+}
+
+.small {
+  min-height: 2.7rem;
+  padding: 0.75rem 1.75rem;
+
+  font-size: 0.9rem;
+}
+
+.medium {
+  min-height: 3rem;
+  padding: 0.75rem 1.5rem;
+
+  font-size: 0.9rem;
+}
+
+.large {
+  min-height: 3.5rem;
+  padding: 0.875rem 1.75rem;
+
+  font-size: 0.9375rem;
+}
+
+.compact {
+  min-height: 2.625rem;
+  padding: 0.75rem 0.875rem;
+
+  font-size: 0.8125rem;
+}
+
+.language {
+  min-width: 3.5rem;
+  min-height: 2.625rem;
+  padding-inline: 0.875rem;
+
+  border-radius: 0.625rem;
+
+  background-color: transparent;
+  color: $color-text-body;
+
+  font-weight: 600;
+
+  box-shadow: none;
+
+  &:hover {
+    background-color: rgba(241, 112, 122, 0.08);
+  }
+}
+
+.icon {
+  flex: 0 0 auto;
+
+  width: 1.125rem;
+  height: 1.125rem;
+}
+
+@media (min-width: $bp-tablet) {
+  .medium {
+    min-height: 3.25rem;
+    padding-inline: 1.625rem;
+
+    font-size: 0.9375rem;
+  }
+
+  .large {
+    min-height: 3.5rem;
+    padding-inline: 1.875rem;
+
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: $bp-desktop) {
+  .medium {
+    min-height: 3.25rem;
+    padding-inline: 1.75rem;
+
+    font-size: 0.9375rem;
+  }
+
+  .large {
+    min-height: 3.5rem;
+    padding-inline: 2rem;
+
+    font-size: 1rem;
+  }
+
+  @media (min-width: $bp-desktop) {
+    .compact {
+      min-width: 2.75rem;
+      min-height: 2.25rem;
+
+      padding-inline: 0.625rem;
+
+      font-size: 0.75rem;
+    }
+  }
+
+  .language {
+    min-width: 2.75rem;
+    min-height: 2.25rem;
+
+    padding-inline: 0.625rem;
+
+    border-radius: 0.5rem;
+  }
+}

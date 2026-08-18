@@ -1,0 +1,76 @@
+.header {
+  display: none;
+}
+
+@media (min-width: 64rem) {
+  .header {
+    display: block;
+    background-color: $color-bg-header;
+    padding: 0 2.5rem;
+  }
+
+  .nav {
+    min-height: 5.5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .navLink {
+    display: inline-flex;
+    align-items: center;
+
+    color: $color-text-body;
+    font-weight: 500;
+    line-height: 1.2;
+    white-space: nowrap;
+
+    transition:
+      color 0.2s ease,
+      opacity 0.2s ease;
+
+    &:hover {
+      color: $color-accent-coral;
+    }
+
+    &:focus-visible {
+      outline: 0.125rem solid $color-accent-coral;
+      outline-offset: 0.25rem;
+    }
+  }
+
+  .active {
+    color: $color-accent-coral;
+    font-weight: 600;
+  }
+
+  .navListLeft,
+  .rightSide {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 3rem;
+    width: 45%;
+  }
+
+  .logoWrapper {
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 8.5rem;
+    height: 8.5rem;
+    border-radius: 50%;
+    background-color: $color-bg-header;
+    z-index: 2;
+  }
+
+  .logo {
+    width: 6rem;
+    height: auto;
+  }
+}
