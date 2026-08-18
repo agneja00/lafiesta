@@ -2,10 +2,10 @@ import styles from "./HeaderDesktop.module.scss";
 import { Link, useLocation, useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { FaPhoneAlt } from "react-icons/fa";
-import { navLinks } from "../../../constants/navLinks";
-import { LOGO_URL } from "../../../constants/media";
-import { PHONE_HREF } from "../../../constants/contact";
-import { buildTo, isLinkActive } from "../../../utils/navigation";
+import { navLinks } from "@/constants/navLinks";
+import { LOGO_URL } from "@/constants/media";
+import { PHONE_HREF } from "@/constants/contact";
+import { buildTo, isLinkActive } from "@/utils/navigation";
 import Button from "../../Button/Button";
 import LanguageSwitcher from "../../LanguageSwitcher/LanguageSwitcher";
 
