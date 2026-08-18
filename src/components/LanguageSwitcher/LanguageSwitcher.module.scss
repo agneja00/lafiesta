@@ -1,6 +1,5 @@
 .switcher {
-  display: inline-flex;
-  align-items: center;
+  @include flexInlineCenter;
 
   padding: 0.125rem;
 

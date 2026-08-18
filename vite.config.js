@@ -5,13 +5,11 @@ import { fileURLToPath } from "url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-const variablesPath = path
-  .resolve(__dirname, "src/styles/variables")
-  .replace(/\\/g, "/");
+const variablesPath = path.resolve(__dirname, "src/styles/variables").replace(/\\/g, "/");
 
-const typographyPath = path
-  .resolve(__dirname, "src/styles/typography")
-  .replace(/\\/g, "/");
+const typographyPath = path.resolve(__dirname, "src/styles/typography").replace(/\\/g, "/");
+
+const mixinsPath = path.resolve(__dirname, "src/styles/mixins").replace(/\\/g, "/");
 
 export default defineConfig({
   plugins: [react()],
@@ -31,6 +29,7 @@ export default defineConfig({
         additionalData: `
           @use "${variablesPath}" as *;
           @use "${typographyPath}" as *;
+          @use "${mixinsPath}" as *;
         `,
       },
     },
