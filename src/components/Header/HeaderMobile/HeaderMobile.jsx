@@ -7,7 +7,6 @@ import { navLinks } from "@/constants/navLinks";
 import { LOGO_URL } from "@/constants/media";
 import { PHONE_HREF, INSTAGRAM_URL } from "@/constants/contact";
 import { buildTo, isLinkActive } from "@/utils/navigation";
-
 import Button from "../../Button/Button";
 import LanguageSwitcher from "../../LanguageSwitcher/LanguageSwitcher";
 
@@ -101,7 +100,7 @@ const HeaderMobile = () => {
           </div>
 
           <div className={styles.language}>
-            <LanguageSwitcher />
+            <LanguageSwitcher onChange={() => setMenuOpen(false)} />
           </div>
         </div>
       )}

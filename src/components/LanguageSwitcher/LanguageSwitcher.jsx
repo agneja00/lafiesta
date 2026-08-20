@@ -1,16 +1,22 @@
 import styles from "./LanguageSwitcher.module.scss";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams, useLocation } from "react-router-dom";
 import { SUPPORTED_LANGUAGES } from "../../constants/routes";
 import Button from "../Button/Button";
 
-const LanguageSwitcher = ({ className = "" }) => {
+const LanguageSwitcher = ({ className = "", onChange }) => {
   const navigate = useNavigate();
+  const location = useLocation();
   const { lang } = useParams();
 
   const changeLanguage = (code) => {
     if (code === lang) return;
 
-    navigate(window.location.pathname.replace(`/${lang}`, `/${code}`));
+    navigate({
+      pathname: location.pathname.replace(`/${lang}`, `/${code}`),
+      hash: location.hash,
+    });
+
+    onChange?.();
   };
 
   return (
