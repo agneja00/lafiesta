@@ -1,0 +1,61 @@
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.outlined {
+  gap: 1rem;
+
+  > li {
+    flex: 1 1 calc(50% - 0.5rem);
+    min-width: 0;
+  }
+}
+
+.divided {
+  gap: 1.5rem 0;
+
+  > li {
+    flex: 1 1 50%;
+    min-width: 0;
+  }
+}
+
+@media (min-width: $bp-tablet) {
+  .outlined {
+    gap: 1rem;
+
+    > li {
+      flex: 1 1 calc(33.333% - 0.667rem);
+    }
+  }
+
+  .divided {
+    gap: 0;
+
+    > li {
+      flex: 1 1 25%;
+    }
+  }
+}
+
+@media (min-width: $bp-desktop) {
+  .outlined {
+    gap: 0.75rem;
+
+    > li {
+      flex: 1 1 20%;
+    }
+  }
+
+  .divided {
+    > li {
+      flex: 1 1 25%;
+    }
+
+    > li:not(:last-child) {
+      border-right: 0.0625rem solid rgba(241, 112, 122, 0.25);
+    }
+  }
+}
