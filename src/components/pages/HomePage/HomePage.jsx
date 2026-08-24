@@ -1,6 +1,7 @@
 import Hero from "@/components/Hero/Hero";
 import { ROUTES } from "@/constants/routes";
 import { useTranslation } from "react-i18next";
+import WhatWeCreate from "@/components/sections/WhatWeCreate/WhatWeCreate";
 
 const HomePage = () => {
   const { t } = useTranslation();
@@ -12,6 +13,7 @@ const HomePage = () => {
         buttonText={t("hero.cta")}
         buttonTo={ROUTES.GALLERY}
       />
+      <WhatWeCreate />
     </>
   );
 };
