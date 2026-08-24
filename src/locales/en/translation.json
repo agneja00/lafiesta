@@ -11,5 +11,47 @@
     "title": "Gifts that say more.",
     "description": "Flowers and surprises for life's special moments.",
     "cta": "View our work"
+  },
+  "whatWeCreate": {
+    "title": "What can we create for you?"
+  },
+  "createCards": {
+    "flowers": {
+      "title": "Flowers",
+      "description": "Bouquets and floral arrangements for every occasion."
+    },
+    "gifts": {
+      "title": "Gifts",
+      "description": "Thoughtful gifts and original sets for your loved ones."
+    },
+    "balloons": {
+      "title": "Balloons",
+      "description": "Festive balloons for your special occasions."
+    },
+    "sweetGifts": {
+      "title": "Sweet Gifts",
+      "description": "Sweet surprises created to bring a little more joy."
+    }
+  },
+  "whyLaFiesta": {
+    "title": "Why choose La Fiesta?"
+  },
+  "reasons": {
+    "personal": {
+      "title": "Every detail made with love",
+      "description": "We create every order with the same care we would give to our own loved ones."
+    },
+    "individual": {
+      "title": "Personalized orders",
+      "description": "Every order is tailored to your wishes and special occasion."
+    },
+    "fresh": {
+      "title": "Fresh, quality flowers",
+      "description": "We choose fresh flowers and carefully selected materials."
+    },
+    "choice": {
+      "title": "Wide selection",
+      "description": "Flowers, gifts and surprises – all in one place."
+    }
   }
 }

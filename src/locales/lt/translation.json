@@ -11,5 +11,48 @@
     "title": "Dovanos, kurios pasako daugiau.",
     "description": "Gėlės ir staigmenos ypatingoms gyvenimo akimirkoms.",
     "cta": "Peržiūrėti mūsų darbus"
+  },
+
+  "whatWeCreate": {
+    "title": "Ką galime jums sukurti?"
+  },
+  "createCards": {
+    "flowers": {
+      "title": "Gėlės",
+      "description": "Puokštės ir kompozicijos kiekvienai progai."
+    },
+    "gifts": {
+      "title": "Dovanos",
+      "description": "Dovanos ir originalūs rinkiniai artimiems žmonėms."
+    },
+    "balloons": {
+      "title": "Balionai",
+      "description": "Šventiniai balionai jūsų ypatingoms progoms."
+    },
+    "sweetGifts": {
+      "title": "Saldžios dovanos",
+      "description": "Saldžios staigmenos, sukurtos pradžiuginti."
+    }
+  },
+  "whyLaFiesta": {
+    "title": "Kodėl rinktis La Fiesta?"
+  },
+  "reasons": {
+    "personal": {
+      "title": "Kiekviena detalė su meile",
+      "description": "Kuriame nuoširdžiai, tarsi sau ar artimam žmogui."
+    },
+    "individual": {
+      "title": "Individualūs užsakymai",
+      "description": "Kiekvienas užsakymas pritaikytas jūsų norams ir progai."
+    },
+    "fresh": {
+      "title": "Šviežios ir kokybiškos gėlės",
+      "description": "Renkamės šviežias gėles ir kruopščiai atrinktas medžiagas."
+    },
+    "choice": {
+      "title": "Platus pasirinkimas",
+      "description": "Gėlės, dovanos ir staigmenos – viskas vienoje vietoje."
+    }
   }
 }
