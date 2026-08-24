@@ -1,10 +1,8 @@
 import styles from "./Card.module.scss";
 
-const Card = ({ icon, title, description, variant = "outlined", className = "" }) => {
-  const classes = [styles.card, styles[variant], className].filter(Boolean).join(" ");
-
+const Card = ({ icon, title, description, variant = "outlined" }) => {
   return (
-    <li className={classes}>
+    <li className={`${styles.card} ${styles[variant]}`}>
       <img src={icon} alt="" aria-hidden="true" className={styles.icon} />
 
       <h3 className={styles.title}>{title}</h3>
