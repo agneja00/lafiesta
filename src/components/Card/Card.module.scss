@@ -1,5 +1,6 @@
 .card {
   @include flexColumn;
+
   align-items: center;
   width: 100%;
   text-align: center;
@@ -32,10 +33,18 @@
 .outlined {
   padding: 1rem 0.75rem;
 
-  border: 0.0625rem solid $color-border-light;
-  border-radius: $radius-card;
+  border: 0.0625rem solid rgba(241, 112, 122, 0.12);
+  border-radius: 1rem;
 
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.65);
+
+  box-shadow:
+    0 0.25rem 1rem rgba(241, 112, 122, 0.06),
+    0 0 0 0.0625rem rgba(255, 255, 255, 0.45);
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .divided {
@@ -55,5 +64,10 @@
 
   .description {
     font-size: 0.8125rem;
+  }
+
+  .outlined {
+    padding: 1.25rem 1rem;
+    border-radius: 1.125rem;
   }
 }
