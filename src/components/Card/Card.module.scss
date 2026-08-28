@@ -16,16 +16,15 @@
 .title {
   margin-top: 0.75rem;
   font-family: $font-heading;
-  font-size: 1.125rem;
+  font-size: 1.35rem;
   font-weight: 600;
   line-height: 1.2;
   color: $color-text-body;
 }
 
 .description {
-  max-width: 12rem;
   margin-top: 0.5rem;
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   line-height: 1.5;
   color: $color-text-body;
 }
@@ -59,15 +58,16 @@
   }
 
   .title {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
   }
 
   .description {
-    font-size: 0.8125rem;
+    font-size: 0.9rem;
+    max-width: 15rem;
   }
 
   .outlined {
-    padding: 1.25rem 1rem;
+    padding: 1.25rem;
     border-radius: 1.125rem;
   }
 }
