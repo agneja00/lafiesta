@@ -9,7 +9,7 @@ export const HERO_DESKTOP = `${CLOUDINARY_BASE}/f_auto,q_auto/hero_desktop_xhnwv
 export const ICONS = {
   section1: {
     card1: `${CLOUDINARY_BASE}/f_auto,q_auto,w_160/s1flower_dmzicu`,
-    card2: `${CLOUDINARY_BASE}/f_auto,q_auto,w_160/s1gift_scj9g5`,
+    card2: `${CLOUDINARY_BASE}/f_auto,q_auto/s1gift_scj9g5.png`,
     card3: `${CLOUDINARY_BASE}/f_auto,q_auto,w_160/s1balloon_yfnjj9`,
     card4: `${CLOUDINARY_BASE}/f_auto,q_auto,w_160/s1candy_rjhnux`,
   },
