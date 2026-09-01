@@ -1,0 +1,34 @@
+.section {
+  padding: 4rem 1.5rem;
+  background-color: $color-bg-page;
+}
+
+.container {
+  width: min(100%, 75rem);
+  margin: 0 auto;
+}
+
+.title {
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+@media (min-width: $bp-tablet) {
+  .section {
+    padding: 5rem 2.5rem;
+  }
+
+  .title {
+    margin-bottom: 3rem;
+  }
+}
+
+@media (min-width: $bp-desktop) {
+  .section {
+    padding: 6rem 4rem;
+  }
+
+  .title {
+    margin-bottom: 3.5rem;
+  }
+}
