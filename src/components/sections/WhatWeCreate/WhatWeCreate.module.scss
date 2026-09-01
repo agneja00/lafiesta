@@ -8,27 +8,14 @@
   margin: 0 auto;
 }
 
-.title {
-  margin-bottom: 2rem;
-  text-align: center;
-}
-
 @media (min-width: $bp-tablet) {
   .section {
     padding: 3rem 2.5rem;
-  }
-
-  .title {
-    margin-bottom: 2.5rem;
   }
 }
 
 @media (min-width: $bp-desktop) {
   .section {
     padding: 4rem;
-  }
-
-  .title {
-    margin-bottom: 3rem;
   }
 }

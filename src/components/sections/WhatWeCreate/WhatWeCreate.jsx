@@ -1,7 +1,8 @@
-import { useTranslation } from "react-i18next";
 import styles from "./WhatWeCreate.module.scss";
+import { useTranslation } from "react-i18next";
 import CardList from "@/components/CardList/CardList";
 import { HOME_CREATE_CARDS } from "@/constants/homeCards";
+import SectionTitle from "@/components/SectionTitle/SectionTitle";
 
 const WhatWeCreate = () => {
   const { t } = useTranslation();
@@ -9,7 +10,7 @@ const WhatWeCreate = () => {
   return (
     <section className={styles.section}>
       <div className={styles.container}>
-        <h2 className={styles.title}>{t("whatWeCreate.title")}</h2>
+        <SectionTitle>{t("whatWeCreate.title")}</SectionTitle>
 
         <CardList items={HOME_CREATE_CARDS} variant="outlined" />
       </div>
