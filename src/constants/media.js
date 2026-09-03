@@ -5,6 +5,7 @@ const CLOUDINARY_BASE = `https://res.cloudinary.com/${CLOUD_NAME}/image/upload`;
 export const LOGO_URL = `${CLOUDINARY_BASE}/f_auto,q_auto,w_160/logoo_aoovzs`;
 export const HERO_URL = `${CLOUDINARY_BASE}/f_auto,q_auto/heroo_wqvkfe`;
 export const HERO_DESKTOP = `${CLOUDINARY_BASE}/f_auto,q_auto/hero_desktop_xhnwvj`;
+export const FLOWERS_DECORATION = `${CLOUDINARY_BASE}/f_auto,q_auto/flowers_decoration_wbqyup`;
 
 export const ICONS = {
   section1: {
