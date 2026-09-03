@@ -1,5 +1,6 @@
 .card {
   @include flexColumnAlignCenter;
+
   width: 100%;
   text-align: center;
 }
@@ -13,6 +14,7 @@
 
 .title {
   margin-top: 0.75rem;
+
   font-family: $font-heading;
   font-size: 1.35rem;
   font-weight: 600;
@@ -22,6 +24,7 @@
 
 .description {
   margin-top: 0.5rem;
+
   font-size: 0.8rem;
   line-height: 1.5;
   color: $color-text-body;
@@ -49,6 +52,10 @@
   padding-inline: 0.75rem;
 }
 
+.step {
+  padding-inline: 0.5rem;
+}
+
 @media (min-width: $bp-tablet) {
   .icon {
     width: 5.5rem;
@@ -60,12 +67,16 @@
   }
 
   .description {
-    font-size: 0.9rem;
     max-width: 15rem;
+    font-size: 0.9rem;
   }
 
   .outlined {
     padding: 1.25rem;
     border-radius: 1.125rem;
+  }
+
+  .step {
+    padding-inline: 0.75rem;
   }
 }
