@@ -76,3 +76,20 @@
   color: $color-accent-coral;
   font-weight: 600;
 }
+
+@mixin sectionPadding {
+  padding: 4rem 1.5rem;
+
+  @include tablet() {
+    padding: 3rem 2.5rem;
+  }
+
+  @include desktop() {
+    padding: 4rem;
+  }
+}
+
+@mixin container {
+  width: min(100%, 75rem);
+  margin: 0 auto;
+}
