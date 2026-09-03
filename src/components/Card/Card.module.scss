@@ -1,7 +1,5 @@
 .card {
-  @include flexColumn;
-
-  align-items: center;
+  @include flexColumnAlignCenter;
   width: 100%;
   text-align: center;
 }

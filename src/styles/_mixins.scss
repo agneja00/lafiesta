@@ -23,6 +23,11 @@
   flex-direction: column;
 }
 
+@mixin flexColumnAlignCenter {
+  @include flexColumn;
+  align-items: center;
+}
+
 @mixin flexCenter {
   display: flex;
   align-items: center;

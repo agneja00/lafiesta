@@ -1,14 +1,12 @@
 .wrapper {
-  @include flexColumn;
-  align-items: center;
+  @include flexColumnAlignCenter;
   gap: 0.8rem;
   width: 100%;
   margin-bottom: 2rem;
 }
 
 .decoration {
-  display: flex;
-  align-items: center;
+  @include flexCenter;
   width: min(80%, 12rem);
 
   &::before,
@@ -21,9 +19,7 @@
 }
 
 .heart {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flexRowCenter;
   flex: 0 0 auto;
   margin: 0 0.625rem;
   color: $color-accent-coral;
