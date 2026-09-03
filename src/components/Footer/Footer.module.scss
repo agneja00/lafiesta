@@ -1,0 +1,144 @@
+.footer {
+  background-color: $color-bg-header;
+  color: $color-text-body;
+}
+
+.container {
+  @include flexColumn;
+  align-items: center;
+  gap: 2.25rem;
+  padding: 2rem 1.5rem;
+  width: 100%;
+}
+
+.brand {
+  @include flexColumn;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.logoLink {
+  display: inline-flex;
+}
+
+.logo {
+  display: block;
+  width: 7rem;
+  height: auto;
+}
+
+.tagline {
+  max-width: 12rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.contact {
+  @include flexRowCenter;
+  gap: 1.5rem;
+  width: 100%;
+  padding-top: 1.5rem;
+  border-top: 0.0625rem solid $color-border-light;
+}
+
+.contactLink {
+  @include flexInlineCenter;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  transition: color 0.2s ease;
+
+  svg {
+    flex: 0 0 auto;
+    width: 1.2rem;
+    height: 1.2rem;
+    color: $color-accent-coral;
+  }
+
+  &:hover {
+    color: $color-accent-coral;
+  }
+
+  &:focus-visible {
+    outline: 0.125rem solid $color-accent-coral;
+    outline-offset: 0.25rem;
+  }
+}
+
+.cta {
+  @include flexColumn;
+  align-items: center;
+  gap: 0.5rem;
+  max-width: 18rem;
+  text-align: center;
+}
+
+.heart {
+  display: block;
+  color: $color-accent-coral;
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+.ctaTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.ctaDescription {
+  max-width: 17rem;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.bottom {
+  width: 100%;
+  padding: 1.5rem 0;
+  border-top: 0.0625rem solid $color-border-light;
+  text-align: center;
+}
+
+.bottomText {
+  font-size: 0.8rem;
+  line-height: 1.4;
+  color: $color-text-muted;
+}
+
+@media (min-width: $bp-desktop) {
+  .container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2rem 3.5rem 0.75rem;
+  }
+
+  .tagline {
+    font-size: 1rem;
+  }
+
+  .ctaTitle {
+    font-size: 1.6rem;
+  }
+  .ctaDescription {
+    font-size: 0.95rem;
+  }
+
+  .contact {
+    flex-direction: column;
+    gap: 0.875rem;
+    width: auto;
+    border-top: 0;
+  }
+
+  .contactLink {
+    font-size: 1rem;
+  }
+
+  .bottom {
+    font-size: 0.9rem;
+    margin-top: 2rem;
+  }
+}

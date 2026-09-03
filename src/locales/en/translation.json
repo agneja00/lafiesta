@@ -53,5 +53,13 @@
       "title": "Wide selection",
       "description": "Flowers, gifts and surprises – all in one place."
     }
+  },
+  "footer": {
+    "tagline": "We create gifts that are remembered.",
+    "cta": {
+      "title": "We’re waiting for you!",
+      "description": "Come visit us and find the perfect gift."
+    },
+    "rights": "All rights reserved."
   }
 }

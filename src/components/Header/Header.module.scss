@@ -1,8 +1,3 @@
-.header {
-  position: relative;
-  z-index: 1000;
-}
-
 .mobileHeader {
   display: block;
 }
@@ -11,7 +6,7 @@
   display: none;
 }
 
-@media (min-width: 48rem) {
+@media (min-width: $bp-desktop) {
   .mobileHeader {
     display: none;
   }

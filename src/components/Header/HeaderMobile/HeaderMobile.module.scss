@@ -64,11 +64,6 @@
   background-color: $color-white;
 }
 
-.navList {
-  @include flexColumn;
-  width: 100%;
-}
-
 .contact {
   @include flexCenter;
   gap: 2rem;

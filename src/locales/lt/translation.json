@@ -54,5 +54,13 @@
       "title": "Platus pasirinkimas",
       "description": "Gėlės, dovanos ir staigmenos – viskas vienoje vietoje."
     }
+  },
+  "footer": {
+    "tagline": "Kuriame dovanas, kurios įsimena.",
+    "cta": {
+      "title": "Laukiame jūsų!",
+      "description": "Ateikite pas mus ir išsirinkite tobulą dovaną."
+    },
+    "rights": "Visos teisės apsaugotos."
   }
 }

@@ -61,7 +61,7 @@ const HeaderMobile = () => {
       {menuOpen && (
         <div className={styles.menu}>
           <nav aria-label="Main navigation">
-            <NavigationLinks showIcons onLinkClick={handleClose} className={styles.navList} />
+            <NavigationLinks variant="mobile" showIcons onLinkClick={handleClose} />
           </nav>
 
           <div className={styles.contact}>

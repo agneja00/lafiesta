@@ -4,13 +4,18 @@ import { useTranslation } from "react-i18next";
 import { navLinks } from "@/constants/navLinks";
 import { buildTo, isLinkActive } from "@/utils/navigation";
 
-const NavigationLinks = ({ links = navLinks, showIcons = false, onLinkClick, className = "" }) => {
+const NavigationLinks = ({
+  links = navLinks,
+  variant = "mobile",
+  showIcons = false,
+  onLinkClick,
+}) => {
   const { lang } = useParams();
   const location = useLocation();
   const { t } = useTranslation();
 
   return (
-    <ul className={`${styles.list} ${className}`.trim()}>
+    <ul className={styles[variant]}>
       {links.map((link) => {
         const Icon = link.icon;
         const active = isLinkActive(link, location, lang);

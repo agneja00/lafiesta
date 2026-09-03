@@ -2,7 +2,7 @@
   display: none;
 }
 
-@media (min-width: 64rem) {
+@media (min-width: $bp-desktop) {
   .header {
     display: block;
     background-color: $color-bg-header;
@@ -11,16 +11,14 @@
 
   .nav {
     min-height: 5.5rem;
-
     @include flexCenter;
     justify-content: space-between;
   }
 
-  .navListLeft,
   .rightSide {
     @include flexCenter;
     justify-content: space-evenly;
-    gap: 3rem;
+    gap: 1.5rem;
     width: 45%;
   }
 
@@ -34,6 +32,7 @@
     height: 8.5rem;
     border-radius: 50%;
     background-color: $color-bg-header;
+
     z-index: 2;
   }
 

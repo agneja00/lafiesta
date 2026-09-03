@@ -19,14 +19,14 @@ const HeaderDesktop = () => {
   return (
     <header className={styles.header}>
       <nav className={styles.nav} aria-label="Main navigation">
-        <NavigationLinks links={leftLinks} className={styles.navListLeft} />
+        <NavigationLinks links={leftLinks} variant="desktopLeft" />
 
         <Link to={`/${lang}`} className={styles.logoWrapper} aria-label="La Fiesta — Home">
           <img src={LOGO_URL} alt="La Fiesta Logo" className={styles.logo} />
         </Link>
 
         <div className={styles.rightSide}>
-          <NavigationLinks links={rightLinks} className={styles.navListRight} />
+          <NavigationLinks links={rightLinks} variant="desktopRight" />
 
           <LanguageSwitcher className={styles.desktopLanguageSwitcher} />
 
