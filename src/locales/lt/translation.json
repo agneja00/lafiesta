@@ -81,5 +81,14 @@
       "description": "Ateikite pas mus ir išsirinkite tobulą dovaną."
     },
     "rights": "Visos teisės apsaugotos."
+  },
+  "contacts": {
+    "title": "Apsilankykite pas mus",
+    "description": "Kviečiame gyvai atvykti, apžiūrėti mūsų darbų, pasikonsultuoti ir išsirinkti tobulą dovaną!",
+    "addressLabel": "Adresas:",
+    "hoursLabel": "Darbo laikas:",
+    "mapTitle": "La Fiesta žemėlapyje",
+    "openGoogleMaps": "Atidaryti Google Maps",
+    "openWaze": "Atidaryti Waze"
   }
 }

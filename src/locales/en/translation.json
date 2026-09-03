@@ -80,5 +80,14 @@
       "description": "Come visit us and find the perfect gift."
     },
     "rights": "All rights reserved."
+  },
+  "contacts": {
+    "title": "Visit us",
+    "description": "Come see us in person — take a look at our work, get advice, and pick out the perfect gift!",
+    "addressLabel": "Address:",
+    "hoursLabel": "Opening hours:",
+    "mapTitle": "La Fiesta on the map",
+    "openGoogleMaps": "Open Google Maps",
+    "openWaze": "Open Waze"
   }
 }

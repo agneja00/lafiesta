@@ -11,7 +11,6 @@
   font-family: $font-body;
   font-weight: 600;
   line-height: 1;
-  text-decoration: none;
   white-space: nowrap;
 
   transition:
@@ -98,6 +97,19 @@
 
   width: 1.125rem;
   height: 1.125rem;
+}
+
+.outline {
+  background-color: $color-white;
+  color: $color-text-heading;
+  border: 0.0625rem solid rgba($color-accent-coral, 0.3);
+
+  box-shadow: none;
+
+  &:hover {
+    border-color: $color-accent-coral;
+    background-color: rgba($color-accent-coral, 0.06);
+  }
 }
 
 @media (min-width: $bp-tablet) {

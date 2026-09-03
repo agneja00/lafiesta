@@ -1,0 +1,194 @@
+.section {
+  position: relative;
+  padding: 2rem 1.5rem;
+  background-color: $color-bg-section-alt;
+}
+
+.card {
+  position: relative;
+  overflow: visible;
+  @include flexColumn;
+  gap: 1.75rem;
+  padding: 2.5rem;
+  border-radius: 1.25rem;
+  background-color: $color-bg-hero-blur;
+  margin: 0 auto;
+}
+
+.bleedImage {
+  display: none;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  @include flexColumn;
+  justify-content: flex-end;
+  gap: 2rem;
+}
+
+.title {
+  @include flexCenter;
+  gap: 0.5rem;
+  font-size: 2.05rem;
+}
+
+.description {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: $color-text-body;
+  max-width: 25rem;
+}
+
+.infoList {
+  @include flexColumn;
+  gap: 1.5rem;
+}
+
+.infoItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.625rem;
+}
+
+.infoIcon {
+  flex-shrink: 0;
+  margin-top: 0.125rem;
+  color: $color-accent-coral;
+}
+
+.infoLabel {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: $color-text-heading;
+}
+
+.infoValue {
+  display: block;
+  margin-top: 0.125rem;
+  font-size: 0.875rem;
+}
+
+.hoursTable {
+  margin-top: 0.375rem;
+}
+
+.hoursRow {
+  display: flex;
+  font-size: 0.875rem;
+  padding: 0.125rem 0;
+
+  dt {
+    flex: 0 0 2.5rem;
+    font-weight: 600;
+    color: $color-text-heading;
+  }
+}
+
+.mapBlock {
+  @include flexColumn;
+  gap: 1rem;
+}
+
+.mapFrame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 0.875rem;
+  overflow: hidden;
+
+  iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+}
+
+.mapButtons {
+  @include flexColumn;
+  gap: 0.625rem;
+}
+
+.mapButton {
+  @include flexInlineCenter;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  border: 0.0625rem solid rgba($color-accent-coral, 0.3);
+  border-radius: $radius-button;
+  background-color: $color-white;
+  color: $color-text-heading;
+  font-size: 0.875rem;
+  font-weight: 600;
+  white-space: nowrap;
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease;
+
+  &:hover,
+  &:focus-visible {
+    border-color: $color-accent-coral;
+    background-color: rgba($color-accent-coral, 0.06);
+  }
+}
+
+@media (min-width: $bp-tablet) {
+  .bleedImage {
+    display: block;
+    position: absolute;
+    left: -4rem;
+    bottom: 5rem;
+    width: 9rem;
+    height: auto;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .content {
+    margin-left: 22.5rem;
+  }
+
+  .mapFrame {
+    aspect-ratio: 16 / 9;
+  }
+
+  .mapButtons {
+    flex-direction: row;
+  }
+
+  .mapButton {
+    flex: 1 1 0;
+  }
+}
+
+@media (min-width: $bp-desktop) {
+  .card {
+    flex-direction: row;
+    align-items: stretch;
+    gap: 2.5rem;
+    width: 100%;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .bleedImage {
+    left: -12rem;
+    bottom: 5rem;
+    width: 35rem;
+  }
+
+  .content {
+    flex: 1 1 0;
+    justify-content: center;
+  }
+
+  .mapBlock {
+    flex: 1.4 1 0;
+    min-width: 10rem;
+  }
+}
