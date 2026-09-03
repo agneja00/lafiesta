@@ -55,6 +55,25 @@
       "description": "Gėlės, dovanos ir staigmenos – viskas vienoje vietoje."
     }
   },
+  "orderSteps": {
+    "title": "Kaip užsisakyti?",
+    "choose": {
+      "title": "Išsirenkate dovaną",
+      "description": "Peržiūrėkite mūsų darbų pavyzdžius arba susisiekite, kad padėtume išsirinkti."
+    },
+    "contact": {
+      "title": "Susisiekiate su mumis",
+      "description": "Parašykite arba paskambinkite telefonu / socialiniuose tinkluose, aptarsime jūsų norus."
+    },
+    "create": {
+      "title": "Mes paruošiame dovaną",
+      "description": "Sukursime jūsų dovaną su meile, atsižvelgdami į visas detales."
+    },
+    "pickup": {
+      "title": "Atsiimate vietoje",
+      "description": "Užsakymą atsiimsite mūsų parduotuvėje. Prekės nepristatomos."
+    }
+  },
   "footer": {
     "tagline": "Kuriame dovanas, kurios įsimena.",
     "cta": {

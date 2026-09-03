@@ -54,6 +54,25 @@
       "description": "Flowers, gifts and surprises – all in one place."
     }
   },
+  "orderSteps": {
+    "title": "How to order?",
+    "choose": {
+      "title": "Choose your gift",
+      "description": "Browse our work or get in touch and we’ll help you choose."
+    },
+    "contact": {
+      "title": "Get in touch",
+      "description": "Message or call us by phone or on social media, and we’ll discuss your wishes."
+    },
+    "create": {
+      "title": "We prepare your gift",
+      "description": "We’ll create your gift with care, paying attention to every detail."
+    },
+    "pickup": {
+      "title": "Pick it up in store",
+      "description": "Your order can be picked up at our store. Delivery is not available."
+    }
+  },
   "footer": {
     "tagline": "We create gifts that are remembered.",
     "cta": {

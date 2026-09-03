@@ -59,3 +59,30 @@ export const HOME_REASONS = [
     descriptionKey: "reasons.choice.description",
   },
 ];
+
+export const ORDER_STEPS = [
+  {
+    id: "choose",
+    icon: ICONS.section3.card1,
+    titleKey: "home.orderSteps.choose.title",
+    descriptionKey: "home.orderSteps.choose.description",
+  },
+  {
+    id: "contact",
+    icon: ICONS.section3.card2,
+    titleKey: "home.orderSteps.contact.title",
+    descriptionKey: "home.orderSteps.contact.description",
+  },
+  {
+    id: "order",
+    icon: ICONS.section3.card3,
+    titleKey: "home.orderSteps.order.title",
+    descriptionKey: "home.orderSteps.order.description",
+  },
+  {
+    id: "pickup",
+    icon: ICONS.section3.card4,
+    titleKey: "home.orderSteps.pickup.title",
+    descriptionKey: "home.orderSteps.pickup.description",
+  },
+];
