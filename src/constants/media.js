@@ -20,4 +20,10 @@ export const ICONS = {
     card3: `${CLOUDINARY_BASE}/f_auto,q_auto,w_160/s2fresh_pimwcj`,
     card4: `${CLOUDINARY_BASE}/f_auto,q_auto,w_160/s2gift_m7bfof`,
   },
+  section3: {
+    card1: `${CLOUDINARY_BASE}/f_auto,q_auto,w_160/s3n1_xt0xz6`,
+    card2: `${CLOUDINARY_BASE}/f_auto,q_auto,w_160/s3n2_lfi4sh`,
+    card3: `${CLOUDINARY_BASE}/f_auto,q_auto,w_160/s3n3_ra4siu`,
+    card4: `${CLOUDINARY_BASE}/f_auto,q_auto,w_160/s3n4_imeb0x`,
+  },
 };
