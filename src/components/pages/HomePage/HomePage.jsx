@@ -3,6 +3,7 @@ import { ROUTES } from "@/constants/routes";
 import { useTranslation } from "react-i18next";
 import WhatWeCreate from "@/components/sections/WhatWeCreate/WhatWeCreate";
 import WhyLaFiesta from "@/components/sections/WhyLaFiesta/WhyLaFiesta";
+import HowToOrder from "@/components/sections/HowToOrder/HowToOrder";
 
 const HomePage = () => {
   const { t } = useTranslation();
@@ -16,6 +17,7 @@ const HomePage = () => {
       />
       <WhatWeCreate />
       <WhyLaFiesta />
+      <HowToOrder />
     </>
   );
 };
