@@ -69,30 +69,6 @@
   width: 100%;
 }
 
-.navLink {
-  @include flexCenter;
-  padding: 0.5rem 0;
-  color: $color-text-body;
-  @include mobileNavLinkAndSocial;
-}
-
-.navLinkLeft {
-  @include flexCenter;
-  gap: 1.25rem;
-}
-
-.navIcon {
-  flex: 0 0 auto;
-  width: 1.75rem;
-  height: 1.75rem;
-
-  color: $color-accent-coral;
-}
-
-.active {
-  @include activeLink;
-}
-
 .contact {
   @include flexCenter;
   gap: 2rem;

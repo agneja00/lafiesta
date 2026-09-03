@@ -1,0 +1,17 @@
+.link {
+  @include flexInlineCenter;
+  gap: 1rem;
+  @include mobileNavLinkAndSocial;
+  white-space: nowrap;
+  padding: 0.5rem 0;
+}
+
+.active {
+  @include activeLink;
+}
+
+@media (min-width: $bp-desktop) {
+  .link {
+    font-size: 1rem;
+  }
+}

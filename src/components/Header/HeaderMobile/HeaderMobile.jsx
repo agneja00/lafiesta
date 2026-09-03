@@ -1,21 +1,19 @@
 import styles from "./HeaderMobile.module.scss";
 import { useEffect, useState } from "react";
-import { Link, useLocation, useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { FaBars, FaTimes, FaPhoneAlt, FaInstagram } from "react-icons/fa";
-import { navLinks } from "@/constants/navLinks";
 import { LOGO_URL } from "@/constants/media";
 import { PHONE_HREF, INSTAGRAM_URL } from "@/constants/contact";
-import { buildTo, isLinkActive } from "@/utils/navigation";
 import Button from "../../Button/Button";
 import LanguageSwitcher from "../../LanguageSwitcher/LanguageSwitcher";
+import NavigationLinks from "../../NavigationLinks/NavigationLinks";
 
 const DESKTOP_BREAKPOINT = 1024;
 
 const HeaderMobile = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const { lang } = useParams();
-  const location = useLocation();
   const { t } = useTranslation();
 
   useEffect(() => {
@@ -62,25 +60,8 @@ const HeaderMobile = () => {
 
       {menuOpen && (
         <div className={styles.menu}>
-          <nav className={styles.navList}>
-            {navLinks.map((link) => {
-              const Icon = link.icon;
-              const active = isLinkActive(link, location, lang);
-
-              return (
-                <Link
-                  key={`${link.to}${link.hash || ""}`}
-                  to={buildTo(link, lang)}
-                  className={`${styles.navLink} ${active ? styles.active : ""}`}
-                  onClick={handleClose}
-                >
-                  <span className={styles.navLinkLeft}>
-                    {Icon && <Icon className={styles.navIcon} fontSize={25} />}
-                    <span>{t(link.label)}</span>
-                  </span>
-                </Link>
-              );
-            })}
+          <nav aria-label="Main navigation">
+            <NavigationLinks showIcons onLinkClick={handleClose} className={styles.navList} />
           </nav>
 
           <div className={styles.contact}>
