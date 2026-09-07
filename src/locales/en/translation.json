@@ -33,6 +33,26 @@
       "description": "Sweet surprises created to bring a little more joy."
     }
   },
+  "galleryPreview": {
+    "title": "Our Work",
+    "subtitle": "Take a look at some of the gifts and festive arrangements we've created.",
+    "viewAll": "View full gallery",
+
+    "images": {
+      "36": "Flower arrangement in a clear balloon",
+      "51": "Colorful gift arrangement",
+      "56": "Festive balloon arrangement",
+      "11": "Colorful flower bouquet",
+      "34": "Pink teddy bear with a festive arrangement",
+      "38": "Red rose arrangement",
+      "17": "Colorful flower and gift arrangement",
+      "49": "Colorful festive bouquet",
+      "54": "Flower and gift arrangement",
+      "57": "Personalized balloon gift",
+      "60": "Colorful flower arrangements",
+      "41": "Flower and sweet gift arrangement"
+    }
+  },
   "whyLaFiesta": {
     "title": "Why choose La Fiesta?"
   },

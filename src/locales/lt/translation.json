@@ -34,6 +34,26 @@
       "description": "Saldžios staigmenos, sukurtos pradžiuginti."
     }
   },
+  "galleryPreview": {
+    "title": "Mūsų darbai",
+    "subtitle": "Atrinkome keletą mūsų sukurtų dovanų ir šventinių kompozicijų.",
+    "viewAll": "Peržiūrėti visą galeriją",
+
+    "images": {
+      "36": "Gėlių kompozicija skaidriame burbule",
+      "51": "Spalvinga dovanų kompozicija",
+      "56": "Šventinė balionų kompozicija",
+      "11": "Spalvinga gėlių puokštė",
+      "34": "Rožinis meškiukas su šventine kompozicija",
+      "38": "Raudonų rožių kompozicija",
+      "17": "Spalvinga gėlių ir dovanų kompozicija",
+      "49": "Spalvinga šventinė puokštė",
+      "54": "Gėlių ir dovanų kompozicija",
+      "57": "Personalizuota balionų dovana",
+      "60": "Spalvingos gėlių kompozicijos",
+      "41": "Gėlių ir saldžių dovanų kompozicija"
+    }
+  },
   "whyLaFiesta": {
     "title": "Kodėl rinktis La Fiesta?"
   },

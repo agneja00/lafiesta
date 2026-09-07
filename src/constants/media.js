@@ -33,61 +33,61 @@ export const GALLERY_PREVIEW_IMAGES = [
   {
     id: 36,
     src: `${CLOUDINARY_BASE}/f_auto,q_auto/36_rbtwa1.jpg`,
-    alt: "Gėlių kompozicija skaidriame burbule",
+    altKey: "galleryPreview.images.36",
   },
   {
     id: 51,
     src: `${CLOUDINARY_BASE}/f_auto,q_auto/51_pthacg.jpg`,
-    alt: "Dovanų kompozicijos",
+    altKey: "galleryPreview.images.51",
   },
   {
     id: 56,
     src: `${CLOUDINARY_BASE}/f_auto,q_auto/56_w1prfl.jpg`,
-    alt: "Šventinė balionų kompozicija",
+    altKey: "galleryPreview.images.56",
   },
   {
     id: 11,
     src: `${CLOUDINARY_BASE}/f_auto,q_auto/11_zefvr4.jpg`,
-    alt: "Spalvinga gėlių puokštė",
+    altKey: "galleryPreview.images.11",
   },
   {
     id: 34,
     src: `${CLOUDINARY_BASE}/f_auto,q_auto/34_vivqte.jpg`,
-    alt: "Rožinis meškiukas",
+    altKey: "galleryPreview.images.34",
   },
   {
     id: 38,
     src: `${CLOUDINARY_BASE}/f_auto,q_auto/38_czjg79.jpg`,
-    alt: "Raudonų rožių kompozicija",
+    altKey: "galleryPreview.images.38",
   },
   {
     id: 17,
     src: `${CLOUDINARY_BASE}/f_auto,q_auto/17_vgulqn.jpg`,
-    alt: "Spalvinga dovanų kompozicija",
+    altKey: "galleryPreview.images.17",
   },
   {
     id: 49,
     src: `${CLOUDINARY_BASE}/f_auto,q_auto/49_igbpoz.jpg`,
-    alt: "Spalvinga šventinė puokštė",
+    altKey: "galleryPreview.images.49",
   },
   {
     id: 54,
     src: `${CLOUDINARY_BASE}/f_auto,q_auto/54_lvdfks.jpg`,
-    alt: "Gėlių ir dovanų kompozicija",
+    altKey: "galleryPreview.images.54",
   },
   {
     id: 57,
     src: `${CLOUDINARY_BASE}/f_auto,q_auto/57_imx9ek.jpg`,
-    alt: "Personalizuota balionų dovana",
+    altKey: "galleryPreview.images.57",
   },
   {
     id: 60,
     src: `${CLOUDINARY_BASE}/f_auto,q_auto/60_htaitw.jpg`,
-    alt: "Spalvingos gėlių kompozicijos",
+    altKey: "galleryPreview.images.60",
   },
   {
     id: 41,
     src: `${CLOUDINARY_BASE}/f_auto,q_auto/41_sw8skx.jpg`,
-    alt: "Gėlių ir saldžių dovanų kompozicija",
+    altKey: "galleryPreview.images.41",
   },
 ];
