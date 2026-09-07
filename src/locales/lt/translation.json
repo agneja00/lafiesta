@@ -1,4 +1,10 @@
 {
+  "common": {
+    "close": "Uždaryti",
+    "previous": "Ankstesnė nuotrauka",
+    "next": "Kita nuotrauka"
+  },
+
   "links": {
     "home": "Pradžia",
     "services": "Paslaugos",

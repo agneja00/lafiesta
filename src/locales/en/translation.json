@@ -1,4 +1,10 @@
 {
+  "common": {
+    "close": "Close",
+    "previous": "Previous photo",
+    "next": "Next photo"
+  },
+
   "links": {
     "home": "Home",
     "services": "Services",
