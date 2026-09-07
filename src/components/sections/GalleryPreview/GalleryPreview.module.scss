@@ -1,0 +1,238 @@
+.section {
+  width: 100%;
+  padding: 3.5rem 0;
+  background-color: $color-white;
+}
+
+.container {
+  width: min(100% - 2rem, 75rem);
+  margin: 0 auto;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.5rem;
+}
+
+.imageButton {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border: 0;
+  border-radius: $radius-card;
+  background: none;
+  cursor: pointer;
+
+  &:focus-visible {
+    outline: 0.125rem solid $color-accent-coral;
+    outline-offset: 0.125rem;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  &:hover img {
+    transform: scale(1.03);
+  }
+}
+
+.action {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5rem;
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  @include flexRowCenter;
+  padding: 1rem;
+  background-color: rgba(58, 46, 46, 0.85);
+  cursor: zoom-out;
+}
+
+.lightboxContent {
+  position: relative;
+  @include flexRowCenter;
+  width: 100%;
+  max-width: 60rem;
+  max-height: 90vh;
+  cursor: default;
+  touch-action: pan-y;
+
+  img {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    max-height: 85vh;
+    object-fit: contain;
+    border-radius: $radius-card;
+    animation: fadeIn 0.2s ease;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.closeButton {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1;
+  @include flexRowCenter;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 0;
+  border-radius: 50%;
+  background-color: $color-white;
+  color: $color-text-heading;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+
+  &:hover {
+    background-color: $color-accent-coral;
+    color: $color-white;
+  }
+
+  &:focus-visible {
+    outline: 0.125rem solid $color-white;
+    outline-offset: 0.125rem;
+  }
+
+  svg {
+    width: 1.125rem;
+    height: 1.125rem;
+  }
+}
+
+.navButton {
+  display: none;
+}
+
+@media (min-width: 48rem) {
+  .navButton {
+    @include flexRowCenter;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    width: 3rem;
+    height: 3rem;
+
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: $color-text-heading;
+
+    transition:
+      background-color 0.2s ease,
+      color 0.2s ease;
+
+    &:hover {
+      background-color: $color-accent-coral;
+      color: $color-white;
+    }
+
+    &:focus-visible {
+      outline: 0.125rem solid $color-white;
+      outline-offset: 0.125rem;
+    }
+
+    svg {
+      width: 1.125rem;
+      height: 1.125rem;
+    }
+  }
+
+  .navButtonPrev {
+    left: 1rem;
+  }
+
+  .navButtonNext {
+    right: 1rem;
+  }
+}
+
+@media (min-width: $bp-tablet) {
+  .section {
+    padding: 4rem 0;
+  }
+
+  .container {
+    width: min(100% - 4rem, 75rem);
+  }
+
+  .gallery {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.75rem;
+  }
+
+  .action {
+    margin-top: 3rem;
+  }
+
+  .lightbox {
+    padding: 2rem;
+  }
+
+  .closeButton {
+    top: 1.5rem;
+    right: 1.5rem;
+  }
+}
+
+@media (min-width: $bp-desktop) {
+  .section {
+    padding: 4rem 0;
+  }
+
+  .container {
+    width: min(100% - 5rem, 75rem);
+  }
+
+  .title {
+    margin-bottom: 3.5rem;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.75rem;
+  }
+
+  .imageButton {
+    &:hover img {
+      transform: scale(1.04);
+    }
+  }
+
+  .action {
+    margin-top: 3.5rem;
+  }
+
+  .lightboxContent {
+    max-width: 70rem;
+  }
+
+  .navButtonPrev {
+    left: 2rem;
+  }
+
+  .navButtonNext {
+    right: 2rem;
+  }
+}

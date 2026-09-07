@@ -2,6 +2,7 @@ import Hero from "@/components/Hero/Hero";
 import { ROUTES } from "@/constants/routes";
 import { useTranslation } from "react-i18next";
 import WhatWeCreate from "@/components/sections/WhatWeCreate/WhatWeCreate";
+import GalleryPreview from "@/components/sections/GalleryPreview/GalleryPreview";
 import WhyLaFiesta from "@/components/sections/WhyLaFiesta/WhyLaFiesta";
 import HowToOrder from "@/components/sections/HowToOrder/HowToOrder";
 import Contacts from "@/components/sections/Contacts/Contacts";
@@ -17,6 +18,7 @@ const HomePage = () => {
         buttonTo={ROUTES.GALLERY}
       />
       <WhatWeCreate />
+      <GalleryPreview />
       <WhyLaFiesta />
       <HowToOrder />
       <Contacts />

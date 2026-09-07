@@ -2,15 +2,31 @@ const CLOUD_NAME = import.meta.env.VITE_CLOUDINARY_CLOUD_NAME;
 
 const CLOUDINARY_BASE = `https://res.cloudinary.com/${CLOUD_NAME}/image/upload`;
 
+// ---------- Картинки одного размера, одного места использования ----------
+// Ширина зашита прямо в константу — им не нужна гибкость, они больше нигде
+// не переиспользуются в другом размере, так что util для них избыточен.
 export const LOGO_URL = `${CLOUDINARY_BASE}/f_auto,q_auto,w_160/logoo_aoovzs`;
-export const HERO_URL = `${CLOUDINARY_BASE}/f_auto,q_auto/heroo_wqvkfe`;
-export const HERO_DESKTOP = `${CLOUDINARY_BASE}/f_auto,q_auto/hero_desktop_xhnwvj`;
-export const FLOWERS_DECORATION = `${CLOUDINARY_BASE}/f_auto,q_auto/flowers_decoration_wbqyup`;
+
+export const FLOWERS_DECORATION = `${CLOUDINARY_BASE}/f_auto,q_auto,w_500/flowers_decoration_wbqyup`;
+// ^ раньше здесь не было ширины вообще — картинка в Contacts рендерится
+// максимум на ~12rem (192px), а грузился, судя по всему, оригинал.
+// Поставил w_500 с запасом под retina-экраны (2x от ~250px реального макс. размера).
+
+// hero — тоже одно место использования каждая версия (мобильная / десктопная
+// картинки переключаются между собой через CSS, не через srcSet), но раньше
+// не было ширины вообще, поэтому браузер тянул оригинал в полном разрешении
+// даже на телефоне. Ограничиваем под реальный видимый размер + запас на retina.
+export const HERO_URL = `${CLOUDINARY_BASE}/f_auto,q_auto,w_900/heroo_wqvkfe`;
+export const HERO_DESKTOP = `${CLOUDINARY_BASE}/f_auto,q_auto,w_1600/hero_desktop_xhnwvj`;
 
 export const ICONS = {
   section1: {
     card1: `${CLOUDINARY_BASE}/f_auto,q_auto,w_160/s1flower_dmzicu`,
-    card2: `${CLOUDINARY_BASE}/f_auto,q_auto/s1gift_scj9g5.png`,
+    card2: `${CLOUDINARY_BASE}/f_auto,q_auto,w_160/s1gift_scj9g5.png`,
+    // ^ у соседей стоит w_160, тут ширины не было вообще — по факту эта
+    // иконка одна во всей сетке грузилась в оригинальном (скорее всего
+    // намного большем) разрешении без всякой причины. Добавил w_160 для
+    // консистentности с card1/card3/card4.
     card3: `${CLOUDINARY_BASE}/f_auto,q_auto,w_160/s1balloon_yfnjj9`,
     card4: `${CLOUDINARY_BASE}/f_auto,q_auto,w_160/s1candy_rjhnux`,
   },
@@ -21,6 +37,7 @@ export const ICONS = {
     card3: `${CLOUDINARY_BASE}/f_auto,q_auto,w_160/s2fresh_pimwcj`,
     card4: `${CLOUDINARY_BASE}/f_auto,q_auto,w_160/s2gift_m7bfof`,
   },
+
   section3: {
     card1: `${CLOUDINARY_BASE}/f_auto,q_auto,w_160/s3n1_xt0xz6`,
     card2: `${CLOUDINARY_BASE}/f_auto,q_auto,w_160/s3n2_lfi4sh`,
