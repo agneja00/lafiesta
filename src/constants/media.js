@@ -28,3 +28,66 @@ export const ICONS = {
     card4: `${CLOUDINARY_BASE}/f_auto,q_auto,w_160/s3n4_imeb0x`,
   },
 };
+
+export const GALLERY_PREVIEW_IMAGES = [
+  {
+    id: 36,
+    src: `${CLOUDINARY_BASE}/f_auto,q_auto/36_rbtwa1.jpg`,
+    alt: "Gėlių kompozicija skaidriame burbule",
+  },
+  {
+    id: 51,
+    src: `${CLOUDINARY_BASE}/f_auto,q_auto/51_pthacg.jpg`,
+    alt: "Dovanų kompozicijos",
+  },
+  {
+    id: 56,
+    src: `${CLOUDINARY_BASE}/f_auto,q_auto/56_w1prfl.jpg`,
+    alt: "Šventinė balionų kompozicija",
+  },
+  {
+    id: 11,
+    src: `${CLOUDINARY_BASE}/f_auto,q_auto/11_zefvr4.jpg`,
+    alt: "Spalvinga gėlių puokštė",
+  },
+  {
+    id: 34,
+    src: `${CLOUDINARY_BASE}/f_auto,q_auto/34_vivqte.jpg`,
+    alt: "Rožinis meškiukas",
+  },
+  {
+    id: 38,
+    src: `${CLOUDINARY_BASE}/f_auto,q_auto/38_czjg79.jpg`,
+    alt: "Raudonų rožių kompozicija",
+  },
+  {
+    id: 17,
+    src: `${CLOUDINARY_BASE}/f_auto,q_auto/17_vgulqn.jpg`,
+    alt: "Spalvinga dovanų kompozicija",
+  },
+  {
+    id: 49,
+    src: `${CLOUDINARY_BASE}/f_auto,q_auto/49_igbpoz.jpg`,
+    alt: "Spalvinga šventinė puokštė",
+  },
+  {
+    id: 54,
+    src: `${CLOUDINARY_BASE}/f_auto,q_auto/54_lvdfks.jpg`,
+    alt: "Gėlių ir dovanų kompozicija",
+  },
+  {
+    id: 57,
+    src: `${CLOUDINARY_BASE}/f_auto,q_auto/57_imx9ek.jpg`,
+    alt: "Personalizuota balionų dovana",
+  },
+  {
+    id: 60,
+    src: `${CLOUDINARY_BASE}/f_auto,q_auto/60_htaitw.jpg`,
+    alt: "Spalvingos gėlių kompozicijos",
+  },
+  {
+    id: 41,
+    src: `${CLOUDINARY_BASE}/f_auto,q_auto/41_sw8skx.jpg`,
+    alt: "Gėlių ir saldžių dovanų kompozicija",
+  },
+];
