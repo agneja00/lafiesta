@@ -422,3 +422,11 @@ export const RAW_GALLERY_BLOCKS = [
     ],
   },
 ];
+
+let cursor = 0;
+export const GALLERY_BLOCKS = RAW_GALLERY_BLOCKS.map((block) => ({
+  ...block,
+  images: block.images.map((image) => ({ ...image, globalIndex: cursor++ })),
+}));
+
+export const GALLERY_IMAGES = GALLERY_BLOCKS.flatMap((block) => block.images);
