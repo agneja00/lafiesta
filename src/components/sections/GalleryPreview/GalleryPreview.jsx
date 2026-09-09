@@ -91,9 +91,7 @@ const GalleryPreview = () => {
     <>
       <section id="galerija" className={styles.section} aria-labelledby="gallery-preview-title">
         <div className={styles.container}>
-          <SectionTitle subtitle={t("galleryPreview.subtitle")}>
-            {t("galleryPreview.title")}
-          </SectionTitle>
+          <SectionTitle subtitle={t("gallery.subtitle")}>{t("gallery.title")}</SectionTitle>
 
           <div className={styles.gallery}>
             {GALLERY_PREVIEW_IMAGES.map((image, index) => (
@@ -118,7 +116,7 @@ const GalleryPreview = () => {
 
           <div className={styles.action}>
             <Button as="link" to={ROUTES.GALLERY} size="medium" icon={FaImages}>
-              {t("galleryPreview.viewAll")}
+              {t("gallery.viewAll")}
             </Button>
           </div>
         </div>

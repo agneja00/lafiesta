@@ -36,62 +36,62 @@ export const GALLERY_PREVIEW_IMAGES = [
   {
     id: 36,
     src: `${CLOUDINARY_BASE}/f_auto,q_auto/36_rbtwa1.jpg`,
-    altKey: "galleryPreview.images.36",
+    altKey: "gallery.images.36",
   },
   {
     id: 51,
     src: `${CLOUDINARY_BASE}/f_auto,q_auto/51_pthacg.jpg`,
-    altKey: "galleryPreview.images.51",
+    altKey: "gallery.images.51",
   },
   {
     id: 56,
     src: `${CLOUDINARY_BASE}/f_auto,q_auto/56_w1prfl.jpg`,
-    altKey: "galleryPreview.images.56",
+    altKey: "gallery.images.56",
   },
   {
     id: 11,
     src: `${CLOUDINARY_BASE}/f_auto,q_auto/11_zefvr4.jpg`,
-    altKey: "galleryPreview.images.11",
+    altKey: "gallery.images.11",
   },
   {
     id: 34,
     src: `${CLOUDINARY_BASE}/f_auto,q_auto/34_vivqte.jpg`,
-    altKey: "galleryPreview.images.34",
+    altKey: "gallery.images.34",
   },
   {
     id: 38,
     src: `${CLOUDINARY_BASE}/f_auto,q_auto/38_czjg79.jpg`,
-    altKey: "galleryPreview.images.38",
+    altKey: "gallery.images.38",
   },
   {
     id: 17,
     src: `${CLOUDINARY_BASE}/f_auto,q_auto/17_vgulqn.jpg`,
-    altKey: "galleryPreview.images.17",
+    altKey: "gallery.images.17",
   },
   {
     id: 49,
     src: `${CLOUDINARY_BASE}/f_auto,q_auto/49_igbpoz.jpg`,
-    altKey: "galleryPreview.images.49",
+    altKey: "gallery.images.49",
   },
   {
     id: 54,
     src: `${CLOUDINARY_BASE}/f_auto,q_auto/54_lvdfks.jpg`,
-    altKey: "galleryPreview.images.54",
+    altKey: "gallery.images.54",
   },
   {
     id: 57,
     src: `${CLOUDINARY_BASE}/f_auto,q_auto/57_imx9ek.jpg`,
-    altKey: "galleryPreview.images.57",
+    altKey: "gallery.images.57",
   },
   {
     id: 60,
     src: `${CLOUDINARY_BASE}/f_auto,q_auto/60_htaitw.jpg`,
-    altKey: "galleryPreview.images.60",
+    altKey: "gallery.images.60",
   },
   {
     id: 41,
     src: `${CLOUDINARY_BASE}/f_auto,q_auto/41_sw8skx.jpg`,
-    altKey: "galleryPreview.images.41",
+    altKey: "gallery.images.41",
   },
 ];
 
@@ -154,7 +154,7 @@ export const RAW_GALLERY_BLOCKS = [
       {
         id: 36,
         src: `${CLOUDINARY_BASE}/f_auto,q_auto/36_rbtwa1.jpg`,
-        altKey: "galleryPreview.images.36",
+        altKey: "gallery.images.36",
       },
       {
         id: 54,
@@ -219,22 +219,22 @@ export const RAW_GALLERY_BLOCKS = [
       {
         id: 11,
         src: `${CLOUDINARY_BASE}/f_auto,q_auto/11_zefvr4.jpg`,
-        altKey: "galleryPreview.images.11",
+        altKey: "gallery.images.11",
       },
       {
         id: 17,
         src: `${CLOUDINARY_BASE}/f_auto,q_auto/17_vgulqn.jpg`,
-        altKey: "galleryPreview.images.17",
+        altKey: "gallery.images.17",
       },
       {
         id: 38,
         src: `${CLOUDINARY_BASE}/f_auto,q_auto/38_czjg79.jpg`,
-        altKey: "galleryPreview.images.38",
+        altKey: "gallery.images.38",
       },
       {
         id: 49,
         src: `${CLOUDINARY_BASE}/f_auto,q_auto/49_igbpoz.jpg`,
-        altKey: "galleryPreview.images.49",
+        altKey: "gallery.images.49",
       },
       { id: 6, src: `${CLOUDINARY_BASE}/f_auto,q_auto/06_qlnpje.jpg`, altKey: "gallery.images.06" },
       { id: 8, src: `${CLOUDINARY_BASE}/f_auto,q_auto/08_baupfo.jpg`, altKey: "gallery.images.08" },
