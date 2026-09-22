@@ -45,12 +45,14 @@
     "subtitle": "Atrinkome keletą mūsų sukurtų dovanų ir šventinių kompozicijų.",
     "viewAll": "Peržiūrėti visą galeriją",
     "blocks": {
-      "gifts": "Dovanos ir išskirtinės kompozicijos",
-      "balloons": "Balionai / šventinės dovanos",
-      "sweets": "Saldžios / dekoratyvinės dovanos",
-      "bouquets": "Puokštės ir floristika",
-      "baskets": "Krepšeliai ir kompozicijos",
-      "shop": "Parduotuvė / papildomas asortimentas"
+      "balloons": "Balionai",
+      "sweets": "Saldžios dovanos",
+      "wood": "Medinės dovanos",
+      "flowers": "Skintos gėlės",
+      "compositions": "Gėlių kompozicijos",
+      "bouquets": "Puokštės",
+      "funeral": "Gedulas – užuojautos gėlės",
+      "shop": "Pakavimas ir dekoras"
     },
     "images": {
       "01": "Dekoratyvinės juostelės ir pakavimo medžiagos",

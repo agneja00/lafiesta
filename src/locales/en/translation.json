@@ -42,12 +42,14 @@
     "subtitle": "Take a look at some of the gifts and festive arrangements we've created.",
     "viewAll": "View full gallery",
     "blocks": {
-      "gifts": "Gifts and exclusive arrangements",
-      "balloons": "Balloons / festive gifts",
-      "sweets": "Sweet / decorative gifts",
-      "bouquets": "Bouquets and floristry",
-      "baskets": "Baskets and arrangements",
-      "shop": "Shop / additional selection"
+      "balloons": "Balloons",
+      "sweets": "Sweet gifts",
+      "wood": "Wooden gifts",
+      "flowers": "Fresh flowers",
+      "compositions": "Flower arrangements",
+      "bouquets": "Bouquets",
+      "funeral": "Mourning — sympathy flowers",
+      "shop": "Wrapping & décor"
     },
     "images": {
       "01": "Decorative ribbons and wrapping materials",
