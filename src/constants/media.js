@@ -34,14 +34,19 @@ export const ICONS = {
 
 export const GALLERY_PREVIEW_IMAGES = [
   {
-    id: 36,
-    src: `${CLOUDINARY_BASE}/f_auto,q_auto/36_rbtwa1.jpg`,
-    altKey: "gallery.images.36",
+    id: 54,
+    src: `${CLOUDINARY_BASE}/f_auto,q_auto/54_lvdfks.jpg`,
+    altKey: "gallery.images.54",
   },
   {
-    id: 51,
-    src: `${CLOUDINARY_BASE}/f_auto,q_auto/51_pthacg.jpg`,
-    altKey: "gallery.images.51",
+    id: 65,
+    src: `${CLOUDINARY_BASE}/f_auto,q_auto/65_jpfb5c.jpg`,
+    altKey: "gallery.images.65",
+  },
+  {
+    id: 41,
+    src: `${CLOUDINARY_BASE}/f_auto,q_auto/41_sw8skx.jpg`,
+    altKey: "gallery.images.41",
   },
   {
     id: 56,
@@ -49,19 +54,24 @@ export const GALLERY_PREVIEW_IMAGES = [
     altKey: "gallery.images.56",
   },
   {
-    id: 11,
-    src: `${CLOUDINARY_BASE}/f_auto,q_auto/11_zefvr4.jpg`,
-    altKey: "gallery.images.11",
+    id: 45,
+    src: `${CLOUDINARY_BASE}/f_auto,q_auto/45_qtehpi.jpg`,
+    altKey: "gallery.images.45",
   },
   {
-    id: 34,
-    src: `${CLOUDINARY_BASE}/f_auto,q_auto/34_vivqte.jpg`,
-    altKey: "gallery.images.34",
+    id: 42,
+    src: `${CLOUDINARY_BASE}/f_auto,q_auto/42_iyhob5.jpg`,
+    altKey: "gallery.images.42",
   },
   {
-    id: 38,
-    src: `${CLOUDINARY_BASE}/f_auto,q_auto/38_czjg79.jpg`,
-    altKey: "gallery.images.38",
+    id: 31,
+    src: `${CLOUDINARY_BASE}/f_auto,q_auto/31_tzekq2.jpg`,
+    altKey: "gallery.images.31",
+  },
+  {
+    id: 10,
+    src: `${CLOUDINARY_BASE}/f_auto,q_auto/10_lqx0fb.jpg`,
+    altKey: "gallery.images.10",
   },
   {
     id: 17,
@@ -74,24 +84,14 @@ export const GALLERY_PREVIEW_IMAGES = [
     altKey: "gallery.images.49",
   },
   {
-    id: 54,
-    src: `${CLOUDINARY_BASE}/f_auto,q_auto/54_lvdfks.jpg`,
-    altKey: "gallery.images.54",
+    id: 28,
+    src: `${CLOUDINARY_BASE}/f_auto,q_auto/28_wynn4w.jpg`,
+    altKey: "gallery.images.28",
   },
   {
     id: 57,
     src: `${CLOUDINARY_BASE}/f_auto,q_auto/57_imx9ek.jpg`,
     altKey: "gallery.images.57",
-  },
-  {
-    id: 60,
-    src: `${CLOUDINARY_BASE}/f_auto,q_auto/60_htaitw.jpg`,
-    altKey: "gallery.images.60",
-  },
-  {
-    id: 41,
-    src: `${CLOUDINARY_BASE}/f_auto,q_auto/41_sw8skx.jpg`,
-    altKey: "gallery.images.41",
   },
 ];
 
