@@ -1,9 +1,12 @@
+import styles from "./Lightbox.module.scss";
 import { useCallback, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
+import { useParams } from "react-router-dom";
 import { FaXmark, FaChevronLeft, FaChevronRight } from "react-icons/fa6";
 
+import ContactActions from "../ContactActions/ContactActions";
+import { getPhotoUrl } from "../../hooks/usePhotoDeepLink";
 import { getCloudinaryUrl, getCloudinarySrcSet } from "../../utils/cloudinary";
-import styles from "./Lightbox.module.scss";
 
 const IMAGE_WIDTHS = [800, 1200, 1600];
 const IMAGE_SIZES = "(min-width: 64rem) 70rem, 90vw";
@@ -12,6 +15,7 @@ const SWIPE_THRESHOLD = 50;
 
 const Lightbox = ({ images, selectedIndex, onNavigate, onClose }) => {
   const { t } = useTranslation();
+  const { lang } = useParams();
   const touchStartX = useRef(null);
   const total = images.length;
 
@@ -128,7 +132,13 @@ const Lightbox = ({ images, selectedIndex, onNavigate, onClose }) => {
           alt={t(selectedImage.altKey)}
           decoding="async"
           fetchPriority="high"
+          onClick={(event) => event.stopPropagation()}
         />
+
+        <div className={styles.cta} onClick={(event) => event.stopPropagation()}>
+          <p className={styles.hint}>{t("galleryContactCta.lightboxHint")}</p>
+          <ContactActions variant="lightbox" photoUrl={getPhotoUrl(lang, selectedImage.id)} />
+        </div>
       </div>
     </div>
   );

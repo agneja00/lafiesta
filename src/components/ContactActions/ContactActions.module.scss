@@ -1,0 +1,69 @@
+.wrapper {
+  @include flexColumn;
+  gap: 0.5rem;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  .item {
+    flex: 1 1 100%;
+  }
+
+  .smsOnly {
+    @media (hover: hover) {
+      display: none;
+    }
+  }
+}
+
+.touchLabel {
+  @media (hover: hover) {
+    display: none;
+  }
+}
+
+.desktopLabel {
+  @media (hover: none) {
+    display: none;
+  }
+}
+
+.copied {
+  font-family: $font-body;
+  font-size: 0.8125rem;
+  text-align: center;
+
+  &:empty {
+    display: none;
+  }
+}
+
+.lightbox {
+  .actions .item:not(.itemMain) {
+    flex: 1 1 0;
+  }
+
+  .copied {
+    color: rgba($color-white, 0.85);
+  }
+}
+
+.section {
+  .copied {
+    color: $color-text-body;
+  }
+}
+
+@media (min-width: $bp-tablet) {
+  .actions .item,
+  .lightbox .actions .item:not(.itemMain) {
+    flex: 0 0 auto;
+  }
+
+  .section .actions {
+    justify-content: flex-start;
+  }
+}

@@ -175,5 +175,19 @@
     "mapTitle": "La Fiesta on the map",
     "openGoogleMaps": "Open Google Maps",
     "openWaze": "Open Waze"
+  },
+  "galleryContactCta": {
+    "lightboxHint": "Like it? Message us — a link to this photo is ready, no screenshot needed.",
+    "instagram": "Message on Instagram",
+    "sms": "Send SMS",
+    "call": "Call",
+    "smsBody": "Hello! I'd like to order a gift.",
+    "smsBodyPhoto": "Hello! I'd like one like this: {{link}}",
+    "galleryTitle": "Like what you see? We'll make one for you",
+    "linkCopied": "Photo link copied — paste it into the Instagram chat.",
+    "galleryText": "Message us, call or drop by — we'll talk through your idea and prepare your gift with love.",
+    "address": "Kapsų g. 2 (Naujininkų Turgelis)",
+    "hours": "Mon–Sun 9:00–20:00",
+    "howToGet": "How to get here"
   }
 }

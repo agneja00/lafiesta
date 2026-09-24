@@ -1,8 +1,8 @@
 import styles from "./Gallery.module.scss";
-import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { GALLERY_BLOCKS, GALLERY_IMAGES } from "@/constants/media";
 import { getCloudinaryUrl, getCloudinarySrcSet } from "@/utils/cloudinary";
+import usePhotoDeepLink from "@/hooks/usePhotoDeepLink";
 import SectionTitle from "@/components/SectionTitle/SectionTitle";
 import Lightbox from "@/components/Lightbox/Lightbox";
 
@@ -11,7 +11,7 @@ const THUMB_SIZES = "(min-width: 64rem) 220px, (min-width: 48rem) 28vw, 45vw";
 
 const Gallery = () => {
   const { t } = useTranslation();
-  const [selectedIndex, setSelectedIndex] = useState(null);
+  const [selectedIndex, setSelectedIndex] = usePhotoDeepLink(GALLERY_IMAGES);
 
   return (
     <>
