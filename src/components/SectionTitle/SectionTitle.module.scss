@@ -5,6 +5,10 @@
   margin-bottom: 2rem;
 }
 
+.title {
+  text-align: center;
+}
+
 .decoration {
   @include flexCenter;
   width: min(80%, 12rem);
