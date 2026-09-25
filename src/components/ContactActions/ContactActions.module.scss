@@ -51,6 +51,10 @@
   color: $color-text-body;
 }
 
+.menu .copied {
+  color: $color-text-body;
+}
+
 @media (min-width: $bp-tablet) {
   .lightbox .actions .item {
     flex: 0 0 auto;

@@ -2,10 +2,10 @@ import styles from "./HeaderMobile.module.scss";
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { FaBars, FaTimes, FaPhoneAlt, FaInstagram } from "react-icons/fa";
+import { FaBars, FaTimes, FaInstagram, FaFacebookF } from "react-icons/fa";
 import { LOGO_URL } from "@/constants/media";
-import { PHONE_HREF, INSTAGRAM_URL } from "@/constants/contact";
-import Button from "../../Button/Button";
+import { INSTAGRAM_URL, FACEBOOK_URL } from "@/constants/contact";
+import ContactActions from "@/components/ContactActions/ContactActions";
 import LanguageSwitcher from "../../LanguageSwitcher/LanguageSwitcher";
 import NavigationLinks from "../../NavigationLinks/NavigationLinks";
 import useScrolled from "@/hooks/useScrolled";
@@ -68,19 +68,31 @@ const HeaderMobile = () => {
           </nav>
 
           <div className={styles.contact}>
-            <Button
-              as="a"
-              href={PHONE_HREF}
-              variant="primary"
-              icon={FaPhoneAlt}
-              className={styles.ctaButton}
-            >
-              {t("links.cta")}
-            </Button>
-            <a href={INSTAGRAM_URL} target="_blank" rel="noreferrer" className={styles.socialLink}>
-              <FaInstagram fontSize={25} color="#F1707A" />
-              <span>Instagram</span>
-            </a>
+            <ContactActions variant="menu" />
+
+            <div className={styles.socials}>
+              <span className={styles.socialsLabel}>{t("menu.followUs")}</span>
+
+              <a
+                href={INSTAGRAM_URL}
+                target="_blank"
+                rel="noreferrer"
+                className={styles.socialIcon}
+                aria-label="Instagram"
+              >
+                <FaInstagram aria-hidden="true" />
+              </a>
+
+              <a
+                href={FACEBOOK_URL}
+                target="_blank"
+                rel="noreferrer"
+                className={styles.socialIcon}
+                aria-label="Facebook"
+              >
+                <FaFacebookF aria-hidden="true" />
+              </a>
+            </div>
           </div>
 
           <div className={styles.language}>
