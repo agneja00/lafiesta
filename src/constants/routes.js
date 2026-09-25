@@ -1,6 +1,7 @@
 export const ROUTES = {
   HOME: "",
   GALLERY: "galerija",
+  PRICES: "kainoraštis",
 
   ERROR_GLOBAL: "*",
 };

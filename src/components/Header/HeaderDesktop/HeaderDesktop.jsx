@@ -13,8 +13,8 @@ const HeaderDesktop = () => {
   const { lang } = useParams();
   const { t } = useTranslation();
 
-  const leftLinks = navLinks.slice(0, 3);
-  const rightLinks = navLinks.slice(3);
+  const leftLinks = navLinks.slice(0, 4);
+  const rightLinks = navLinks.slice(4);
 
   return (
     <header className={styles.header}>

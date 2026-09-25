@@ -3,6 +3,7 @@ import {
   IoHomeOutline,
   IoFlowerOutline,
   IoImagesOutline,
+  IoPricetagsOutline,
   IoLocationOutline,
 } from "react-icons/io5";
 
@@ -22,6 +23,11 @@ export const navLinks = [
     label: "links.gallery",
     to: ROUTES.GALLERY,
     icon: IoImagesOutline,
+  },
+  {
+    label: "links.prices",
+    to: ROUTES.PRICES,
+    icon: IoPricetagsOutline,
   },
   {
     label: "links.contacts",
