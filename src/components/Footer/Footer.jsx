@@ -1,7 +1,7 @@
 import styles from "./Footer.module.scss";
 import { useParams, Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { FaPhoneAlt, FaInstagram, FaFacebook } from "react-icons/fa";
+import { FaPhoneAlt, FaInstagram, FaFacebookF } from "react-icons/fa";
 import { LOGO_URL } from "@/constants/media";
 import { PHONE_NUMBER, PHONE_HREF, INSTAGRAM_URL, FACEBOOK_URL } from "@/constants/contact";
 import NavigationLinks from "../NavigationLinks/NavigationLinks";
@@ -25,28 +25,36 @@ const Footer = () => {
           <NavigationLinks variant="footer" />
         </nav>
 
-        <ul className={styles.contact}>
-          <li>
-            <a href={INSTAGRAM_URL} target="_blank" rel="noreferrer" className={styles.contactLink}>
+        <div className={styles.contact}>
+          <a href={PHONE_HREF} className={styles.contactLink}>
+            <FaPhoneAlt aria-hidden="true" />
+            <span>{PHONE_NUMBER}</span>
+          </a>
+
+          <div className={styles.socials}>
+            <span className={styles.socialsLabel}>{t("menu.followUs")}</span>
+
+            <a
+              href={INSTAGRAM_URL}
+              target="_blank"
+              rel="noreferrer"
+              className={styles.socialIcon}
+              aria-label="Instagram"
+            >
               <FaInstagram aria-hidden="true" />
-              <span>Instagram</span>
             </a>
-          </li>
 
-          <li>
-            <a href={FACEBOOK_URL} target="_blank" rel="noreferrer" className={styles.contactLink}>
-              <FaFacebook aria-hidden="true" />
-              <span>Facebook</span>
+            <a
+              href={FACEBOOK_URL}
+              target="_blank"
+              rel="noreferrer"
+              className={`${styles.socialIcon} ${styles.socialIconFacebook}`}
+              aria-label="Facebook"
+            >
+              <FaFacebookF aria-hidden="true" />
             </a>
-          </li>
-
-          <li>
-            <a href={PHONE_HREF} className={styles.contactLink}>
-              <FaPhoneAlt aria-hidden="true" />
-              <span>{PHONE_NUMBER}</span>
-            </a>
-          </li>
-        </ul>
+          </div>
+        </div>
 
         <div className={styles.cta}>
           <span className={styles.heart} aria-hidden="true">

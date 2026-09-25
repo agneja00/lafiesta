@@ -34,9 +34,8 @@
 }
 
 .contact {
-  @include flexRowCenter;
-  flex-wrap: wrap;
-  gap: 1rem 1.5rem;
+  @include flexColumnAlignCenter;
+  gap: 1.25rem;
   width: 100%;
   padding-top: 1.5rem;
   border-top: 0.0625rem solid $color-border-light;
@@ -64,6 +63,48 @@
     outline: 0.125rem solid $color-accent-coral;
     outline-offset: 0.25rem;
   }
+}
+
+.socials {
+  @include flexRowCenter;
+  gap: 0.75rem;
+}
+
+.socialsLabel {
+  color: $color-text-muted;
+  font-size: 0.875rem;
+}
+
+.socialIcon {
+  @include flexRowCenter;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  background-color: $color-white;
+  color: $color-accent-coral;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+
+  svg {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+
+  &:hover {
+    background-color: $color-accent-coral;
+    color: $color-white;
+  }
+
+  &:focus-visible {
+    outline: 0.125rem solid $color-accent-coral;
+    outline-offset: 0.125rem;
+  }
+}
+
+.socialIconFacebook svg {
+  width: 1.05rem;
+  height: 1.05rem;
 }
 
 .cta {
@@ -120,14 +161,15 @@
   .ctaTitle {
     font-size: 1.6rem;
   }
+
   .ctaDescription {
     font-size: 0.95rem;
   }
 
   .contact {
-    flex-direction: column;
-    gap: 0.875rem;
+    gap: 1rem;
     width: auto;
+    padding-top: 0;
     border-top: 0;
   }
 
