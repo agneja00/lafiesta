@@ -20,8 +20,9 @@
 
   "hero": {
     "title": "Dovanos, kurios pasako daugiau.",
-    "description": "Gėlės ir staigmenos ypatingoms gyvenimo akimirkoms.",
-    "cta": "Peržiūrėti mūsų darbus"
+    "description": "Gėlės, balionai ir dovanos ypatingoms akimirkoms – Vilniuje, Naujininkų turgelyje.",
+    "cta": "Mūsų darbai",
+    "secondaryCta": "Instagram"
   },
 
   "whatWeCreate": {

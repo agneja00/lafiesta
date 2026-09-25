@@ -1,6 +1,6 @@
 .hero {
   position: relative;
-  min-height: 44rem;
+  min-height: 45.5rem;
   overflow: hidden;
   background-color: $color-bg-page;
 }
@@ -28,8 +28,8 @@
   align-items: flex-start;
   justify-content: flex-end;
   gap: 1.5rem;
-  min-height: 43rem;
-  padding: 1rem 1.5rem 1rem;
+  min-height: 44.5rem;
+  padding: 1rem 1.5rem;
 }
 
 .title {
@@ -42,15 +42,37 @@
   color: $color-text-body;
 }
 
+.actions {
+  display: flex;
+  gap: 0.625rem;
+  width: 100%;
+}
+
+.actions .action {
+  flex: 1 1 0;
+  min-width: 0;
+  padding-inline: 0.875rem;
+}
+
 @include tablet {
   .hero {
-    min-height: 44rem;
+    min-height: 45.5rem;
   }
 
   .content {
-    min-height: 44rem;
+    min-height: 45.5rem;
     padding-inline: 2.5rem;
     padding-bottom: 4rem;
+  }
+
+  .actions {
+    width: auto;
+    gap: 1rem;
+  }
+
+  .actions .action {
+    flex: 0 0 auto;
+    padding-inline: 1.75rem;
   }
 }
 
