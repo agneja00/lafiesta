@@ -1,10 +1,9 @@
 import styles from "./HeaderDesktop.module.scss";
 import { Link, useParams } from "react-router-dom";
-import { useTranslation } from "react-i18next";
 import { FaPhoneAlt } from "react-icons/fa";
 import { navLinks } from "@/constants/navLinks";
 import { LOGO_URL } from "@/constants/media";
-import { PHONE_HREF } from "@/constants/contact";
+import { PHONE_HREF, PHONE_NUMBER } from "@/constants/contact";
 import useScrolled from "@/hooks/useScrolled";
 import Button from "../../Button/Button";
 import LanguageSwitcher from "../../LanguageSwitcher/LanguageSwitcher";
@@ -12,7 +11,6 @@ import NavigationLinks from "@/components/NavigationLinks/NavigationLinks";
 
 const HeaderDesktop = () => {
   const { lang } = useParams();
-  const { t } = useTranslation();
 
   const isScrolled = useScrolled(80);
 
@@ -41,7 +39,7 @@ const HeaderDesktop = () => {
             icon={FaPhoneAlt}
             className={styles.cta}
           >
-            {t("links.cta")}
+            {PHONE_NUMBER}
           </Button>
         </div>
       </nav>
