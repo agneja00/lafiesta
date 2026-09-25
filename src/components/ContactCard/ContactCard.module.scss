@@ -23,14 +23,16 @@
   position: relative;
   z-index: 2;
   @include flexColumn;
-  justify-content: flex-end;
   gap: 2rem;
 }
 
 .title {
   @include flexCenter;
   gap: 0.5rem;
-  font-size: 2.05rem;
+}
+
+.heart {
+  font-size: 2.85rem;
 }
 
 .description {

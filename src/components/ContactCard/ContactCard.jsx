@@ -41,7 +41,10 @@ const ContactCard = ({
       <div className={styles.card}>
         <div className={styles.content}>
           <h2 id={titleId} className={styles.title}>
-            {title} <span aria-hidden="true">♡</span>
+            {title}{" "}
+            <span aria-hidden="true" className={styles.heart}>
+              ♡
+            </span>
           </h2>
 
           <p className={styles.description}>{description}</p>
