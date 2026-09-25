@@ -1,12 +1,14 @@
 import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { ROUTES } from "../constants/routes";
+import { buildTo } from "@/utils/navigation";
 
 const PARAM = "foto";
 
 const SITE_URL = import.meta.env.VITE_SITE_URL || window.location.origin;
 
-export const getPhotoUrl = (lang, id) => `${SITE_URL}/${lang}${ROUTES.GALLERY}?${PARAM}=${id}`;
+export const getPhotoUrl = (lang, id) =>
+  `${SITE_URL}${buildTo({ to: ROUTES.GALLERY }, lang)}?${PARAM}=${id}`;
 
 const usePhotoDeepLink = (images) => {
   const [searchParams, setSearchParams] = useSearchParams();
