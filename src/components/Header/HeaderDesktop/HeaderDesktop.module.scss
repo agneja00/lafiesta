@@ -5,14 +5,19 @@
 @media (min-width: $bp-desktop) {
   .header {
     display: block;
-    background-color: $color-bg-header;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     padding: 0 2.5rem;
+    background-color: $color-bg-header;
+    transition: box-shadow 0.25s ease;
   }
 
   .nav {
     min-height: 5.5rem;
     @include flexCenter;
     justify-content: space-between;
+    transition: min-height 0.25s ease;
   }
 
   .rightSide {
@@ -24,20 +29,41 @@
 
   .logoWrapper {
     position: absolute;
-    top: -35px;
+    top: 0;
     left: 50%;
-    transform: translate(-50%, 20%);
+    z-index: 2;
     @include flexRowCenter;
     width: 8.5rem;
     height: 8.5rem;
     border-radius: 50%;
     background-color: $color-bg-header;
-
-    z-index: 2;
+    transform: translate(-50%, -0.5rem);
+    transform-origin: top center;
+    transition: transform 0.25s ease;
   }
 
   .logo {
     width: 6rem;
     height: auto;
+  }
+
+  .scrolled {
+    box-shadow: 0 0.25rem 1rem rgba($color-text-heading, 0.08);
+  }
+
+  .scrolled .nav {
+    min-height: 4.75rem;
+  }
+
+  .scrolled .logoWrapper {
+    transform: translate(-50%, 0) scale(0.55);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .header,
+  .nav,
+  .logoWrapper {
+    transition: none;
   }
 }

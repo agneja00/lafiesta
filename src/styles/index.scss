@@ -23,3 +23,15 @@ select {
 li {
   list-style: none;
 }
+
+[id] {
+  scroll-margin-top: 6rem;
+
+  @include tablet {
+    scroll-margin-top: 5.75rem;
+  }
+
+  @include desktop {
+    scroll-margin-top: 5.5rem;
+  }
+}

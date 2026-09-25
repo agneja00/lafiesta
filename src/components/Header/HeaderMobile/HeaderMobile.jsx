@@ -8,6 +8,7 @@ import { PHONE_HREF, INSTAGRAM_URL } from "@/constants/contact";
 import Button from "../../Button/Button";
 import LanguageSwitcher from "../../LanguageSwitcher/LanguageSwitcher";
 import NavigationLinks from "../../NavigationLinks/NavigationLinks";
+import useScrolled from "@/hooks/useScrolled";
 
 const DESKTOP_BREAKPOINT = 1024;
 
@@ -15,6 +16,8 @@ const HeaderMobile = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const { lang } = useParams();
   const { t } = useTranslation();
+
+  const isScrolled = useScrolled(60);
 
   useEffect(() => {
     const handleResize = () => {
@@ -39,7 +42,7 @@ const HeaderMobile = () => {
   };
 
   return (
-    <header className={styles.header}>
+    <header className={`${styles.header} ${isScrolled ? styles.scrolled : ""}`}>
       <div className={styles.bar}>
         <button
           type="button"

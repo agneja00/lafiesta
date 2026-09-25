@@ -5,6 +5,7 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { navLinks } from "@/constants/navLinks";
 import { LOGO_URL } from "@/constants/media";
 import { PHONE_HREF } from "@/constants/contact";
+import useScrolled from "@/hooks/useScrolled";
 import Button from "../../Button/Button";
 import LanguageSwitcher from "../../LanguageSwitcher/LanguageSwitcher";
 import NavigationLinks from "@/components/NavigationLinks/NavigationLinks";
@@ -13,11 +14,13 @@ const HeaderDesktop = () => {
   const { lang } = useParams();
   const { t } = useTranslation();
 
+  const isScrolled = useScrolled(80);
+
   const leftLinks = navLinks.slice(0, 4);
   const rightLinks = navLinks.slice(4);
 
   return (
-    <header className={styles.header}>
+    <header className={`${styles.header} ${isScrolled ? styles.scrolled : ""}`}>
       <nav className={styles.nav} aria-label="Main navigation">
         <NavigationLinks links={leftLinks} variant="desktopLeft" />
 
