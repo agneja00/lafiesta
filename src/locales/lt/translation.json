@@ -21,7 +21,8 @@
   },
 
   "whatWeCreate": {
-    "title": "Ką galime jums sukurti?"
+    "title": "Ką galime jums sukurti?",
+    "viewPrices": "Orientacinės kainos"
   },
   "createCards": {
     "flowers": {

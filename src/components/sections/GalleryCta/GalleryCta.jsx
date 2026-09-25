@@ -1,8 +1,10 @@
 import styles from "./GalleryCta.module.scss";
 import { useParams, Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+
 import ContactCard from "@/components/ContactCard/ContactCard";
 import ContactActions from "@/components/ContactActions/ContactActions";
+import { ROUTES } from "@/constants/routes";
 
 const GalleryCta = () => {
   const { t } = useTranslation();
@@ -17,9 +19,15 @@ const GalleryCta = () => {
     >
       <ContactActions variant="card" />
 
-      <Link to={`/${lang}#kontaktai`} className={styles.link}>
-        {t("galleryContactCta.howToGet")} →
-      </Link>
+      <div className={styles.links}>
+        <Link to={`/${lang}${ROUTES.PRICES}`} className={styles.link}>
+          {t("links.prices")} →
+        </Link>
+
+        <Link to={`/${lang}#kontaktai`} className={styles.link}>
+          {t("galleryContactCta.howToGet")} →
+        </Link>
+      </div>
     </ContactCard>
   );
 };

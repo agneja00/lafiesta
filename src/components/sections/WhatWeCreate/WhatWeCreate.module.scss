@@ -6,3 +6,9 @@
 .container {
   @include container;
 }
+
+.action {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}

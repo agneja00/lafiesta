@@ -1,5 +1,11 @@
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 1.5rem;
+}
+
 .link {
-  align-self: center;
   color: $color-text-heading;
   font-size: 0.875rem;
   font-weight: 600;

@@ -18,7 +18,8 @@
     "cta": "View our work"
   },
   "whatWeCreate": {
-    "title": "What can we create for you?"
+    "title": "What can we create for you?",
+    "viewPrices": "Starting prices"
   },
   "createCards": {
     "flowers": {
