@@ -210,9 +210,9 @@
   },
   "galleryContactCta": {
     "lightboxHint": "Нравится? Напишите нам — ссылка на это фото уже готова, делать скриншот не нужно.",
-    "instagram": "Написать в Instagram",
+    "instagram": "Instagram",
     "messenger": "Messenger",
-    "sms": "Написать SMS",
+    "sms": "SMS",
     "call": "Позвонить",
     "smsBody": "Здравствуйте! Хочу заказать подарок.",
     "smsBodyPhoto": "Здравствуйте! Хочу такой же: {{link}}",

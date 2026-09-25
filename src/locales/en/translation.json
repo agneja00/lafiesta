@@ -208,9 +208,9 @@
   },
   "galleryContactCta": {
     "lightboxHint": "Like it? Message us — a link to this photo is ready, no screenshot needed.",
-    "instagram": "Message on Instagram",
+    "instagram": "Instagram",
     "messenger": "Messenger",
-    "sms": "Send SMS",
+    "sms": "SMS",
     "call": "Call",
     "smsBody": "Hello! I'd like to order a gift.",
     "smsBodyPhoto": "Hello! I'd like one like this: {{link}}",
