@@ -2,9 +2,9 @@ import styles from "./HeaderMobile.module.scss";
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { FaBars, FaTimes, FaInstagram, FaFacebookF } from "react-icons/fa";
+import { FaBars, FaTimes, FaInstagram, FaFacebookF, FaPhoneAlt } from "react-icons/fa";
 import { LOGO_URL } from "@/constants/media";
-import { INSTAGRAM_URL, FACEBOOK_URL } from "@/constants/contact";
+import { INSTAGRAM_URL, FACEBOOK_URL, PHONE_HREF } from "@/constants/contact";
 import ContactActions from "@/components/ContactActions/ContactActions";
 import LanguageSwitcher from "../../LanguageSwitcher/LanguageSwitcher";
 import NavigationLinks from "../../NavigationLinks/NavigationLinks";
@@ -59,6 +59,10 @@ const HeaderMobile = () => {
         <Link to={`/${lang}`} className={styles.logoWrapper} onClick={handleClose}>
           <img src={LOGO_URL} alt="La Fiesta Logo" className={styles.logo} />
         </Link>
+
+        <a href={PHONE_HREF} className={styles.callButton} aria-label={t("galleryContactCta.call")}>
+          <FaPhoneAlt aria-hidden="true" />
+        </a>
       </div>
 
       {menuOpen && (
@@ -87,7 +91,7 @@ const HeaderMobile = () => {
                 href={FACEBOOK_URL}
                 target="_blank"
                 rel="noreferrer"
-                className={styles.socialIcon}
+                className={`${styles.socialIcon} ${styles.socialIconFacebook}`}
                 aria-label="Facebook"
               >
                 <FaFacebookF aria-hidden="true" />
