@@ -1,0 +1,12 @@
+.link {
+  align-self: center;
+  color: $color-text-heading;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+
+  &:hover {
+    color: $color-accent-coral;
+  }
+}

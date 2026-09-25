@@ -10,5 +10,9 @@ export const INSTAGRAM_DM_URL = "https://ig.me/m/lafiestalietuva";
 
 const PHONE_RAW = PHONE_HREF.replace("tel:", "");
 
+export const ADDRESS = "Kapsų g. 2 (Naujininkų Turgelis)";
+export const WORKING_DAYS = "I–VII";
+export const WORKING_TIME = "9:00 – 20:00";
+
 export const getSmsHref = (body = "") =>
   `sms:${PHONE_RAW}${body ? `?&body=${encodeURIComponent(body)}` : ""}`;

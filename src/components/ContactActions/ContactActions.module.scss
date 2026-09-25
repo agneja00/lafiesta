@@ -8,6 +8,7 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 0.75rem;
+
   .item {
     flex: 1 1 100%;
   }
@@ -32,6 +33,7 @@
 }
 
 .copied {
+  margin: 0;
   font-family: $font-body;
   font-size: 0.8125rem;
   text-align: center;
@@ -57,6 +59,12 @@
   }
 }
 
+.card {
+  .copied {
+    color: $color-text-body;
+  }
+}
+
 @media (min-width: $bp-tablet) {
   .actions .item,
   .lightbox .actions .item:not(.itemMain) {
@@ -65,5 +73,20 @@
 
   .section .actions {
     justify-content: flex-start;
+  }
+
+  .card .actions .item {
+    flex: 1 1 0;
+  }
+}
+
+@media (min-width: $bp-desktop) {
+  .card .actions {
+    flex-direction: column;
+  }
+
+  .card .actions .item {
+    flex: 0 0 auto;
+    width: 100%;
   }
 }
