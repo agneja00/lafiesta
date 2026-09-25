@@ -1,6 +1,6 @@
 .section {
   position: relative;
-  padding: 2rem 1.5rem;
+  padding: 2rem 1rem;
   background-color: $color-bg-section-alt;
 }
 
@@ -9,7 +9,7 @@
   overflow: visible;
   @include flexColumn;
   gap: 1.75rem;
-  padding: 2.5rem;
+  padding: 2rem 1.5rem;
   border-radius: 1.25rem;
   background-color: $color-bg-hero-blur;
   margin: 0 auto;
@@ -23,28 +23,31 @@
   position: relative;
   z-index: 2;
   @include flexColumn;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 .title {
-  @include flexCenter;
-  gap: 0.5rem;
+  display: block;
 }
 
 .heart {
-  font-size: 2.85rem;
+  display: inline-block;
+  font-size: 0.8em;
+  line-height: 1;
+  color: $color-accent-coral;
+  vertical-align: 0.05em;
 }
 
 .description {
-  font-size: 0.9rem;
-  line-height: 1.5;
-  color: $color-text-body;
   max-width: 25rem;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: $color-text-body;
 }
 
 .infoList {
   @include flexColumn;
-  gap: 1.5rem;
+  gap: 1.25rem;
 }
 
 .infoItem {
@@ -61,7 +64,7 @@
 
 .infoLabel {
   display: block;
-  font-size: 0.875rem;
+  font-size: 0.9375rem;
   font-weight: 600;
   color: $color-text-heading;
 }
@@ -69,17 +72,17 @@
 .infoValue {
   display: block;
   margin-top: 0.125rem;
-  font-size: 0.875rem;
+  font-size: 0.9375rem;
 }
 
 .hoursTable {
-  margin-top: 0.375rem;
+  margin-top: 0.25rem;
 }
 
 .hoursRow {
   display: flex;
-  font-size: 0.875rem;
   padding: 0.125rem 0;
+  font-size: 0.9375rem;
 
   dt {
     flex: 0 0 2.5rem;
@@ -100,6 +103,18 @@
 }
 
 @media (min-width: $bp-tablet) {
+  .section {
+    padding: 2rem 1.5rem;
+  }
+
+  .card {
+    padding: 2.5rem;
+  }
+
+  .content {
+    gap: 2rem;
+  }
+
   .bleedImage {
     display: block;
     position: absolute;
