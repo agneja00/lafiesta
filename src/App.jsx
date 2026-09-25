@@ -2,6 +2,7 @@ import { ROUTES, DEFAULT_LANGUAGE } from "./constants/routes";
 import RootLayout from "./components/layout/RootLayout";
 import HomePage from "./components/pages/HomePage/HomePage";
 import GalleryPage from "./components/pages/GalleryPage/GalleryPage";
+import PricesPage from "./components/pages/PricesPage/PricesPage";
 import ErrorPage from "./components/pages/ErrorPage/ErrorPage";
 import LanguageValidator from "./components/LanguageValidator/LanguageValidator";
 import { RouterProvider, createBrowserRouter, Navigate } from "react-router-dom";
@@ -21,6 +22,7 @@ const router = createBrowserRouter([
         children: [
           { index: true, element: <HomePage /> },
           { path: ROUTES.GALLERY, element: <GalleryPage /> },
+          { path: ROUTES.PRICES, element: <PricesPage /> },
         ],
       },
     ],
