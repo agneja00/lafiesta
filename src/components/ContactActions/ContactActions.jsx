@@ -1,12 +1,17 @@
 import styles from "./ContactActions.module.scss";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { FaInstagram, FaPhone, FaCommentSms } from "react-icons/fa6";
+import { FaInstagram, FaFacebookMessenger, FaPhone, FaCommentSms } from "react-icons/fa6";
+import Button from "@/components/Button/Button";
+import {
+  PHONE_NUMBER,
+  PHONE_HREF,
+  INSTAGRAM_DM_URL,
+  FACEBOOK_DM_URL,
+  getSmsHref,
+} from "@/constants/contact";
 
-import Button from "../Button/Button";
-import { PHONE_NUMBER, PHONE_HREF, INSTAGRAM_DM_URL, getSmsHref } from "../../constants/contact";
-
-const ContactActions = ({ photoUrl, variant = "section" }) => {
+const ContactActions = ({ photoUrl, variant = "card" }) => {
   const { t } = useTranslation();
 
   const [copiedUrl, setCopiedUrl] = useState(null);
@@ -16,7 +21,7 @@ const ContactActions = ({ photoUrl, variant = "section" }) => {
     ? t("galleryContactCta.smsBodyPhoto", { link: photoUrl })
     : t("galleryContactCta.smsBody");
 
-  const handleInstagramClick = () => {
+  const copyPhotoLink = () => {
     if (!photoUrl || !navigator.clipboard) return;
 
     navigator.clipboard
@@ -24,6 +29,7 @@ const ContactActions = ({ photoUrl, variant = "section" }) => {
       .then(() => setCopiedUrl(photoUrl))
       .catch(() => {});
   };
+
   return (
     <div className={`${styles.wrapper} ${styles[variant]}`}>
       <div className={styles.actions}>
@@ -32,12 +38,25 @@ const ContactActions = ({ photoUrl, variant = "section" }) => {
           href={INSTAGRAM_DM_URL}
           target="_blank"
           rel="noopener noreferrer"
-          onClick={handleInstagramClick}
+          onClick={copyPhotoLink}
           variant="primary"
           icon={FaInstagram}
-          className={`${styles.item} ${styles.itemMain}`}
+          className={styles.item}
         >
           {t("galleryContactCta.instagram")}
+        </Button>
+
+        <Button
+          as="a"
+          href={FACEBOOK_DM_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={copyPhotoLink}
+          variant="primary"
+          icon={FaFacebookMessenger}
+          className={styles.item}
+        >
+          {t("galleryContactCta.messenger")}
         </Button>
 
         <Button

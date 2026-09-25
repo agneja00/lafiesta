@@ -10,7 +10,7 @@
   gap: 0.75rem;
 
   .item {
-    flex: 1 1 100%;
+    flex: 1 1 calc(50% - 0.375rem);
   }
 
   .smsOnly {
@@ -43,36 +43,17 @@
   }
 }
 
-.lightbox {
-  .actions .item:not(.itemMain) {
-    flex: 1 1 0;
-  }
-
-  .copied {
-    color: rgba($color-white, 0.85);
-  }
+.lightbox .copied {
+  color: rgba($color-white, 0.85);
 }
 
-.section {
-  .copied {
-    color: $color-text-body;
-  }
-}
-
-.card {
-  .copied {
-    color: $color-text-body;
-  }
+.card .copied {
+  color: $color-text-body;
 }
 
 @media (min-width: $bp-tablet) {
-  .actions .item,
-  .lightbox .actions .item:not(.itemMain) {
+  .lightbox .actions .item {
     flex: 0 0 auto;
-  }
-
-  .section .actions {
-    justify-content: flex-start;
   }
 
   .card .actions .item {

@@ -1,9 +1,9 @@
 import styles from "./Footer.module.scss";
 import { useParams, Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { FaPhoneAlt, FaInstagram } from "react-icons/fa";
+import { FaPhoneAlt, FaInstagram, FaFacebook } from "react-icons/fa";
 import { LOGO_URL } from "@/constants/media";
-import { PHONE_HREF, INSTAGRAM_URL } from "@/constants/contact";
+import { PHONE_NUMBER, PHONE_HREF, INSTAGRAM_URL, FACEBOOK_URL } from "@/constants/contact";
 import NavigationLinks from "../NavigationLinks/NavigationLinks";
 
 const Footer = () => {
@@ -27,16 +27,23 @@ const Footer = () => {
 
         <ul className={styles.contact}>
           <li>
-            <a href={PHONE_HREF} className={styles.contactLink}>
-              <FaPhoneAlt aria-hidden="true" />
-              <span>+370 600 00000</span>
+            <a href={INSTAGRAM_URL} target="_blank" rel="noreferrer" className={styles.contactLink}>
+              <FaInstagram aria-hidden="true" />
+              <span>Instagram</span>
             </a>
           </li>
 
           <li>
-            <a href={INSTAGRAM_URL} target="_blank" rel="noreferrer" className={styles.contactLink}>
-              <FaInstagram aria-hidden="true" />
-              <span>Instagram</span>
+            <a href={FACEBOOK_URL} target="_blank" rel="noreferrer" className={styles.contactLink}>
+              <FaFacebook aria-hidden="true" />
+              <span>Facebook</span>
+            </a>
+          </li>
+
+          <li>
+            <a href={PHONE_HREF} className={styles.contactLink}>
+              <FaPhoneAlt aria-hidden="true" />
+              <span>{PHONE_NUMBER}</span>
             </a>
           </li>
         </ul>
