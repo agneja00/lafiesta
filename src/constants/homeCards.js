@@ -4,7 +4,7 @@ import { ROUTES } from "./routes";
 export const HOME_CREATE_CARDS = [
   {
     id: "bouquets",
-    icon: ICONS.section1.card1, // цветок
+    icon: ICONS.section1.card1,
     titleKey: "createCards.bouquets.title",
     descriptionKey: "createCards.bouquets.description",
     to: ROUTES.GALLERY,

@@ -91,6 +91,11 @@
   }
 }
 
+.actions {
+  width: 100%;
+  max-width: 26rem;
+}
+
 .aside {
   @include flexColumn;
   justify-content: center;

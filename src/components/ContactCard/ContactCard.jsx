@@ -10,6 +10,7 @@ const ContactCard = ({
   titleId,
   title,
   description,
+  actions,
   decoration = false,
   compact = false,
   children,
@@ -47,6 +48,7 @@ const ContactCard = ({
               ♡
             </span>
           </h2>
+
           <p className={styles.description}>{description}</p>
 
           <ul className={styles.infoList}>
@@ -71,6 +73,8 @@ const ContactCard = ({
               </div>
             </li>
           </ul>
+
+          {actions && <div className={styles.actions}>{actions}</div>}
         </div>
 
         <div className={styles.aside}>{children}</div>

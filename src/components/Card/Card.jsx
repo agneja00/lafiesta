@@ -10,7 +10,6 @@ const Card = ({ icon, title, description, variant = "outlined", to }) => {
 
       <h3 className={styles.title}>
         {to ? (
-          // ссылка на заголовке, а ::after растягивает её на всю карточку
           <Link to={to} className={styles.link}>
             {title}
           </Link>

@@ -2,8 +2,10 @@ import styles from "./Contacts.module.scss";
 import { useTranslation } from "react-i18next";
 import { FaWaze } from "react-icons/fa6";
 import { SiGooglemaps } from "react-icons/si";
+
 import { GOOGLE_MAPS_EMBED_SRC, GOOGLE_MAPS_URL, WAZE_URL } from "@/constants/contact";
 import ContactCard from "@/components/ContactCard/ContactCard";
+import ContactActions from "@/components/ContactActions/ContactActions";
 import Button from "@/components/Button/Button";
 
 const Contacts = () => {
@@ -15,6 +17,7 @@ const Contacts = () => {
       titleId="contacts-title"
       title={t("contacts.title")}
       description={t("contacts.description")}
+      actions={<ContactActions variant="menu" />}
       decoration
     >
       <div className={styles.mapFrame}>

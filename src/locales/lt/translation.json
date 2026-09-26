@@ -56,6 +56,7 @@
       "description": "Vainikai ir krepšeliai paskutiniam atsisveikinimui."
     }
   },
+
   "gallery": {
     "title": "Mūsų darbai",
     "subtitle": "Atrinkome keletą mūsų sukurtų dovanų ir šventinių kompozicijų.",
@@ -168,6 +169,7 @@
       "95": "Balionai, rožinis meškiukas ir puokštė"
     }
   },
+
   "whyLaFiesta": {
     "title": "Kodėl rinktis La Fiesta?"
   },
@@ -189,25 +191,27 @@
       "description": "Gėlės, balionai, saldumynai ir medinės dovanos – vienu apsilankymu."
     }
   },
+
   "orderSteps": {
     "title": "Kaip užsisakyti?",
     "choose": {
-      "title": "Išsirenkate dovaną",
-      "description": "Peržiūrėkite mūsų darbų pavyzdžius arba susisiekite, kad padėtume išsirinkti."
+      "title": "Išsirinkite",
+      "description": "Peržiūrėkite mūsų darbus arba tiesiog papasakokite, kam ir kokia proga – padėsime išsirinkti."
     },
     "contact": {
-      "title": "Susisiekiate su mumis",
-      "description": "Parašykite arba paskambinkite telefonu / socialiniuose tinkluose, aptarsime jūsų norus."
+      "title": "Susisiekite",
+      "description": "Parašykite Instagram, Messenger, SMS arba paskambinkite – aptarsime idėją ir kainą."
     },
     "prepare": {
-      "title": "Mes paruošiame dovaną",
-      "description": "Sukursime jūsų dovaną su meile, atsižvelgdami į visas detales."
+      "title": "Paruošiame",
+      "description": "Sukursime dovaną su meile, atsižvelgdami į kiekvieną detalę."
     },
     "pickup": {
-      "title": "Atsiimate vietoje",
-      "description": "Užsakymą atsiimsite mūsų parduotuvėje. Prekės nepristatomos."
+      "title": "Atsiimkite",
+      "description": "Jūsų dovana lauks paruošta mūsų parduotuvėje Naujininkų turgelyje."
     }
   },
+
   "footer": {
     "tagline": "Kuriame dovanas, kurios įsimena.",
     "cta": {
@@ -216,15 +220,17 @@
     },
     "rights": "Visos teisės apsaugotos."
   },
+
   "contacts": {
     "title": "Apsilankykite pas mus",
-    "description": "Kviečiame gyvai atvykti, apžiūrėti mūsų darbų, pasikonsultuoti ir išsirinkti tobulą dovaną!",
+    "description": "Užsukite gyvai arba parašykite – padėsime išsirinkti tobulą dovaną.",
     "addressLabel": "Adresas:",
     "hoursLabel": "Darbo laikas:",
     "mapTitle": "La Fiesta žemėlapyje",
     "openGoogleMaps": "Atidaryti Google Maps",
     "openWaze": "Atidaryti Waze"
   },
+
   "galleryContactCta": {
     "lightboxHint": "Patinka? Parašykite mums – nuoroda į šią nuotrauką jau paruošta, ekrano kopijos daryti nereikia.",
     "instagram": "Instagram",
@@ -234,10 +240,8 @@
     "smsBody": "Sveiki! Norėčiau užsisakyti dovaną.",
     "smsBodyPhoto": "Sveiki! Norėčiau tokio: {{link}}",
     "galleryTitle": "Patiko? Sukursime ir jums",
-    "linkCopied": "Nuoroda į nuotrauką nukopijuota – įklijuokite ją Instagram pokalbyje.",
     "galleryText": "Parašykite, paskambinkite ar užsukite – aptarsime jūsų idėją ir paruošime dovaną su meile.",
-    "address": "Kapsų g. 2 (Naujininkų Turgelis)",
-    "hours": "I–VII 9:00–20:00",
+    "linkCopied": "Nuoroda į nuotrauką nukopijuota – įklijuokite ją pokalbyje.",
     "howToGet": "Kaip atvykti"
   }
 }

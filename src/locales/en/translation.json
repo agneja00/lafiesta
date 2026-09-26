@@ -4,6 +4,7 @@
     "previous": "Previous photo",
     "next": "Next photo"
   },
+
   "links": {
     "home": "Home",
     "services": "What we make",
@@ -12,15 +13,18 @@
     "contacts": "Contacts",
     "cta": "Contact us"
   },
+
   "menu": {
     "followUs": "Follow us:"
   },
+
   "hero": {
     "title": "Gifts that say more.",
     "description": "Flowers, balloons and gifts for special moments — in Vilnius, at Naujininkai Market.",
     "cta": "Our work",
     "secondaryCta": "Instagram"
   },
+
   "whatWeCreate": {
     "title": "What can we create for you?",
     "subtitle": "Every gift is made individually — for your occasion, wishes and budget.",
@@ -52,6 +56,7 @@
       "description": "Wreaths and baskets for a final farewell."
     }
   },
+
   "gallery": {
     "title": "Our Work",
     "subtitle": "Take a look at some of the gifts and festive arrangements we've created.",
@@ -164,6 +169,7 @@
       "95": "Balloons, a pink teddy bear and a bouquet"
     }
   },
+
   "whyLaFiesta": {
     "title": "Why choose La Fiesta?"
   },
@@ -185,25 +191,27 @@
       "description": "Flowers, balloons, sweets and wooden gifts — in a single visit."
     }
   },
+
   "orderSteps": {
     "title": "How to order?",
     "choose": {
-      "title": "Choose your gift",
-      "description": "Browse our work or get in touch and we’ll help you choose."
+      "title": "Choose",
+      "description": "Browse our work or just tell us who it's for and the occasion — we'll help you choose."
     },
     "contact": {
       "title": "Get in touch",
-      "description": "Message or call us by phone or on social media, and we’ll discuss your wishes."
+      "description": "Message us on Instagram, Messenger, SMS or call — we'll discuss the idea and price."
     },
     "prepare": {
-      "title": "We prepare your gift",
-      "description": "We’ll create your gift with care, paying attention to every detail."
+      "title": "We prepare it",
+      "description": "We'll make your gift with love, paying attention to every detail."
     },
     "pickup": {
-      "title": "Pick it up in store",
-      "description": "Your order can be picked up at our store. Delivery is not available."
+      "title": "Pick it up",
+      "description": "Your gift will be ready and waiting at our shop at Naujininkai Market."
     }
   },
+
   "footer": {
     "tagline": "We create gifts that are remembered.",
     "cta": {
@@ -212,15 +220,17 @@
     },
     "rights": "All rights reserved."
   },
+
   "contacts": {
     "title": "Visit us",
-    "description": "Come see us in person — take a look at our work, get advice, and pick out the perfect gift!",
+    "description": "Drop by or message us — we'll help you choose the perfect gift.",
     "addressLabel": "Address:",
     "hoursLabel": "Opening hours:",
     "mapTitle": "La Fiesta on the map",
     "openGoogleMaps": "Open Google Maps",
     "openWaze": "Open Waze"
   },
+
   "galleryContactCta": {
     "lightboxHint": "Like it? Message us — a link to this photo is ready, no screenshot needed.",
     "instagram": "Instagram",
@@ -230,10 +240,8 @@
     "smsBody": "Hello! I'd like to order a gift.",
     "smsBodyPhoto": "Hello! I'd like one like this: {{link}}",
     "galleryTitle": "Like what you see? We'll make one for you",
-    "linkCopied": "Photo link copied — paste it into the Instagram chat.",
     "galleryText": "Message us, call or drop by — we'll talk through your idea and prepare your gift with love.",
-    "address": "Kapsų g. 2 (Naujininkų Turgelis)",
-    "hours": "Mon–Sun 9:00–20:00",
+    "linkCopied": "Photo link copied — paste it into the chat.",
     "howToGet": "How to get here"
   }
 }
