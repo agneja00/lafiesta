@@ -13,7 +13,6 @@ export const GOOGLE_MAPS_URL = "https://maps.google.com/?q=Vilnius,Kapsų+g.+2";
 export const WAZE_URL = "https://waze.com/ul?q=Vilnius,Kapsų+g.+2";
 
 export const ADDRESS = "Kapsų g. 2 (Naujininkų Turgelis)";
-export const WORKING_DAYS = "I–VII";
 export const WORKING_TIME = "9:00 – 20:00";
 
 const PHONE_RAW = PHONE_HREF.replace("tel:", "");

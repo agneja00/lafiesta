@@ -59,7 +59,7 @@
 
   "gallery": {
     "title": "Our Work",
-    "subtitle": "Take a look at some of the gifts and festive arrangements we've created.",
+    "subtitle": "See what we've created for others — and pick what you'd love.",
     "viewAll": "View full gallery",
     "blocks": {
       "balloons": "Balloons",
@@ -214,9 +214,8 @@
 
   "footer": {
     "tagline": "We create gifts that are remembered.",
-    "cta": {
-      "title": "We’re waiting for you!",
-      "description": "Come visit us and find the perfect gift."
+    "visit": {
+      "title": "Open every day"
     },
     "rights": "All rights reserved."
   },
@@ -226,6 +225,7 @@
     "description": "Drop by or message us — we'll help you choose the perfect gift.",
     "addressLabel": "Address:",
     "hoursLabel": "Opening hours:",
+    "everyday": "Every day",
     "mapTitle": "La Fiesta on the map",
     "openGoogleMaps": "Open Google Maps",
     "openWaze": "Open Waze"

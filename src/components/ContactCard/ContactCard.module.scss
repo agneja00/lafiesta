@@ -81,11 +81,11 @@
 
 .hoursRow {
   display: flex;
+  gap: 0.5rem;
   padding: 0.125rem 0;
   font-size: 0.9375rem;
 
   dt {
-    flex: 0 0 2.5rem;
     font-weight: 600;
     color: $color-text-heading;
   }

@@ -59,7 +59,7 @@
 
   "gallery": {
     "title": "Mūsų darbai",
-    "subtitle": "Atrinkome keletą mūsų sukurtų dovanų ir šventinių kompozicijų.",
+    "subtitle": "Pasižiūrėkite, ką sukūrėme kitiems – ir išsirinkite, kas patiktų jums.",
     "viewAll": "Peržiūrėti visą galeriją",
     "blocks": {
       "balloons": "Balionai",
@@ -214,9 +214,8 @@
 
   "footer": {
     "tagline": "Kuriame dovanas, kurios įsimena.",
-    "cta": {
-      "title": "Laukiame jūsų!",
-      "description": "Ateikite pas mus ir išsirinkite tobulą dovaną."
+    "visit": {
+      "title": "Laukiame jūsų kasdien"
     },
     "rights": "Visos teisės apsaugotos."
   },
@@ -226,6 +225,7 @@
     "description": "Užsukite gyvai arba parašykite – padėsime išsirinkti tobulą dovaną.",
     "addressLabel": "Adresas:",
     "hoursLabel": "Darbo laikas:",
+    "everyday": "Kasdien",
     "mapTitle": "La Fiesta žemėlapyje",
     "openGoogleMaps": "Atidaryti Google Maps",
     "openWaze": "Atidaryti Waze"
