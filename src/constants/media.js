@@ -15,6 +15,8 @@ export const ICONS = {
     card2: `${CLOUDINARY_BASE}/f_auto,q_auto,w_160/s1gift_scj9g5.png`,
     card3: `${CLOUDINARY_BASE}/f_auto,q_auto,w_160/s1balloon_yfnjj9`,
     card4: `${CLOUDINARY_BASE}/f_auto,q_auto,w_160/s1candy_rjhnux`,
+    card5: `${CLOUDINARY_BASE}/f_auto,q_auto,w_160/s1wood_tis5wy`,
+    card6: `${CLOUDINARY_BASE}/f_auto,q_auto,w_160/s1funeral_osmyvd`,
   },
 
   section2: {
