@@ -23,24 +23,33 @@
   },
   "whatWeCreate": {
     "title": "What can we create for you?",
+    "subtitle": "Every gift is made individually — for your occasion, wishes and budget.",
     "viewPrices": "Starting prices"
   },
   "createCards": {
-    "flowers": {
-      "title": "Flowers",
-      "description": "Bouquets and floral arrangements for every occasion."
+    "bouquets": {
+      "title": "Bouquets",
+      "description": "From a few stems to lavish bouquets — for any occasion."
     },
-    "gifts": {
-      "title": "Gifts",
-      "description": "Thoughtful gifts and original sets for your loved ones."
+    "compositions": {
+      "title": "Flower arrangements",
+      "description": "Flowers in boxes, baskets and hearts."
     },
     "balloons": {
       "title": "Balloons",
-      "description": "Festive balloons for your special occasions."
+      "description": "Bubble, foil and personalized balloons for your celebration."
     },
     "sweetGifts": {
-      "title": "Sweet Gifts",
-      "description": "Sweet surprises created to bring a little more joy."
+      "title": "Sweet gifts",
+      "description": "Candy bouquets and sets with flowers."
+    },
+    "wood": {
+      "title": "Wooden gifts",
+      "description": "Engraved frames, envelopes, boxes and boards."
+    },
+    "funeral": {
+      "title": "Sympathy flowers",
+      "description": "Wreaths and baskets for a final farewell."
     }
   },
   "gallery": {

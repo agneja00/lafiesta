@@ -16,7 +16,7 @@ const WhatWeCreate = () => {
   return (
     <section className={styles.section} id="paslaugos">
       <div className={styles.container}>
-        <SectionTitle>{t("whatWeCreate.title")}</SectionTitle>
+        <SectionTitle subtitle={t("whatWeCreate.subtitle")}>{t("whatWeCreate.title")}</SectionTitle>
 
         <CardList items={HOME_CREATE_CARDS} variant="outlined" />
 

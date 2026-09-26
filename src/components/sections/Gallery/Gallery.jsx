@@ -20,7 +20,7 @@ const Gallery = () => {
           <SectionTitle subtitle={t("gallery.subtitle")}>{t("gallery.title")}</SectionTitle>
 
           {GALLERY_BLOCKS.map((block) => (
-            <div key={block.id} className={styles.block}>
+            <div key={block.id} id={block.id} className={styles.block}>
               <h2 className={styles.blockTitle}>{t(block.titleKey)}</h2>
 
               <div className={styles.gallery}>

@@ -1,18 +1,23 @@
 import { ICONS } from "./media";
+import { ROUTES } from "./routes";
 
 export const HOME_CREATE_CARDS = [
   {
-    id: "flowers",
-    icon: ICONS.section1.card1,
-    titleKey: "createCards.flowers.title",
-    descriptionKey: "createCards.flowers.description",
+    id: "bouquets",
+    icon: ICONS.section1.card1, // цветок
+    titleKey: "createCards.bouquets.title",
+    descriptionKey: "createCards.bouquets.description",
+    to: ROUTES.GALLERY,
+    hash: "#bouquets",
   },
 
   {
-    id: "gifts",
+    id: "compositions",
     icon: ICONS.section1.card2,
-    titleKey: "createCards.gifts.title",
-    descriptionKey: "createCards.gifts.description",
+    titleKey: "createCards.compositions.title",
+    descriptionKey: "createCards.compositions.description",
+    to: ROUTES.GALLERY,
+    hash: "#compositions",
   },
 
   {
@@ -20,13 +25,35 @@ export const HOME_CREATE_CARDS = [
     icon: ICONS.section1.card3,
     titleKey: "createCards.balloons.title",
     descriptionKey: "createCards.balloons.description",
+    to: ROUTES.GALLERY,
+    hash: "#balloons",
   },
 
   {
-    id: "sweetGifts",
+    id: "sweets",
     icon: ICONS.section1.card4,
     titleKey: "createCards.sweetGifts.title",
     descriptionKey: "createCards.sweetGifts.description",
+    to: ROUTES.GALLERY,
+    hash: "#sweets",
+  },
+
+  {
+    id: "wood",
+    icon: ICONS.section1.card5,
+    titleKey: "createCards.wood.title",
+    descriptionKey: "createCards.wood.description",
+    to: ROUTES.GALLERY,
+    hash: "#wood",
+  },
+
+  {
+    id: "funeral",
+    icon: ICONS.section1.card6,
+    titleKey: "createCards.funeral.title",
+    descriptionKey: "createCards.funeral.description",
+    to: ROUTES.GALLERY,
+    hash: "#funeral",
   },
 ];
 

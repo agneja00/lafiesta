@@ -27,24 +27,33 @@
 
   "whatWeCreate": {
     "title": "Ką galime jums sukurti?",
+    "subtitle": "Kiekvieną dovaną kuriame individualiai – pagal progą, norus ir biudžetą.",
     "viewPrices": "Orientacinės kainos"
   },
   "createCards": {
-    "flowers": {
-      "title": "Gėlės",
-      "description": "Puokštės ir kompozicijos kiekvienai progai."
+    "bouquets": {
+      "title": "Puokštės",
+      "description": "Nuo kelių žiedų iki prabangių puokščių – bet kuriai progai."
     },
-    "gifts": {
-      "title": "Dovanos",
-      "description": "Dovanos ir originalūs rinkiniai artimiems žmonėms."
+    "compositions": {
+      "title": "Gėlių kompozicijos",
+      "description": "Gėlės dėžutėse, krepšeliuose ir širdelėse."
     },
     "balloons": {
       "title": "Balionai",
-      "description": "Šventiniai balionai jūsų ypatingoms progoms."
+      "description": "Burbuliniai, folijos ir vardiniai balionai šventei."
     },
     "sweetGifts": {
       "title": "Saldžios dovanos",
-      "description": "Saldžios staigmenos, sukurtos pradžiuginti."
+      "description": "Saldainių puokštės ir rinkiniai su gėlėmis."
+    },
+    "wood": {
+      "title": "Medinės dovanos",
+      "description": "Graviruoti rėmeliai, vokai, dėžės ir lentelės."
+    },
+    "funeral": {
+      "title": "Užuojautos gėlės",
+      "description": "Vainikai ir krepšeliai paskutiniam atsisveikinimui."
     }
   },
   "gallery": {

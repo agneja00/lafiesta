@@ -5,12 +5,9 @@
 }
 
 .outlined {
-  gap: 1rem;
-
-  > li {
-    flex: 1 1 calc(50% - 0.5rem);
-    min-width: 0;
-  }
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
 }
 
 .divided {
@@ -32,11 +29,8 @@
 
 @media (min-width: $bp-tablet) {
   .outlined {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1rem;
-
-    > li {
-      flex: 1 1 calc(33.333% - 0.667rem);
-    }
   }
 
   .divided {
@@ -49,14 +43,6 @@
 }
 
 @media (min-width: $bp-desktop) {
-  .outlined {
-    gap: 0.75rem;
-
-    > li {
-      flex: 1 1 20%;
-    }
-  }
-
   .divided {
     > li {
       flex: 1 1 25%;

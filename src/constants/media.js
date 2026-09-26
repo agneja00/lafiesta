@@ -12,10 +12,10 @@ export const HERO_DESKTOP = `${CLOUDINARY_BASE}/f_auto,q_auto,w_1600/hero_deskto
 export const ICONS = {
   section1: {
     card1: `${CLOUDINARY_BASE}/f_auto,q_auto,w_160/s1flower_dmzicu`,
-    card2: `${CLOUDINARY_BASE}/f_auto,q_auto,w_160/s1gift_scj9g5.png`,
+    card2: `${CLOUDINARY_BASE}/f_auto,q_auto,w_160/s1flowers_composition_ygumnw`,
     card3: `${CLOUDINARY_BASE}/f_auto,q_auto,w_160/s1balloon_yfnjj9`,
     card4: `${CLOUDINARY_BASE}/f_auto,q_auto,w_160/s1candy_rjhnux`,
-    card5: `${CLOUDINARY_BASE}/f_auto,q_auto,w_160/s1wood_tis5wy`,
+    card5: `${CLOUDINARY_BASE}/f_auto,q_auto,w_160/s1gift_scj9g5.png`,
     card6: `${CLOUDINARY_BASE}/f_auto,q_auto,w_160/s1funeral_osmyvd`,
   },
 

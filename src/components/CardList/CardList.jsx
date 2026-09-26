@@ -1,9 +1,12 @@
 import styles from "./CardList.module.scss";
+import { useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { buildTo } from "@/utils/navigation";
 import Card from "../Card/Card";
 
 const CardList = ({ items, variant = "outlined", className = "" }) => {
   const { t } = useTranslation();
+  const { lang } = useParams();
 
   const classes = [styles.list, styles[variant], className].filter(Boolean).join(" ");
 
@@ -16,6 +19,7 @@ const CardList = ({ items, variant = "outlined", className = "" }) => {
           title={t(item.titleKey)}
           description={t(item.descriptionKey)}
           variant={variant}
+          to={item.to !== undefined ? buildTo(item, lang) : undefined}
         />
       ))}
     </ul>
