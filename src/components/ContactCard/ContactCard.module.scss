@@ -109,7 +109,7 @@
 
 @media (min-width: $bp-tablet) {
   .section {
-    padding: 2rem 1.5rem;
+    padding: 2rem;
   }
 
   .card {
@@ -132,15 +132,19 @@
   }
 
   .withDecoration .content {
-    margin-left: 22.5rem;
+    margin-left: 5rem;
   }
 }
 
 @media (min-width: $bp-desktop) {
+  .section {
+    padding: 2rem 2.5rem;
+  }
+
   .card {
     flex-direction: row;
     align-items: stretch;
-    gap: 2.5rem;
+    gap: 3rem;
     width: 100%;
   }
 
@@ -154,14 +158,23 @@
     width: 35rem;
   }
 
+  .withDecoration .content {
+    margin-left: 22.5rem;
+  }
+
   .content {
     flex: 1 1 0;
-    justify-content: center;
+  }
+
+  .actions {
+    max-width: none;
+    margin-top: auto;
   }
 
   .aside {
-    flex: 1.4 1 0;
+    flex: 1 1 0;
     min-width: 10rem;
+    justify-content: stretch;
   }
 
   .compact .card {
@@ -191,5 +204,6 @@
   .compact .aside {
     flex: 0 0 auto;
     min-width: 17rem;
+    justify-content: center;
   }
 }

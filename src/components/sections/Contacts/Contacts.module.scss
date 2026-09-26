@@ -35,10 +35,19 @@
     border-color 0.2s ease,
     background-color 0.2s ease;
 
-  &:hover,
-  &:focus-visible {
+  @include hover {
     border-color: $color-accent-coral;
     background-color: rgba($color-accent-coral, 0.06);
+  }
+
+  &:active {
+    border-color: $color-accent-coral;
+    background-color: rgba($color-accent-coral, 0.1);
+  }
+
+  &:focus-visible {
+    outline: 0.125rem solid $color-accent-coral;
+    outline-offset: 0.125rem;
   }
 }
 
@@ -53,5 +62,13 @@
 
   .mapButton {
     flex: 1 1 0;
+  }
+}
+
+@media (min-width: $bp-desktop) {
+  .mapFrame {
+    flex: 1 1 auto;
+    min-height: 16rem;
+    aspect-ratio: auto;
   }
 }
