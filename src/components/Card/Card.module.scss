@@ -17,7 +17,7 @@
   font-size: 1.35rem;
   font-weight: 600;
   line-height: 1.2;
-  color: $color-text-body;
+  color: $color-text-heading;
 }
 
 .description {
@@ -44,18 +44,10 @@
 .divided {
   position: relative;
   padding-inline: 1rem;
-
-  .title {
-    color: $color-text-heading;
-  }
 }
 
 .step {
   padding-inline: 0.5rem;
-
-  .title {
-    color: $color-text-heading;
-  }
 }
 
 @media (max-width: 47.99rem) {
