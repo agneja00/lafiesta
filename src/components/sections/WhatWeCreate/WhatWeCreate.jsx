@@ -14,7 +14,7 @@ const WhatWeCreate = () => {
   const { lang } = useParams();
 
   return (
-    <section className={styles.section} id="paslaugos">
+    <section className={styles.section} id="ka-kuriame">
       <div className={styles.container}>
         <SectionTitle subtitle={t("whatWeCreate.subtitle")}>{t("whatWeCreate.title")}</SectionTitle>
 

@@ -16,7 +16,7 @@ export const navLinks = [
   {
     label: "links.services",
     to: ROUTES.HOME,
-    hash: "#paslaugos",
+    hash: "#ka-kuriame",
     icon: IoFlowerOutline,
   },
   {
