@@ -169,20 +169,20 @@
   },
   "reasons": {
     "personal": {
-      "title": "Every detail made with love",
-      "description": "We create every order with the same care we would give to our own loved ones."
+      "title": "Made with love",
+      "description": "Every gift is handmade — for the occasion and the person it's meant for."
     },
     "individual": {
-      "title": "Personalized orders",
-      "description": "Every order is tailored to your wishes and special occasion."
+      "title": "Within your budget",
+      "description": "We'll suggest the most beautiful option at a price that suits you."
     },
     "fresh": {
-      "title": "Fresh, quality flowers",
-      "description": "We choose fresh flowers and carefully selected materials."
+      "title": "Fresh flowers",
+      "description": "We restock our flowers regularly, so bouquets stay beautiful longer."
     },
     "choice": {
-      "title": "Wide selection",
-      "description": "Flowers, gifts and surprises – all in one place."
+      "title": "All in one place",
+      "description": "Flowers, balloons, sweets and wooden gifts — in a single visit."
     }
   },
   "orderSteps": {

@@ -43,7 +43,41 @@
 
 .divided {
   position: relative;
-  padding-inline: 0.75rem;
+  padding-inline: 1rem;
+
+  .title {
+    color: $color-text-heading;
+  }
+}
+
+@media (max-width: 47.99rem) {
+  .divided {
+    display: grid;
+    grid-template-columns: 3.5rem 1fr;
+    column-gap: 1rem;
+    align-items: center;
+    padding-inline: 0;
+    text-align: left;
+
+    .icon {
+      grid-row: 1 / span 2;
+      width: 3.5rem;
+      height: 3.5rem;
+    }
+
+    .title {
+      grid-column: 2;
+      align-self: end;
+      margin-top: 0;
+      font-size: 1.3rem;
+    }
+
+    .description {
+      grid-column: 2;
+      align-self: start;
+      margin-top: 0.25rem;
+    }
+  }
 }
 
 .step {
@@ -117,6 +151,22 @@
   .outlined {
     padding: 1.5rem 1.25rem;
     border-radius: 1.125rem;
+  }
+
+  .divided {
+    .icon {
+      width: 4.5rem;
+      height: 4.5rem;
+    }
+
+    .title {
+      margin-top: 0.5rem;
+    }
+
+    .description {
+      max-width: 17rem;
+      margin-top: 0.5rem;
+    }
   }
 
   .step {

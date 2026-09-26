@@ -173,20 +173,20 @@
   },
   "reasons": {
     "personal": {
-      "title": "Kiekviena detalė su meile",
-      "description": "Kuriame nuoširdžiai, tarsi sau ar artimam žmogui."
+      "title": "Kuriame su meile",
+      "description": "Kiekvieną dovaną kuriame rankomis – pagal progą ir žmogų, kuriam ji skirta."
     },
     "individual": {
-      "title": "Individualūs užsakymai",
-      "description": "Kiekvienas užsakymas pritaikytas jūsų norams ir progai."
+      "title": "Pagal jūsų biudžetą",
+      "description": "Pasiūlysime gražiausią variantą už jums tinkamą kainą."
     },
     "fresh": {
-      "title": "Šviežios ir kokybiškos gėlės",
-      "description": "Renkamės šviežias gėles ir kruopščiai atrinktas medžiagas."
+      "title": "Šviežios gėlės",
+      "description": "Gėles atnaujiname nuolat, todėl puokštės ilgai džiugina."
     },
     "choice": {
-      "title": "Platus pasirinkimas",
-      "description": "Gėlės, dovanos ir staigmenos – viskas vienoje vietoje."
+      "title": "Viskas vienoje vietoje",
+      "description": "Gėlės, balionai, saldumynai ir medinės dovanos – vienu apsilankymu."
     }
   },
   "orderSteps": {
