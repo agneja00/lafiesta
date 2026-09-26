@@ -1,5 +1,6 @@
 import styles from "./HeaderDesktop.module.scss";
 import { Link, useParams } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { FaPhoneAlt } from "react-icons/fa";
 import { navLinks } from "@/constants/navLinks";
 import { LOGO_URL } from "@/constants/media";
@@ -11,10 +12,10 @@ import NavigationLinks from "@/components/NavigationLinks/NavigationLinks";
 
 const HeaderDesktop = () => {
   const { lang } = useParams();
+  const { t } = useTranslation();
 
   const isScrolled = useScrolled(80);
-
-  const leftLinks = navLinks.slice(0, 4);
+  const leftLinks = navLinks.slice(1, 4);
   const rightLinks = navLinks.slice(4);
 
   return (
@@ -22,7 +23,11 @@ const HeaderDesktop = () => {
       <nav className={styles.nav} aria-label="Main navigation">
         <NavigationLinks links={leftLinks} variant="desktopLeft" />
 
-        <Link to={`/${lang}`} className={styles.logoWrapper} aria-label="La Fiesta — Home">
+        <Link
+          to={`/${lang}`}
+          className={styles.logoWrapper}
+          aria-label={`La Fiesta — ${t("links.home")}`}
+        >
           <img src={LOGO_URL} alt="La Fiesta Logo" className={styles.logo} />
         </Link>
 
