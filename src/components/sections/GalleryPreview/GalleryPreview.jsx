@@ -2,14 +2,14 @@ import styles from "./GalleryPreview.module.scss";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { FaImages } from "react-icons/fa6";
-import { GALLERY_PREVIEW_IMAGES } from "../../../constants/media";
-import { ROUTES } from "../../../constants/routes";
-import { getCloudinaryUrl, getCloudinarySrcSet } from "../../../utils/cloudinary";
-import SectionTitle from "../../SectionTitle/SectionTitle";
-import Button from "../../Button/Button";
-import Lightbox from "../../Lightbox/Lightbox";
+import { FaImages, FaMagnifyingGlassPlus } from "react-icons/fa6";
+import { GALLERY_PREVIEW_IMAGES } from "@/constants/media";
+import { ROUTES } from "@/constants/routes";
 import { buildTo } from "@/utils/navigation";
+import { getCloudinaryUrl, getCloudinarySrcSet } from "@/utils/cloudinary";
+import SectionTitle from "@/components/SectionTitle/SectionTitle";
+import Button from "@/components/Button/Button";
+import Lightbox from "@/components/Lightbox/Lightbox";
 
 const THUMB_WIDTHS = [300, 450, 600];
 const THUMB_SIZES = "(min-width: 64rem) 280px, (min-width: 48rem) 33vw, 45vw";
@@ -18,8 +18,6 @@ const GalleryPreview = () => {
   const { t } = useTranslation();
   const { lang } = useParams();
   const [selectedIndex, setSelectedIndex] = useState(null);
-
-  const galleryPath = buildTo({ to: ROUTES.GALLERY }, lang);
 
   return (
     <>
@@ -44,12 +42,22 @@ const GalleryPreview = () => {
                   loading="lazy"
                   decoding="async"
                 />
+
+                <span className={styles.zoom} aria-hidden="true">
+                  <FaMagnifyingGlassPlus />
+                </span>
               </button>
             ))}
           </div>
 
           <div className={styles.action}>
-            <Button as="link" to={galleryPath} size="medium" icon={FaImages}>
+            <Button
+              as="link"
+              to={buildTo({ to: ROUTES.GALLERY }, lang)}
+              variant="primary"
+              size="medium"
+              icon={FaImages}
+            >
               {t("gallery.viewAll")}
             </Button>
           </div>
