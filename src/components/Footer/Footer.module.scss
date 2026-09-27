@@ -6,8 +6,8 @@
 .container {
   @include flexColumnAlignCenter;
   gap: 2.25rem;
-  padding: 2rem 1.5rem;
   width: 100%;
+  padding: 2.5rem 1rem 2rem;
 }
 
 .brand {
@@ -18,6 +18,12 @@
 
 .logoLink {
   display: inline-flex;
+
+  &:focus-visible {
+    outline: 0.125rem solid $color-accent-coral;
+    outline-offset: 0.25rem;
+    border-radius: 0.5rem;
+  }
 }
 
 .logo {
@@ -28,7 +34,7 @@
 
 .tagline {
   max-width: 12rem;
-  font-size: 0.9rem;
+  font-size: 0.9375rem;
   line-height: 1.5;
   text-align: center;
 }
@@ -44,7 +50,7 @@
 .contactLink {
   @include flexInlineCenter;
   gap: 0.5rem;
-  font-size: 0.9rem;
+  font-size: 0.9375rem;
   line-height: 1.4;
   transition: color 0.2s ease;
 
@@ -55,7 +61,11 @@
     color: $color-accent-coral;
   }
 
-  &:hover {
+  @include hover {
+    color: $color-accent-coral;
+  }
+
+  &:active {
     color: $color-accent-coral;
   }
 
@@ -91,7 +101,12 @@
     height: 1.25rem;
   }
 
-  &:hover {
+  @include hover {
+    background-color: $color-accent-coral;
+    color: $color-white;
+  }
+
+  &:active {
     background-color: $color-accent-coral;
     color: $color-white;
   }
@@ -107,7 +122,7 @@
   height: 1.05rem;
 }
 
-.cta {
+.visit {
   @include flexColumnAlignCenter;
   gap: 0.5rem;
   max-width: 18rem;
@@ -121,27 +136,36 @@
   line-height: 1;
 }
 
-.ctaTitle {
+.visitTitle {
+  margin-bottom: 0.25rem;
   font-size: 1.5rem;
   font-weight: 600;
   line-height: 1.2;
 }
 
-.ctaDescription {
-  max-width: 17rem;
-  font-size: 0.85rem;
+.visitLine {
+  @include flexInlineCenter;
+  gap: 0.4rem;
+  font-size: 0.9375rem;
   line-height: 1.5;
+
+  svg {
+    flex: 0 0 auto;
+    width: 1rem;
+    height: 1rem;
+    color: $color-accent-coral;
+  }
 }
 
 .bottom {
   width: 100%;
-  padding: 1.5rem 0;
+  padding: 1.5rem 1rem;
   border-top: 0.0625rem solid $color-border-light;
   text-align: center;
 }
 
 .bottomText {
-  font-size: 0.8rem;
+  font-size: 0.8125rem;
   line-height: 1.4;
   color: $color-text-muted;
 }
@@ -151,19 +175,11 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    padding: 2rem 3.5rem 0.75rem;
+    padding: 2.5rem 3.5rem 1rem;
   }
 
   .tagline {
     font-size: 1rem;
-  }
-
-  .ctaTitle {
-    font-size: 1.6rem;
-  }
-
-  .ctaDescription {
-    font-size: 0.95rem;
   }
 
   .contact {
@@ -177,8 +193,19 @@
     font-size: 1rem;
   }
 
+  .visitTitle {
+    font-size: 1.6rem;
+  }
+
+  .visitLine {
+    font-size: 1rem;
+  }
+
   .bottom {
-    font-size: 0.9rem;
     margin-top: 2rem;
+  }
+
+  .bottomText {
+    font-size: 0.875rem;
   }
 }

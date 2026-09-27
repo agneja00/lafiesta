@@ -2,8 +2,17 @@ import styles from "./Footer.module.scss";
 import { useParams, Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { FaPhoneAlt, FaInstagram, FaFacebookF } from "react-icons/fa";
+import { IoLocationSharp } from "react-icons/io5";
+import { FaClock } from "react-icons/fa6";
 import { LOGO_URL } from "@/constants/media";
-import { PHONE_NUMBER, PHONE_HREF, INSTAGRAM_URL, FACEBOOK_URL } from "@/constants/contact";
+import {
+  PHONE_NUMBER,
+  PHONE_HREF,
+  INSTAGRAM_URL,
+  FACEBOOK_URL,
+  ADDRESS,
+  WORKING_TIME,
+} from "@/constants/contact";
 import NavigationLinks from "../NavigationLinks/NavigationLinks";
 
 const Footer = () => {
@@ -14,7 +23,11 @@ const Footer = () => {
     <footer className={styles.footer}>
       <div className={styles.container}>
         <div className={styles.brand}>
-          <Link to={`/${lang}`} className={styles.logoLink}>
+          <Link
+            to={`/${lang}`}
+            className={styles.logoLink}
+            aria-label={`La Fiesta — ${t("links.home")}`}
+          >
             <img src={LOGO_URL} alt="La Fiesta Logo" className={styles.logo} />
           </Link>
 
@@ -31,6 +44,7 @@ const Footer = () => {
             <span>{PHONE_NUMBER}</span>
           </a>
 
+          {/* подписаться */}
           <div className={styles.socials}>
             <span className={styles.socialsLabel}>{t("menu.followUs")}</span>
 
@@ -56,14 +70,24 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className={styles.cta}>
+        <div className={styles.visit}>
           <span className={styles.heart} aria-hidden="true">
             ♡
           </span>
 
-          <h3 className={styles.ctaTitle}>{t("footer.cta.title")}</h3>
+          <h3 className={styles.visitTitle}>{t("footer.visit.title")}</h3>
 
-          <p className={styles.ctaDescription}>{t("footer.cta.description")}</p>
+          <p className={styles.visitLine}>
+            <IoLocationSharp aria-hidden="true" />
+            <span>{ADDRESS}</span>
+          </p>
+
+          <p className={styles.visitLine}>
+            <FaClock aria-hidden="true" />
+            <span>
+              {t("contacts.everyday")} {WORKING_TIME}
+            </span>
+          </p>
         </div>
       </div>
 
