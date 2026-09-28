@@ -3,9 +3,21 @@
   inset: 0;
   z-index: 2000;
   @include flexRowCenter;
-  padding: 1rem;
-  background-color: rgba(58, 46, 46, 0.85);
+  padding: 4.25rem 1rem 1rem;
+  background-color: rgba($color-text-body, 0.92);
   cursor: zoom-out;
+}
+
+.counter {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.25rem;
+  color: rgba($color-white, 0.85);
+  font-family: $font-body;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  pointer-events: none;
 }
 
 .lightboxContent {
@@ -42,6 +54,7 @@
 }
 
 .hint {
+  margin: 0;
   color: rgba($color-white, 0.85);
   font-family: $font-body;
   font-size: 0.875rem;
@@ -53,6 +66,7 @@
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -60,8 +74,8 @@
 
 .closeButton {
   position: absolute;
-  top: 1rem;
-  right: 1rem;
+  top: 0.75rem;
+  right: 0.75rem;
   z-index: 1;
   @include flexRowCenter;
   width: 2.75rem;
@@ -70,12 +84,16 @@
   border-radius: 50%;
   background-color: $color-white;
   color: $color-text-heading;
-
   transition:
     background-color 0.2s ease,
     color 0.2s ease;
 
-  &:hover {
+  @include hover {
+    background-color: $color-accent-coral;
+    color: $color-white;
+  }
+
+  &:active {
     background-color: $color-accent-coral;
     color: $color-white;
   }
@@ -97,7 +115,12 @@
 
 @media (min-width: $bp-tablet) {
   .lightbox {
-    padding: 2rem;
+    padding: 2rem 5rem;
+  }
+
+  .counter {
+    top: 2.25rem;
+    left: 2rem;
   }
 
   .closeButton {
@@ -109,20 +132,23 @@
     @include flexRowCenter;
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
     z-index: 1;
     width: 3rem;
     height: 3rem;
-
     border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba($color-white, 0.9);
     color: $color-text-heading;
-
+    transform: translateY(-50%);
     transition:
       background-color 0.2s ease,
       color 0.2s ease;
 
-    &:hover {
+    @include hover {
+      background-color: $color-accent-coral;
+      color: $color-white;
+    }
+
+    &:active {
       background-color: $color-accent-coral;
       color: $color-white;
     }
@@ -158,5 +184,16 @@
 
   .navButtonNext {
     right: 2rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lightboxContent img {
+    animation: none;
+  }
+
+  .closeButton,
+  .navButton {
+    transition: none;
   }
 }

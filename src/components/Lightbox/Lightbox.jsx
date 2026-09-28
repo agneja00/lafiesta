@@ -3,14 +3,12 @@ import { useCallback, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { useParams } from "react-router-dom";
 import { FaXmark, FaChevronLeft, FaChevronRight } from "react-icons/fa6";
-
-import ContactActions from "../ContactActions/ContactActions";
-import { getPhotoUrl } from "../../hooks/usePhotoDeepLink";
-import { getCloudinaryUrl, getCloudinarySrcSet } from "../../utils/cloudinary";
+import ContactActions from "@/components/ContactActions/ContactActions";
+import { getPhotoUrl } from "@/hooks/usePhotoDeepLink";
+import { getCloudinaryUrl, getCloudinarySrcSet } from "@/utils/cloudinary";
 
 const IMAGE_WIDTHS = [800, 1200, 1600];
 const IMAGE_SIZES = "(min-width: 64rem) 70rem, 90vw";
-
 const SWIPE_THRESHOLD = 50;
 
 const Lightbox = ({ images, selectedIndex, onNavigate, onClose }) => {
@@ -78,6 +76,8 @@ const Lightbox = ({ images, selectedIndex, onNavigate, onClose }) => {
     else showNext();
   };
 
+  const stopPropagation = (event) => event.stopPropagation();
+
   return (
     <div
       className={styles.lightbox}
@@ -86,6 +86,10 @@ const Lightbox = ({ images, selectedIndex, onNavigate, onClose }) => {
       aria-label={t(selectedImage.altKey)}
       onClick={onClose}
     >
+      <span className={styles.counter} aria-hidden="true">
+        {selectedIndex + 1} / {total}
+      </span>
+
       <button
         type="button"
         className={styles.closeButton}
@@ -132,10 +136,10 @@ const Lightbox = ({ images, selectedIndex, onNavigate, onClose }) => {
           alt={t(selectedImage.altKey)}
           decoding="async"
           fetchPriority="high"
-          onClick={(event) => event.stopPropagation()}
+          onClick={stopPropagation}
         />
 
-        <div className={styles.cta} onClick={(event) => event.stopPropagation()}>
+        <div className={styles.cta} onClick={stopPropagation}>
           <p className={styles.hint}>{t("galleryContactCta.lightboxHint")}</p>
           <ContactActions variant="lightbox" photoUrl={getPhotoUrl(lang, selectedImage.id)} />
         </div>
