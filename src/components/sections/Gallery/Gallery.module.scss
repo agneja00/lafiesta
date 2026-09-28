@@ -11,10 +11,10 @@
 
 .chipsBar {
   position: sticky;
-  top: 4.75rem;
+  top: var(--header-height, 4.75rem);
   z-index: 10;
   margin: 0 -1rem 1.5rem;
-  padding: 0.625rem 0;
+  padding: 0.75rem 0;
   background-color: rgba($color-white, 0.95);
   border-bottom: 0.0625rem solid $color-border-light;
   backdrop-filter: blur(0.5rem);
@@ -86,7 +86,7 @@
 }
 
 .block[id] {
-  scroll-margin-top: 9.25rem;
+  scroll-margin-top: calc(var(--header-height, 4.75rem) + 4.75rem);
 }
 
 .blockTitle {
@@ -200,7 +200,6 @@
   }
 
   .chipsBar {
-    top: 5rem;
     margin-inline: -2rem;
     margin-bottom: 2rem;
   }
@@ -211,10 +210,6 @@
 
   .block {
     margin-top: 3.5rem;
-  }
-
-  .block[id] {
-    scroll-margin-top: 9.5rem;
   }
 
   .blockTitle {
@@ -250,10 +245,21 @@
   }
 
   .chipsBar {
-    top: 4.75rem;
     margin-inline: 0;
     margin-bottom: 2.5rem;
     border-bottom: 0;
+    box-shadow: 0 0 0 100vmax $color-white;
+    clip-path: inset(0 -100vmax);
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: -100vmax;
+      bottom: 0;
+      left: -100vmax;
+      height: 0.0625rem;
+      background-color: $color-border-light;
+    }
   }
 
   .chips {
@@ -264,7 +270,7 @@
   }
 
   .block[id] {
-    scroll-margin-top: 8.75rem;
+    scroll-margin-top: calc(var(--header-height, 4.75rem) + 7.75rem);
   }
 
   .gallery {

@@ -1,4 +1,5 @@
 import styles from "./HeaderDesktop.module.scss";
+import { useRef } from "react";
 import { Link, useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { FaPhoneAlt } from "react-icons/fa";
@@ -6,6 +7,7 @@ import { navLinks } from "@/constants/navLinks";
 import { LOGO_URL } from "@/constants/media";
 import { PHONE_HREF, PHONE_NUMBER } from "@/constants/contact";
 import useScrolled from "@/hooks/useScrolled";
+import useHeaderHeight from "@/hooks/useHeaderHeight";
 import Button from "../../Button/Button";
 import LanguageSwitcher from "../../LanguageSwitcher/LanguageSwitcher";
 import NavigationLinks from "@/components/NavigationLinks/NavigationLinks";
@@ -13,13 +15,16 @@ import NavigationLinks from "@/components/NavigationLinks/NavigationLinks";
 const HeaderDesktop = () => {
   const { lang } = useParams();
   const { t } = useTranslation();
+  const headerRef = useRef(null);
 
   const isScrolled = useScrolled(80);
+  useHeaderHeight(headerRef);
+
   const leftLinks = navLinks.slice(1, 4);
   const rightLinks = navLinks.slice(4);
 
   return (
-    <header className={`${styles.header} ${isScrolled ? styles.scrolled : ""}`}>
+    <header ref={headerRef} className={`${styles.header} ${isScrolled ? styles.scrolled : ""}`}>
       <nav className={styles.nav} aria-label="Main navigation">
         <NavigationLinks links={leftLinks} variant="desktopLeft" />
 

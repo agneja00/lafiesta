@@ -1,5 +1,5 @@
 import styles from "./HeaderMobile.module.scss";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { FaBars, FaTimes, FaInstagram, FaFacebookF, FaPhoneAlt } from "react-icons/fa";
@@ -9,6 +9,7 @@ import ContactActions from "@/components/ContactActions/ContactActions";
 import LanguageSwitcher from "../../LanguageSwitcher/LanguageSwitcher";
 import NavigationLinks from "../../NavigationLinks/NavigationLinks";
 import useScrolled from "@/hooks/useScrolled";
+import useHeaderHeight from "@/hooks/useHeaderHeight";
 
 const DESKTOP_BREAKPOINT = 1024;
 
@@ -16,8 +17,10 @@ const HeaderMobile = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const { lang } = useParams();
   const { t } = useTranslation();
+  const headerRef = useRef(null);
 
   const isScrolled = useScrolled(60);
+  useHeaderHeight(headerRef);
 
   useEffect(() => {
     const handleResize = () => {
@@ -42,7 +45,7 @@ const HeaderMobile = () => {
   };
 
   return (
-    <header className={`${styles.header} ${isScrolled ? styles.scrolled : ""}`}>
+    <header ref={headerRef} className={`${styles.header} ${isScrolled ? styles.scrolled : ""}`}>
       <div className={styles.bar}>
         <button
           type="button"
