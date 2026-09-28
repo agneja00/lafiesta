@@ -36,64 +36,64 @@ export const ICONS = {
 
 export const GALLERY_PREVIEW_IMAGES = [
   {
-    id: 54,
-    src: `${CLOUDINARY_BASE}/f_auto,q_auto/54_lvdfks.jpg`,
-    altKey: "gallery.images.54",
-  },
-  {
-    id: 28,
-    src: `${CLOUDINARY_BASE}/f_auto,q_auto/28_wynn4w.jpg`,
-    altKey: "gallery.images.28",
-  },
-  {
-    id: 10,
-    src: `${CLOUDINARY_BASE}/f_auto,q_auto/10_pvacu3.jpg`,
-    altKey: "gallery.images.10",
-  },
-  {
-    id: 49,
-    src: `${CLOUDINARY_BASE}/f_auto,q_auto/49_igbpoz.jpg`,
-    altKey: "gallery.images.49",
-  },
-  {
-    id: 92,
-    src: `${CLOUDINARY_BASE}/f_auto,q_auto/92_cxpu4b.jpg`,
-    altKey: "gallery.images.92",
-  },
-  {
-    id: 57,
-    src: `${CLOUDINARY_BASE}/f_auto,q_auto/57_imx9ek.jpg`,
-    altKey: "gallery.images.57",
-  },
-  {
-    id: 12,
-    src: `${CLOUDINARY_BASE}/f_auto,q_auto/12_nnn97u.jpg`,
-    altKey: "gallery.images.12",
-  },
-  {
-    id: 93,
-    src: `${CLOUDINARY_BASE}/f_auto,q_auto/93_fe4b6z.jpg`,
-    altKey: "gallery.images.93",
-  },
-  {
-    id: 45,
-    src: `${CLOUDINARY_BASE}/f_auto,q_auto/45_qtehpi.jpg`,
-    altKey: "gallery.images.45",
-  },
-  {
-    id: 41,
-    src: `${CLOUDINARY_BASE}/f_auto,q_auto/41_sw8skx.jpg`,
-    altKey: "gallery.images.41",
-  },
-  {
-    id: 56,
-    src: `${CLOUDINARY_BASE}/f_auto,q_auto/56_w1prfl.jpg`,
-    altKey: "gallery.images.56",
+    id: 99,
+    src: `${CLOUDINARY_BASE}/f_auto,q_auto,w_160/99_ezhshp`,
+    altKey: "gallery.images.99",
   },
   {
     id: 65,
     src: `${CLOUDINARY_BASE}/f_auto,q_auto/65_jpfb5c.jpg`,
     altKey: "gallery.images.65",
+  },
+  {
+    id: 97,
+    src: `${CLOUDINARY_BASE}/f_auto,q_auto,w_160/97_bs6nmd`,
+    altKey: "gallery.images.97",
+  },
+  {
+    id: 77,
+    src: `${CLOUDINARY_BASE}/f_auto,q_auto/77_nellhd.jpg`,
+    altKey: "gallery.images.77",
+  },
+  {
+    id: 78,
+    src: `${CLOUDINARY_BASE}/f_auto,q_auto/78_jxp5r0.jpg`,
+    altKey: "gallery.images.78",
+  },
+  {
+    id: 98,
+    src: `${CLOUDINARY_BASE}/f_auto,q_auto,w_160/98_p4gw0s`,
+    altKey: "gallery.images.98",
+  },
+  {
+    id: 64,
+    src: `${CLOUDINARY_BASE}/f_auto,q_auto/64_r1jdgo.jpg`,
+    altKey: "gallery.images.64",
+  },
+  {
+    id: 19,
+    src: `${CLOUDINARY_BASE}/f_auto,q_auto/19_sq1odp.jpg`,
+    altKey: "gallery.images.19",
+  },
+  {
+    id: 84,
+    src: `${CLOUDINARY_BASE}/f_auto,q_auto/84_ahr5yi.jpg`,
+    altKey: "gallery.images.84",
+  },
+  {
+    id: 35,
+    src: `${CLOUDINARY_BASE}/f_auto,q_auto/35_rgyybf.jpg`,
+    altKey: "gallery.images.35",
+  },
+  {
+    id: 96,
+    src: `${CLOUDINARY_BASE}/f_auto,q_auto,w_160/96_hoiivo`,
+    altKey: "gallery.images.96",
+  },
+  {
+    id: 86,
+    src: `${CLOUDINARY_BASE}/f_auto,q_auto/86_txivwo.jpg`,
+    altKey: "gallery.images.86",
   },
 ];
 
