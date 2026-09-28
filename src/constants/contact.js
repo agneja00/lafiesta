@@ -1,11 +1,28 @@
 export const PHONE_NUMBER = "+370 656 50079";
 export const PHONE_HREF = "tel:+37065650079";
 
-export const INSTAGRAM_URL = "https://www.instagram.com/lafiestalietuva/";
-export const INSTAGRAM_DM_URL = "https://ig.me/m/lafiestalietuva";
+const isAndroid = typeof navigator !== "undefined" && /Android/i.test(navigator.userAgent);
 
-export const FACEBOOK_URL = "https://www.facebook.com/lafiestalietuva";
-export const FACEBOOK_DM_URL = "https://m.me/lafiestalietuva";
+const getAndroidAppUrl = (webUrl, packageName) => {
+  const path = webUrl.replace("https://", "");
+  return `intent://${path}#Intent;package=${packageName};scheme=https;S.browser_fallback_url=${encodeURIComponent(webUrl)};end`;
+};
+
+const INSTAGRAM_USERNAME = "lafiestalietuva";
+const INSTAGRAM_WEB_URL = `https://www.instagram.com/${INSTAGRAM_USERNAME}/`;
+
+export const INSTAGRAM_URL = isAndroid
+  ? getAndroidAppUrl(`https://instagram.com/_u/${INSTAGRAM_USERNAME}/`, "com.instagram.android")
+  : INSTAGRAM_WEB_URL;
+export const INSTAGRAM_DM_URL = `https://ig.me/m/${INSTAGRAM_USERNAME}`;
+
+const FACEBOOK_USERNAME = "lafiestalietuva";
+const FACEBOOK_WEB_URL = `https://www.facebook.com/${FACEBOOK_USERNAME}`;
+
+export const FACEBOOK_URL = isAndroid
+  ? getAndroidAppUrl(FACEBOOK_WEB_URL, "com.facebook.katana")
+  : FACEBOOK_WEB_URL;
+export const FACEBOOK_DM_URL = `https://m.me/${FACEBOOK_USERNAME}`;
 
 const COORDINATES = "54.6613334,25.2749752";
 
