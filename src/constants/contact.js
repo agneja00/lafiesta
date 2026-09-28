@@ -1,5 +1,5 @@
-export const PHONE_NUMBER = "+370 600 00000";
-export const PHONE_HREF = "tel:+37060000000";
+export const PHONE_NUMBER = "+370 656 50079";
+export const PHONE_HREF = "tel:+37065650079";
 
 export const INSTAGRAM_URL = "https://www.instagram.com/lafiestalietuva/";
 export const INSTAGRAM_DM_URL = "https://ig.me/m/lafiestalietuva";
