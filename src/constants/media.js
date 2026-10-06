@@ -2,7 +2,7 @@ const CLOUD_NAME = import.meta.env.VITE_CLOUDINARY_CLOUD_NAME;
 
 const CLOUDINARY_BASE = `https://res.cloudinary.com/${CLOUD_NAME}/image/upload`;
 
-export const LOGO_URL = `${CLOUDINARY_BASE}/f_auto,q_auto,w_160/logoo_aoovzs`;
+export const LOGO_URL = `${CLOUDINARY_BASE}/f_auto,q_auto,w_160/lafiesta_logo_xzaldi`;
 
 export const FLOWERS_DECORATION = `${CLOUDINARY_BASE}/f_auto,q_auto,w_500/flowers_decoration_wbqyup`;
 

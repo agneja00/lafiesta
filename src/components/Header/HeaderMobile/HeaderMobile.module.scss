@@ -8,7 +8,7 @@
   position: relative;
   @include flexRowCenter;
   width: 100%;
-  padding: 0 1.25rem;
+  padding: 0.25rem 1.25rem;
   background-color: $color-bg-header;
   transition:
     height 0.25s ease,
@@ -92,12 +92,12 @@
 
 .logo {
   display: block;
-  width: 7rem;
+  width: 5.5rem;
   transition: width 0.25s ease;
 }
 
 .scrolled .logo {
-  width: 4.5rem;
+  width: 3.85rem;
 }
 
 .scrolled .bar {
