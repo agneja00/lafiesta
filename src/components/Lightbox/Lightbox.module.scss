@@ -29,19 +29,44 @@
   width: 100%;
   max-width: 60rem;
   height: 100%;
-  touch-action: pan-y;
+}
 
-  img {
-    align-self: center;
-    display: block;
-    width: auto;
-    height: auto;
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-    border-radius: $radius-card;
-    cursor: default;
-    animation: fadeIn 0.2s ease;
+.zoomWrapper {
+  width: 100% !important;
+  height: 100% !important;
+  overflow: hidden;
+  border-radius: $radius-card;
+}
+
+.zoomContent {
+  @include flexRowCenter;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.image,
+.imageZoomed {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: $radius-card;
+  animation: fadeIn 0.2s ease;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.image {
+  cursor: zoom-in;
+}
+
+.imageZoomed {
+  cursor: grab;
+
+  &:active {
+    cursor: grabbing;
   }
 }
 
@@ -188,7 +213,8 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .lightboxContent img {
+  .image,
+  .imageZoomed {
     animation: none;
   }
 
