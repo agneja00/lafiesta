@@ -11,17 +11,26 @@ import { getCloudinaryUrl, getCloudinarySrcSet } from "@/utils/cloudinary";
 const IMAGE_WIDTHS = [800, 1200, 1600, 2400];
 const IMAGE_SIZES = "(min-width: 64rem) 70rem, 90vw";
 const SWIPE_THRESHOLD = 50;
+const TAP_MOVE_LIMIT = 10;
+const DOUBLE_TAP_DELAY = 300;
 const MAX_SCALE = 4;
+const DOUBLE_TAP_SCALE = 2.5;
+const ZOOM_ANIMATION_MS = 200;
 
 const Lightbox = ({ images, selectedIndex, onNavigate, onClose }) => {
   const { t } = useTranslation();
   const { lang } = useParams();
-  const touchStartX = useRef(null);
+  const transformRef = useRef(null);
+  const touchStart = useRef(null);
+  const lastTap = useRef(0);
+  const lastTouchToggle = useRef(0);
   const [isZoomed, setIsZoomed] = useState(false);
   const total = images.length;
 
   const isOpen = selectedIndex !== null;
   const selectedImage = isOpen ? images[selectedIndex] : null;
+
+  const getScale = () => transformRef.current?.instance.transformState.scale ?? 1;
 
   const showPrev = useCallback(() => {
     setIsZoomed(false);
@@ -70,33 +79,82 @@ const Lightbox = ({ images, selectedIndex, onNavigate, onClose }) => {
 
   if (!isOpen) return null;
 
-  const handleTouchStart = (event) => {
-    if (isZoomed || event.touches.length > 1) {
-      touchStartX.current = null;
+  const toggleZoomAt = (clientX, clientY) => {
+    const api = transformRef.current;
+    if (!api) return;
+
+    if (getScale() > 1.01) {
+      api.resetTransform(ZOOM_ANIMATION_MS);
+      setIsZoomed(false);
       return;
     }
 
-    touchStartX.current = event.touches[0].clientX;
+    const rect = api.instance.wrapperComponent.getBoundingClientRect();
+    const x = clientX - rect.left;
+    const y = clientY - rect.top;
+
+    api.setTransform(
+      x * (1 - DOUBLE_TAP_SCALE),
+      y * (1 - DOUBLE_TAP_SCALE),
+      DOUBLE_TAP_SCALE,
+      ZOOM_ANIMATION_MS
+    );
+    setIsZoomed(true);
+  };
+
+  const handleTouchStart = (event) => {
+    if (event.touches.length > 1) {
+      touchStart.current = null;
+      return;
+    }
+
+    const touch = event.touches[0];
+    touchStart.current = { x: touch.clientX, y: touch.clientY };
   };
 
   const handleTouchMove = (event) => {
-    if (event.touches.length > 1) touchStartX.current = null;
+    if (event.touches.length > 1) touchStart.current = null;
   };
 
   const handleTouchEnd = (event) => {
-    if (touchStartX.current === null || isZoomed) return;
+    if (touchStart.current === null) return;
 
-    const deltaX = event.changedTouches[0].clientX - touchStartX.current;
-    touchStartX.current = null;
+    const touch = event.changedTouches[0];
+    const deltaX = touch.clientX - touchStart.current.x;
+    const deltaY = touch.clientY - touchStart.current.y;
+    touchStart.current = null;
 
-    if (Math.abs(deltaX) < SWIPE_THRESHOLD) return;
+    const isTap = Math.abs(deltaX) < TAP_MOVE_LIMIT && Math.abs(deltaY) < TAP_MOVE_LIMIT;
+
+    if (isTap && event.target.tagName === "IMG") {
+      const now = Date.now();
+
+      if (now - lastTap.current < DOUBLE_TAP_DELAY) {
+        lastTap.current = 0;
+        lastTouchToggle.current = now;
+        toggleZoomAt(touch.clientX, touch.clientY);
+      } else {
+        lastTap.current = now;
+      }
+
+      return;
+    }
+
+    if (getScale() > 1.01) return;
+    if (Math.abs(deltaX) < SWIPE_THRESHOLD || Math.abs(deltaX) < Math.abs(deltaY)) return;
 
     if (deltaX > 0) showPrev();
     else showNext();
   };
 
+  const handleDoubleClick = (event) => {
+    event.stopPropagation();
+    if (Date.now() - lastTouchToggle.current < 500) return;
+    toggleZoomAt(event.clientX, event.clientY);
+  };
+
   const handleOverlayClick = () => {
-    if (!isZoomed) handleClose();
+    if (getScale() <= 1.01) handleClose();
   };
 
   const handleTransformed = (_, state) => {
@@ -161,13 +219,13 @@ const Lightbox = ({ images, selectedIndex, onNavigate, onClose }) => {
       >
         <TransformWrapper
           key={selectedImage.id}
+          ref={transformRef}
           minScale={1}
           maxScale={MAX_SCALE}
           centerOnInit
           limitToBounds
           wheel={{ step: 0.15 }}
-          doubleClick={{ mode: "toggle" }}
-          panning={{ disabled: !isZoomed }}
+          doubleClick={{ disabled: true }}
           onTransformed={handleTransformed}
         >
           <TransformComponent wrapperClass={styles.zoomWrapper} contentClass={styles.zoomContent}>
@@ -179,7 +237,9 @@ const Lightbox = ({ images, selectedIndex, onNavigate, onClose }) => {
               alt={t(selectedImage.altKey)}
               decoding="async"
               fetchPriority="high"
+              draggable={false}
               onClick={stopPropagation}
+              onDoubleClick={handleDoubleClick}
             />
           </TransformComponent>
         </TransformWrapper>
