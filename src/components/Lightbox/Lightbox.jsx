@@ -213,9 +213,9 @@ const Lightbox = ({ images, selectedIndex, onNavigate, onClose }) => {
 
       <div
         className={styles.lightboxContent}
-        onTouchStart={handleTouchStart}
-        onTouchMove={handleTouchMove}
-        onTouchEnd={handleTouchEnd}
+        onTouchStartCapture={handleTouchStart}
+        onTouchMoveCapture={handleTouchMove}
+        onTouchEndCapture={handleTouchEnd}
       >
         <TransformWrapper
           key={selectedImage.id}
