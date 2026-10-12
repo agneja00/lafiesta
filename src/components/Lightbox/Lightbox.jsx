@@ -30,6 +30,7 @@ const Lightbox = ({ images, selectedIndex, onNavigate, onClose }) => {
   const transformRef = useRef(null);
   const zoomAreaRef = useRef(null);
   const touchStart = useRef(null);
+  const lastTouchPoint = useRef(null);
   const isMultiTouch = useRef(false);
   const lastTap = useRef(0);
   const lastTouchToggle = useRef(0);
@@ -137,6 +138,7 @@ const Lightbox = ({ images, selectedIndex, onNavigate, onClose }) => {
 
     isMultiTouch.current = false;
     touchStart.current = getPoint(event);
+    lastTouchPoint.current = touchStart.current;
 
     if (!isScaled()) event.stopPropagation();
   };
@@ -148,6 +150,8 @@ const Lightbox = ({ images, selectedIndex, onNavigate, onClose }) => {
       return;
     }
 
+    lastTouchPoint.current = getPoint(event);
+
     if (!isScaled()) event.stopPropagation();
   };
 
@@ -158,7 +162,7 @@ const Lightbox = ({ images, selectedIndex, onNavigate, onClose }) => {
     touchStart.current = null;
     if (!start || isMultiTouch.current) return;
 
-    const point = getPoint(event);
+    const point = getPoint(event) ?? lastTouchPoint.current;
     if (!point) return;
 
     const deltaX = point.x - start.x;
@@ -186,6 +190,13 @@ const Lightbox = ({ images, selectedIndex, onNavigate, onClose }) => {
 
     if (deltaX > 0) showPrev();
     else showNext();
+  };
+
+  const handleTouchCancel = () => {
+    touchStart.current = null;
+    lastTouchPoint.current = null;
+    isMultiTouch.current = false;
+    syncZoomed();
   };
 
   const handleMouseDown = (event) => {
@@ -252,15 +263,14 @@ const Lightbox = ({ images, selectedIndex, onNavigate, onClose }) => {
         <FaChevronRight aria-hidden="true" />
       </button>
 
-      <div
-        className={styles.lightboxContent}
-        onTouchStartCapture={handleTouchStart}
-        onTouchMoveCapture={handleTouchMove}
-        onTouchEndCapture={handleTouchEnd}
-      >
+      <div className={styles.lightboxContent}>
         <div
           className={styles.zoomArea}
           ref={zoomAreaRef}
+          onTouchStartCapture={handleTouchStart}
+          onTouchMoveCapture={handleTouchMove}
+          onTouchEndCapture={handleTouchEnd}
+          onTouchCancelCapture={handleTouchCancel}
           onMouseDownCapture={handleMouseDown}
           onMouseUp={() => syncZoomed()}
           onWheel={() => syncZoomed(50)}
