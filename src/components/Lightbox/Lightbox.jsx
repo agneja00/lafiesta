@@ -17,6 +17,7 @@ const DOUBLE_TAP_DISTANCE = 40;
 const MAX_SCALE = 4;
 const DOUBLE_TAP_SCALE = 2.5;
 const ZOOM_ANIMATION_MS = 200;
+const ZOOM_START_DELAY_MS = 30;
 const ZOOMED_SCALE = 1.01;
 
 const getPoint = (event) => {
@@ -31,6 +32,7 @@ const Lightbox = ({ images, selectedIndex, onNavigate, onClose }) => {
   const controlsRef = useRef(null);
   const zoomAreaRef = useRef(null);
   const imageRef = useRef(null);
+  const zoomedRef = useRef(false);
   const touchStart = useRef(null);
   const lastTouchPoint = useRef(null);
   const isMultiTouch = useRef(false);
@@ -42,17 +44,25 @@ const Lightbox = ({ images, selectedIndex, onNavigate, onClose }) => {
   const isOpen = selectedIndex !== null;
   const selectedImage = isOpen ? images[selectedIndex] : null;
 
+  const setZoomed = (value) => {
+    zoomedRef.current = value;
+    setIsZoomed(value);
+  };
+
   const showPrev = useCallback(() => {
+    zoomedRef.current = false;
     setIsZoomed(false);
     onNavigate((selectedIndex - 1 + total) % total);
   }, [selectedIndex, total, onNavigate]);
 
   const showNext = useCallback(() => {
+    zoomedRef.current = false;
     setIsZoomed(false);
     onNavigate((selectedIndex + 1) % total);
   }, [selectedIndex, total, onNavigate]);
 
   const handleClose = useCallback(() => {
+    zoomedRef.current = false;
     setIsZoomed(false);
     onClose();
   }, [onClose]);
@@ -89,7 +99,7 @@ const Lightbox = ({ images, selectedIndex, onNavigate, onClose }) => {
 
   if (!isOpen) return null;
 
-  const getScale = () => {
+  const getRenderedScale = () => {
     const content = zoomAreaRef.current?.querySelector(`.${styles.zoomContent}`);
     if (!content) return 1;
 
@@ -99,7 +109,9 @@ const Lightbox = ({ images, selectedIndex, onNavigate, onClose }) => {
     return new DOMMatrixReadOnly(transform).a;
   };
 
-  const isScaled = () => getScale() > ZOOMED_SCALE;
+  const isScaled = () => getRenderedScale() > ZOOMED_SCALE;
+
+  const isZoomedNow = () => isScaled() || zoomedRef.current;
 
   const isOnImage = (point) => {
     const rect = imageRef.current?.getBoundingClientRect();
@@ -112,32 +124,39 @@ const Lightbox = ({ images, selectedIndex, onNavigate, onClose }) => {
 
   const syncZoomed = (delay = 0) => {
     window.setTimeout(() => {
-      window.requestAnimationFrame(() => setIsZoomed(isScaled()));
+      window.requestAnimationFrame(() => setZoomed(isScaled()));
     }, delay);
   };
 
-  const toggleZoomAt = (clientX, clientY) => {
-    const controls = controlsRef.current;
-    const area = zoomAreaRef.current;
-    if (!controls || !area) return;
+  const zoomOut = () => {
+    setZoomed(false);
+    window.setTimeout(() => {
+      controlsRef.current?.setTransform(0, 0, 1, ZOOM_ANIMATION_MS);
+    }, ZOOM_START_DELAY_MS);
+  };
 
-    if (isScaled()) {
-      controls.resetTransform(ZOOM_ANIMATION_MS);
-      syncZoomed(ZOOM_ANIMATION_MS + 20);
-      return;
-    }
+  const zoomInAt = (clientX, clientY) => {
+    const area = zoomAreaRef.current;
+    if (!controlsRef.current || !area) return;
 
     const rect = area.getBoundingClientRect();
     const x = clientX - rect.left;
     const y = clientY - rect.top;
 
-    controls.setTransform(
-      x * (1 - DOUBLE_TAP_SCALE),
-      y * (1 - DOUBLE_TAP_SCALE),
-      DOUBLE_TAP_SCALE,
-      ZOOM_ANIMATION_MS
-    );
-    syncZoomed(ZOOM_ANIMATION_MS + 20);
+    setZoomed(true);
+    window.setTimeout(() => {
+      controlsRef.current?.setTransform(
+        x * (1 - DOUBLE_TAP_SCALE),
+        y * (1 - DOUBLE_TAP_SCALE),
+        DOUBLE_TAP_SCALE,
+        ZOOM_ANIMATION_MS
+      );
+    }, ZOOM_START_DELAY_MS);
+  };
+
+  const toggleZoomAt = (clientX, clientY) => {
+    if (isZoomedNow()) zoomOut();
+    else zoomInAt(clientX, clientY);
   };
 
   const handleTap = (point) => {
@@ -177,7 +196,7 @@ const Lightbox = ({ images, selectedIndex, onNavigate, onClose }) => {
     touchStart.current = getPoint(event);
     lastTouchPoint.current = touchStart.current;
 
-    if (!isScaled()) event.stopPropagation();
+    if (!isZoomedNow()) event.stopPropagation();
   };
 
   const handleTouchMove = (event) => {
@@ -189,15 +208,17 @@ const Lightbox = ({ images, selectedIndex, onNavigate, onClose }) => {
 
     lastTouchPoint.current = getPoint(event);
 
-    if (!isScaled()) event.stopPropagation();
+    if (!isZoomedNow()) event.stopPropagation();
   };
 
   const handleTouchEnd = (event) => {
-    syncZoomed();
-
     const start = touchStart.current;
     touchStart.current = null;
-    if (!start || isMultiTouch.current) return;
+
+    if (!start || isMultiTouch.current) {
+      syncZoomed(50);
+      return;
+    }
 
     const point = getPoint(event) ?? lastTouchPoint.current;
     if (!point) return;
@@ -207,13 +228,14 @@ const Lightbox = ({ images, selectedIndex, onNavigate, onClose }) => {
     const isTap = Math.abs(deltaX) < TAP_MOVE_LIMIT && Math.abs(deltaY) < TAP_MOVE_LIMIT;
 
     if (isTap) {
+      event.stopPropagation();
       handleTap(point);
       return;
     }
 
     lastTap.current = null;
 
-    if (isScaled()) return;
+    if (isZoomedNow()) return;
     if (Math.abs(deltaX) < SWIPE_THRESHOLD || Math.abs(deltaX) < Math.abs(deltaY)) return;
 
     if (deltaX > 0) showPrev();
@@ -224,15 +246,15 @@ const Lightbox = ({ images, selectedIndex, onNavigate, onClose }) => {
     touchStart.current = null;
     lastTouchPoint.current = null;
     isMultiTouch.current = false;
-    syncZoomed();
+    syncZoomed(50);
   };
 
   const handlePointerDown = (event) => {
-    if (event.pointerType === "mouse" && !isScaled()) event.stopPropagation();
+    if (event.pointerType === "mouse" && !isZoomedNow()) event.stopPropagation();
   };
 
   const handleMouseDown = (event) => {
-    if (!isScaled()) event.stopPropagation();
+    if (!isZoomedNow()) event.stopPropagation();
   };
 
   const handleDoubleClick = (event) => {
@@ -250,7 +272,7 @@ const Lightbox = ({ images, selectedIndex, onNavigate, onClose }) => {
   };
 
   const handleOverlayClick = () => {
-    if (!isScaled()) handleClose();
+    if (!isZoomedNow()) handleClose();
   };
 
   const handleInit = (controls) => {
@@ -319,7 +341,6 @@ const Lightbox = ({ images, selectedIndex, onNavigate, onClose }) => {
           onMouseDownCapture={handleMouseDown}
           onDoubleClickCapture={handleDoubleClick}
           onClick={handleAreaClick}
-          onMouseUp={() => syncZoomed()}
           onWheel={() => syncZoomed(50)}
         >
           <TransformWrapper
