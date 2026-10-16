@@ -24,7 +24,7 @@ export const FACEBOOK_URL = isAndroid
   : FACEBOOK_WEB_URL;
 export const FACEBOOK_DM_URL = `https://m.me/${FACEBOOK_USERNAME}`;
 
-const COORDINATES = "54.6613334,25.2749752";
+const COORDINATES = "54.6613733, 25.2748384";
 
 export const GOOGLE_MAPS_EMBED_SRC = `https://maps.google.com/maps?q=${COORDINATES}&z=17&output=embed`;
 export const GOOGLE_MAPS_URL = `https://www.google.com/maps/search/?api=1&query=${COORDINATES}`;
