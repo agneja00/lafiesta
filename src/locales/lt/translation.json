@@ -53,7 +53,8 @@
     },
     "funeral": {
       "title": "Užuojautos gėlės",
-      "description": "Vainikai, krepšeliai ir žvakės. Rašymas ant juostų."
+      "description": "Vainikai, krepšeliai ir žvakės. Rašymas ant juostų.",
+      "ribbons": "Užrašai ir rašymas ant juostų"
     }
   },
 

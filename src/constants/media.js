@@ -126,6 +126,11 @@ const RAW_GALLERY_BLOCKS = [
     ],
   },
   {
+    id: "ribbons",
+    titleKey: "gallery.blocks.ribbons",
+    images: [],
+  },
+  {
     id: "wood",
     titleKey: "gallery.blocks.wood",
     images: [
