@@ -30,7 +30,7 @@ export const GOOGLE_MAPS_EMBED_SRC = `https://maps.google.com/maps?q=${COORDINAT
 export const GOOGLE_MAPS_URL = `https://www.google.com/maps/search/?api=1&query=${COORDINATES}`;
 export const WAZE_URL = `https://waze.com/ul?ll=${COORDINATES}&navigate=yes`;
 
-export const ADDRESS = "Kapsų g. 2 (Naujininkų Turgelis)";
+export const ADDRESS = "Kapsų g. 2";
 export const WORKING_TIME = "9:00 – 20:00";
 
 const PHONE_RAW = PHONE_HREF.replace("tel:", "");
