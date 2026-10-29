@@ -2,6 +2,7 @@
   width: 100%;
   padding: 2.5rem 0;
   background-color: $color-white;
+  overflow-x: clip;
 }
 
 .container {
@@ -248,18 +249,10 @@
     margin-inline: 0;
     margin-bottom: 2.5rem;
     border-bottom: 0;
-    box-shadow: 0 0 0 100vmax $color-white;
-    clip-path: inset(0 -100vmax);
-
-    &::after {
-      content: "";
-      position: absolute;
-      right: -100vmax;
-      bottom: 0;
-      left: -100vmax;
-      height: 0.0625rem;
-      background-color: $color-border-light;
-    }
+    box-shadow:
+      0 0 0 100vmax $color-white,
+      0 0.0625rem 0 100vmax $color-border-light;
+    clip-path: inset(0 -100vmax -0.0625rem);
   }
 
   .chips {
