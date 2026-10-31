@@ -1,7 +1,6 @@
 export const ROUTES = {
   HOME: "",
   GALLERY: "galerija",
-  PRICES: "kainorastis",
 
   ERROR_GLOBAL: "*",
 };

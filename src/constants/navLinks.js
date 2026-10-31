@@ -26,7 +26,7 @@ export const navLinks = [
   },
   {
     label: "links.prices",
-    to: ROUTES.PRICES,
+    to: "#kainorastis",
     icon: IoPricetagsOutline,
   },
   {
