@@ -1,9 +1,10 @@
-import { useEffect, useState } from "react";
-import { useSearchParams } from "react-router-dom";
+import { useCallback } from "react";
+import { useLocation, useNavigate, useSearchParams } from "react-router-dom";
 import { ROUTES } from "../constants/routes";
 import { buildTo } from "@/utils/navigation";
 
 const PARAM = "foto";
+const OPENED_STATE_KEY = "photoOpened";
 
 const SITE_URL = import.meta.env.VITE_SITE_URL || window.location.origin;
 
@@ -12,24 +13,42 @@ export const getPhotoUrl = (lang, id) =>
 
 const usePhotoDeepLink = (images) => {
   const [searchParams, setSearchParams] = useSearchParams();
+  const navigate = useNavigate();
+  const location = useLocation();
 
-  const [selectedIndex, setSelectedIndex] = useState(() => {
-    const id = Number(searchParams.get(PARAM));
-    if (!id) return null;
-    const index = images.findIndex((img) => img.id === id);
-    return index === -1 ? null : index;
-  });
+  const photoId = Number(searchParams.get(PARAM));
+  const foundIndex = photoId ? images.findIndex((img) => img.id === photoId) : -1;
+  const selectedIndex = foundIndex === -1 ? null : foundIndex;
 
-  useEffect(() => {
-    const next = new URLSearchParams(searchParams);
-    if (selectedIndex === null) next.delete(PARAM);
-    else next.set(PARAM, String(images[selectedIndex].id));
+  const setSelectedIndex = useCallback(
+    (value) => {
+      const nextIndex = typeof value === "function" ? value(selectedIndex) : value;
+      const next = new URLSearchParams(searchParams);
 
-    if (next.toString() !== searchParams.toString()) {
-      setSearchParams(next, { replace: true });
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [selectedIndex]);
+      if (nextIndex === null || nextIndex === undefined || !images[nextIndex]) {
+        if (location.state?.[OPENED_STATE_KEY]) {
+          navigate(-1);
+          return;
+        }
+
+        next.delete(PARAM);
+        setSearchParams(next, { replace: true, preventScrollReset: true });
+        return;
+      }
+
+      next.set(PARAM, String(images[nextIndex].id));
+      if (next.toString() === searchParams.toString()) return;
+
+      const isAlreadyOpen = selectedIndex !== null;
+
+      setSearchParams(next, {
+        replace: isAlreadyOpen,
+        state: isAlreadyOpen ? location.state : { [OPENED_STATE_KEY]: true },
+        preventScrollReset: true,
+      });
+    },
+    [images, location.state, navigate, searchParams, selectedIndex, setSearchParams]
+  );
 
   return [selectedIndex, setSelectedIndex];
 };
