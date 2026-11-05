@@ -53,16 +53,20 @@ const ContactCard = ({
 
           <ul className={styles.infoList}>
             <li className={styles.infoItem}>
-              <IoLocationSharp size={22} className={styles.infoIcon} />
-              <div>
+              <span className={styles.infoIcon} aria-hidden="true">
+                <IoLocationSharp />
+              </span>
+              <div className={styles.infoText}>
                 <span className={styles.infoLabel}>{t("contacts.addressLabel")}</span>
                 <span className={styles.infoValue}>{ADDRESS}</span>
               </div>
             </li>
 
             <li className={styles.infoItem}>
-              <FaClock size={18} className={styles.infoIcon} />
-              <div>
+              <span className={styles.infoIcon} aria-hidden="true">
+                <FaClock />
+              </span>
+              <div className={styles.infoText}>
                 <span className={styles.infoLabel}>{t("contacts.hoursLabel")}</span>
                 <dl className={styles.hoursTable}>
                   <div className={styles.hoursRow}>
