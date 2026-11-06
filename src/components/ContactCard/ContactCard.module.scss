@@ -33,7 +33,7 @@
 
 .heart {
   display: inline-block;
-  font-size: 2.25rem;
+  font-size: 2rem;
   line-height: 1;
   color: $color-accent-coral;
 }
@@ -166,6 +166,10 @@
 
   .title {
     font-size: 2.5rem;
+  }
+
+  .heart {
+    font-size: 2.75rem;
   }
 
   .bleedImage {
