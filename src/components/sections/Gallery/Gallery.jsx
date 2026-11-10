@@ -7,6 +7,7 @@ import { getCloudinaryUrl, getCloudinarySrcSet } from "@/utils/cloudinary";
 import usePhotoDeepLink from "@/hooks/usePhotoDeepLink";
 import SectionTitle from "@/components/SectionTitle/SectionTitle";
 import Lightbox from "@/components/Lightbox/Lightbox";
+import Reveal from "@/components/Reveal/Reveal";
 
 const THUMB_WIDTHS = [260, 380, 500];
 const THUMB_SIZES = "(min-width: 64rem) 220px, (min-width: 48rem) 28vw, 45vw";
@@ -59,7 +60,9 @@ const Gallery = () => {
     <>
       <section className={styles.section} aria-labelledby="gallery-page-title">
         <div className={styles.container}>
-          <SectionTitle subtitle={t("gallery.subtitle")}>{t("gallery.title")}</SectionTitle>
+          <Reveal>
+            <SectionTitle subtitle={t("gallery.subtitle")}>{t("gallery.title")}</SectionTitle>
+          </Reveal>
 
           <nav className={styles.chipsBar} aria-label={t("gallery.title")}>
             <div ref={chipsRef} className={styles.chips}>
@@ -80,15 +83,17 @@ const Gallery = () => {
 
           {GALLERY_BLOCKS.map((block) => (
             <div key={block.id} id={block.id} className={styles.block}>
-              <h2 className={styles.blockTitle}>
+              <Reveal as="h2" className={styles.blockTitle}>
                 {t(block.titleKey)}
                 <span className={styles.count}>{block.images.length}</span>
-              </h2>
+              </Reveal>
 
               <div className={styles.gallery}>
-                {block.images.map((image) => (
-                  <button
+                {block.images.map((image, index) => (
+                  <Reveal
+                    as="button"
                     key={image.id}
+                    index={index}
                     type="button"
                     className={styles.imageButton}
                     onClick={() => setSelectedIndex(image.globalIndex)}
@@ -106,7 +111,7 @@ const Gallery = () => {
                     <span className={styles.zoom} aria-hidden="true">
                       <FaMagnifyingGlassPlus />
                     </span>
-                  </button>
+                  </Reveal>
                 ))}
               </div>
             </div>

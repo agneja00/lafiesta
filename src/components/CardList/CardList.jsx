@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { buildTo } from "@/utils/navigation";
 import Card from "../Card/Card";
+import Reveal from "../Reveal/Reveal";
 
 const CardList = ({ items, variant = "outlined", className = "" }) => {
   const { t } = useTranslation();
@@ -11,7 +12,7 @@ const CardList = ({ items, variant = "outlined", className = "" }) => {
   const classes = [styles.list, styles[variant], className].filter(Boolean).join(" ");
 
   return (
-    <ul className={classes}>
+    <Reveal as="ul" variant="stagger" className={classes}>
       {items.map((item) => (
         <Card
           key={item.id}
@@ -22,7 +23,7 @@ const CardList = ({ items, variant = "outlined", className = "" }) => {
           to={item.to !== undefined ? buildTo(item, lang) : undefined}
         />
       ))}
-    </ul>
+    </Reveal>
   );
 };
 

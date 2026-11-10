@@ -10,6 +10,7 @@ import { getCloudinaryUrl, getCloudinarySrcSet } from "@/utils/cloudinary";
 import SectionTitle from "@/components/SectionTitle/SectionTitle";
 import Button from "@/components/Button/Button";
 import Lightbox from "@/components/Lightbox/Lightbox";
+import Reveal from "@/components/Reveal/Reveal";
 
 const THUMB_WIDTHS = [300, 450, 600];
 const THUMB_SIZES = "(min-width: 64rem) 280px, (min-width: 48rem) 33vw, 45vw";
@@ -23,12 +24,16 @@ const GalleryPreview = () => {
     <>
       <section id="galerija" className={styles.section} aria-labelledby="gallery-preview-title">
         <div className={styles.container}>
-          <SectionTitle subtitle={t("gallery.subtitle")}>{t("gallery.title")}</SectionTitle>
+          <Reveal>
+            <SectionTitle subtitle={t("gallery.subtitle")}>{t("gallery.title")}</SectionTitle>
+          </Reveal>
 
           <div className={styles.gallery}>
             {GALLERY_PREVIEW_IMAGES.map((image, index) => (
-              <button
+              <Reveal
+                as="button"
                 key={image.id}
+                index={index}
                 type="button"
                 className={styles.imageButton}
                 onClick={() => setSelectedIndex(index)}
@@ -46,11 +51,11 @@ const GalleryPreview = () => {
                 <span className={styles.zoom} aria-hidden="true">
                   <FaMagnifyingGlassPlus />
                 </span>
-              </button>
+              </Reveal>
             ))}
           </div>
 
-          <div className={styles.action}>
+          <Reveal className={styles.action}>
             <Button
               as="link"
               to={buildTo({ to: ROUTES.GALLERY }, lang)}
@@ -60,7 +65,7 @@ const GalleryPreview = () => {
             >
               {t("gallery.viewAll")}
             </Button>
-          </div>
+          </Reveal>
         </div>
       </section>
 

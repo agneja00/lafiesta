@@ -1,0 +1,63 @@
+$reveal-easing: cubic-bezier(0, 0, 0.3, 1);
+$reveal-duration: 0.6s;
+$reveal-step: 100ms;
+$stagger-max: 8;
+
+.reveal {
+  opacity: 0;
+  transition:
+    opacity $reveal-duration $reveal-easing,
+    transform $reveal-duration $reveal-easing;
+  transition-delay: calc(var(--reveal-order, 0) * 75ms);
+}
+
+.up {
+  transform: translateY(2rem);
+}
+
+.fade {
+  transform: none;
+}
+
+.zoom {
+  transform: scale(0.96);
+}
+
+.visible {
+  opacity: 1;
+  transform: none;
+}
+
+.stagger {
+  opacity: 1;
+  transform: none;
+  transition: none;
+
+  > * {
+    opacity: 0;
+    transform: translateY(2rem);
+    transition:
+      opacity $reveal-duration $reveal-easing,
+      transform $reveal-duration $reveal-easing;
+  }
+
+  @for $i from 1 through $stagger-max {
+    > :nth-child(#{$i}) {
+      transition-delay: ($i - 1) * $reveal-step;
+    }
+  }
+
+  &.visible > * {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .stagger > * {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

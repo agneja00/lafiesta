@@ -4,6 +4,7 @@ import { IoLocationSharp } from "react-icons/io5";
 import { FaClock } from "react-icons/fa6";
 import { FLOWERS_DECORATION } from "@/constants/media";
 import { ADDRESS, WORKING_TIME } from "@/constants/contact";
+import Reveal from "@/components/Reveal/Reveal";
 
 const ContactCard = ({
   id,
@@ -28,7 +29,9 @@ const ContactCard = ({
   return (
     <section id={id} className={sectionClasses} aria-labelledby={titleId}>
       {decoration && (
-        <img
+        <Reveal
+          as="img"
+          variant="fade"
           className={styles.bleedImage}
           src={FLOWERS_DECORATION}
           alt=""
@@ -40,7 +43,7 @@ const ContactCard = ({
       )}
 
       <div className={styles.card}>
-        <div className={styles.content}>
+        <Reveal className={styles.content}>
           <h2 id={titleId} className={styles.title}>
             {title}
             {"\u00A0"}
@@ -79,9 +82,11 @@ const ContactCard = ({
           </ul>
 
           {actions && <div className={styles.actions}>{actions}</div>}
-        </div>
+        </Reveal>
 
-        <div className={styles.aside}>{children}</div>
+        <Reveal index={2} className={styles.aside}>
+          {children}
+        </Reveal>
       </div>
     </section>
   );

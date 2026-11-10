@@ -7,6 +7,7 @@ import { INSTAGRAM_URL } from "@/constants/contact";
 import { ROUTES } from "@/constants/routes";
 import { buildTo } from "@/utils/navigation";
 import Button from "../Button/Button";
+import Reveal from "@/components/Reveal/Reveal";
 
 const Hero = () => {
   const { t } = useTranslation();
@@ -28,11 +29,15 @@ const Hero = () => {
       </picture>
 
       <div className={styles.content}>
-        <h1 className={styles.title}>{t("hero.title")}</h1>
+        <Reveal as="h1" className={styles.title}>
+          {t("hero.title")}
+        </Reveal>
 
-        <p className={styles.description}>{t("hero.description")}</p>
+        <Reveal as="p" index={1} className={styles.description}>
+          {t("hero.description")}
+        </Reveal>
 
-        <div className={styles.actions}>
+        <Reveal index={2} className={styles.actions}>
           <Button
             as="link"
             to={buildTo({ to: ROUTES.HOME, hash: "#galerija" }, lang)}
@@ -56,7 +61,7 @@ const Hero = () => {
           >
             {t("hero.secondaryCta")}
           </Button>
-        </div>
+        </Reveal>
       </div>
     </section>
   );
