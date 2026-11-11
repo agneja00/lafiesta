@@ -2,6 +2,7 @@ import styles from "./Reveal.module.scss";
 import { useEffect, useRef, useState } from "react";
 
 const STAGGER_LIMIT = 5;
+const OBSERVER_OPTIONS = { rootMargin: "0px 0px -10% 0px", threshold: 0.1 };
 
 const isObserverSupported = () => typeof window !== "undefined" && "IntersectionObserver" in window;
 
@@ -21,18 +22,30 @@ const Reveal = ({
     const element = ref.current;
     if (!element || !isObserverSupported()) return;
 
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (!entry.isIntersecting) return;
-        setIsVisible(true);
-        observer.disconnect();
-      },
-      { rootMargin: "0px 0px -10% 0px", threshold: 0.1 }
-    );
+    if (variant === "stagger") {
+      const observer = new IntersectionObserver((entries) => {
+        entries
+          .filter((entry) => entry.isIntersecting)
+          .forEach((entry, order) => {
+            entry.target.style.setProperty("--reveal-order", order);
+            entry.target.dataset.revealed = "true";
+            observer.unobserve(entry.target);
+          });
+      }, OBSERVER_OPTIONS);
+
+      Array.from(element.children).forEach((child) => observer.observe(child));
+      return () => observer.disconnect();
+    }
+
+    const observer = new IntersectionObserver(([entry]) => {
+      if (!entry.isIntersecting) return;
+      setIsVisible(true);
+      observer.disconnect();
+    }, OBSERVER_OPTIONS);
 
     observer.observe(element);
     return () => observer.disconnect();
-  }, []);
+  }, [variant]);
 
   const classes = [styles.reveal, styles[variant], isVisible && styles.visible, className]
     .filter(Boolean)
