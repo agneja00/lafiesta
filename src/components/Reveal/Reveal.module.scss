@@ -37,7 +37,7 @@ $reveal-duration: 0.6s;
     transition:
       opacity $reveal-duration $reveal-easing,
       transform $reveal-duration $reveal-easing;
-    transition-delay: calc(var(--reveal-order, 0) * 150ms);
+    transition-delay: var(--reveal-delay, 0ms);
   }
 
   > [data-revealed],
