@@ -88,12 +88,10 @@ const Gallery = () => {
                 <span className={styles.count}>{block.images.length}</span>
               </Reveal>
 
-              <div className={styles.gallery}>
-                {block.images.map((image, index) => (
-                  <Reveal
-                    as="button"
+              <Reveal variant="stagger" className={styles.gallery}>
+                {block.images.map((image) => (
+                  <button
                     key={image.id}
-                    index={index}
                     type="button"
                     className={styles.imageButton}
                     onClick={() => setSelectedIndex(image.globalIndex)}
@@ -111,9 +109,9 @@ const Gallery = () => {
                     <span className={styles.zoom} aria-hidden="true">
                       <FaMagnifyingGlassPlus />
                     </span>
-                  </Reveal>
+                  </button>
                 ))}
-              </div>
+              </Reveal>
             </div>
           ))}
         </div>

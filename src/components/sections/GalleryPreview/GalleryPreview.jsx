@@ -28,12 +28,10 @@ const GalleryPreview = () => {
             <SectionTitle subtitle={t("gallery.subtitle")}>{t("gallery.title")}</SectionTitle>
           </Reveal>
 
-          <div className={styles.gallery}>
+          <Reveal variant="stagger" className={styles.gallery}>
             {GALLERY_PREVIEW_IMAGES.map((image, index) => (
-              <Reveal
-                as="button"
+              <button
                 key={image.id}
-                index={index}
                 type="button"
                 className={styles.imageButton}
                 onClick={() => setSelectedIndex(index)}
@@ -51,9 +49,9 @@ const GalleryPreview = () => {
                 <span className={styles.zoom} aria-hidden="true">
                   <FaMagnifyingGlassPlus />
                 </span>
-              </Reveal>
+              </button>
             ))}
-          </div>
+          </Reveal>
 
           <Reveal className={styles.action}>
             <Button
