@@ -144,7 +144,6 @@ const RAW_GALLERY_BLOCKS = [
     images: [
       { id: 98, src: `${CLOUDINARY_BASE}/f_auto,q_auto/98_p4gw0s`, altKey: "gallery.images.98" },
       { id: 155, src: `${CLOUDINARY_BASE}/f_auto,q_auto/155_klwd0f`, altKey: "gallery.images.155" },
-      { id: 17, src: `${CLOUDINARY_BASE}/f_auto,q_auto/17_nx3kho`, altKey: "gallery.images.17" },
       { id: 30, src: `${CLOUDINARY_BASE}/f_auto,q_auto/30_hn5ey0`, altKey: "gallery.images.30" },
       { id: 126, src: `${CLOUDINARY_BASE}/f_auto,q_auto/126_ehgbaz`, altKey: "gallery.images.126" },
       { id: 127, src: `${CLOUDINARY_BASE}/f_auto,q_auto/127_jpmgj5`, altKey: "gallery.images.127" },
@@ -153,7 +152,6 @@ const RAW_GALLERY_BLOCKS = [
       { id: 154, src: `${CLOUDINARY_BASE}/f_auto,q_auto/154_lo967p`, altKey: "gallery.images.154" },
       { id: 130, src: `${CLOUDINARY_BASE}/f_auto,q_auto/130_lopc93`, altKey: "gallery.images.130" },
       { id: 44, src: `${CLOUDINARY_BASE}/f_auto,q_auto/44_ftktlz`, altKey: "gallery.images.44" },
-      { id: 33, src: `${CLOUDINARY_BASE}/f_auto,q_auto/33_o6hcmd`, altKey: "gallery.images.33" },
       {
         id: 146,
         src: `${CLOUDINARY_BASE}/f_auto,q_auto/146_vmn830`,
@@ -234,7 +232,6 @@ const RAW_GALLERY_BLOCKS = [
       { id: 89, src: `${CLOUDINARY_BASE}/f_auto,q_auto/89_trtqvd`, altKey: "gallery.images.89" },
       { id: 162, src: `${CLOUDINARY_BASE}/f_auto,q_auto/162_zefviw`, altKey: "gallery.images.162" },
       { id: 52, src: `${CLOUDINARY_BASE}/f_auto,q_auto/52_ds9d9k`, altKey: "gallery.images.52" },
-      { id: 150, src: `${CLOUDINARY_BASE}/f_auto,q_auto/150_dkgfp6`, altKey: "gallery.images.150" },
       { id: 84, src: `${CLOUDINARY_BASE}/f_auto,q_auto/84_ahr5yi`, altKey: "gallery.images.84" },
       { id: 159, src: `${CLOUDINARY_BASE}/f_auto,q_auto/159_py3kxv`, altKey: "gallery.images.159" },
       { id: 88, src: `${CLOUDINARY_BASE}/f_auto,q_auto/88_zpv2hc`, altKey: "gallery.images.88" },
