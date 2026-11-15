@@ -128,7 +128,6 @@ const RAW_GALLERY_BLOCKS = [
       { id: 35, src: `${CLOUDINARY_BASE}/f_auto,q_auto/35_rgyybf`, altKey: "gallery.images.35" },
       { id: 19, src: `${CLOUDINARY_BASE}/f_auto,q_auto/19_sq1odp`, altKey: "gallery.images.19" },
       { id: 50, src: `${CLOUDINARY_BASE}/f_auto,q_auto/50_gmiewh`, altKey: "gallery.images.50" },
-      { id: 8, src: `${CLOUDINARY_BASE}/f_auto,q_auto/08_baupfo`, altKey: "gallery.images.08" },
       { id: 114, src: `${CLOUDINARY_BASE}/f_auto,q_auto/114_vnfbgi`, altKey: "gallery.images.114" },
       { id: 2, src: `${CLOUDINARY_BASE}/f_auto,q_auto/02_w4v5kf`, altKey: "gallery.images.02" },
       { id: 59, src: `${CLOUDINARY_BASE}/f_auto,q_auto/59_ta8yq2`, altKey: "gallery.images.59" },
@@ -320,6 +319,7 @@ const RAW_GALLERY_BLOCKS = [
     titleKey: "gallery.blocks.shop",
     images: [
       { id: 24, src: `${CLOUDINARY_BASE}/f_auto,q_auto/24_iapc0f`, altKey: "gallery.images.24" },
+      { id: 8, src: `${CLOUDINARY_BASE}/f_auto,q_auto/08_baupfo`, altKey: "gallery.images.08" },
       { id: 83, src: `${CLOUDINARY_BASE}/f_auto,q_auto/83_bbdazt`, altKey: "gallery.images.83" },
       { id: 1, src: `${CLOUDINARY_BASE}/f_auto,q_auto/01_ea2e86`, altKey: "gallery.images.01" },
     ],
