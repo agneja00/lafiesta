@@ -1,10 +1,25 @@
 {
+  "seo": {
+    "home": {
+      "title": "Gėlės, balionai ir dovanos Vilniuje | La Fiesta",
+      "description": "Gėlių parduotuvė Naujininkuose: puokštės, kompozicijos, balionai su užrašais, dovanos, laidojimo vainikai ir žvakės. Kapsų g. 2, Vilnius. Kasdien 9–20 val.",
+      "ogTitle": "Gėlių parduotuvė Vilniuje – La Fiesta",
+      "ogDescription": "Puokštės, kompozicijos, balionai su užrašais ir dovanos kiekvienai šventei. Užsukite – Kapsų g. 2, Vilnius."
+    },
+    "gallery": {
+      "title": "Puokščių, balionų ir dovanų galerija | La Fiesta",
+      "description": "Mūsų darbai: gėlių puokštės, kompozicijos, balionai su užrašais, dovanos, laidojimo vainikai, užuojautos gėlės ir kapų puokštės. La Fiesta, Vilnius."
+    },
+    "prices": {
+      "title": "Gėlių, puokščių ir balionų kainos | La Fiesta",
+      "description": "Puokščių, gėlių kompozicijų, balionų su užrašais ir dovanų kainos. Užsakykite telefonu ar žinute arba užsukite į Kapsų g. 2, Vilnius."
+    }
+  },
   "common": {
     "close": "Uždaryti",
     "previous": "Ankstesnė nuotrauka",
     "next": "Kita nuotrauka"
   },
-
   "links": {
     "home": "Pradžia",
     "services": "Ką kuriame",

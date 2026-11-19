@@ -1,10 +1,25 @@
 {
+  "seo": {
+    "home": {
+      "title": "Flowers, Balloons & Gifts in Vilnius | La Fiesta",
+      "description": "Flower shop in Naujininkai, Vilnius: bouquets, arrangements, custom balloons, gifts, funeral wreaths and candles. Kapsų g. 2. Open daily 9:00–20:00.",
+      "ogTitle": "Flower Shop in Vilnius – La Fiesta",
+      "ogDescription": "Bouquets, arrangements, custom balloons and gifts for every celebration. Visit us at Kapsų g. 2, Vilnius."
+    },
+    "gallery": {
+      "title": "Bouquets, Balloons & Gifts Gallery | La Fiesta",
+      "description": "Our work: bouquets, arrangements, custom balloons, gifts, funeral wreaths, sympathy flowers and grave arrangements. La Fiesta, Naujininkai, Vilnius."
+    },
+    "prices": {
+      "title": "Flower, Bouquet & Balloon Prices | La Fiesta",
+      "description": "Prices for bouquets, flower arrangements, custom balloons and gifts. Order by phone or message, or visit us at Kapsų g. 2, Vilnius."
+    }
+  },
   "common": {
     "close": "Close",
     "previous": "Previous photo",
     "next": "Next photo"
   },
-
   "links": {
     "home": "Home",
     "services": "What we make",
